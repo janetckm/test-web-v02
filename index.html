@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducAlte</title>
+    <meta name="description" content="Discover interactive online classes in programming, design, and more. Learn from industry experts and enhance your skills.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="logo">Educ<span style="color: var(--primary);">Alte</span></a>
+            
+            <div class="nav-links">
+                <a href="#classes">Class</a>
+                <a href="#teacher">Teacher</a>
+            </div>
+            
+            <div class="auth-buttons">
+                <a href="#" class="btn btn-outline">Log In</a>
+                <a href="#" class="btn btn-primary">Sign Up</a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="nav-links">
+        
+            <a href="#classes">Class</a>
+            <a href="#contact">Teacher</a>
+            <div class="mobile-auth" style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+                <a href="#" class="btn btn-outline" style="width: 100%; text-align: center;">Log In</a>
+            </div>
+        </div>
+    </div>
+    
+<!--    
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Learn the Skills of Tomorrow, Today</h1>
+            <p>Learning Platform for Metaverse</p>
+            <div class="hero-buttons">
+                <a href="#classes" class="btn btn-primary">Explore Classes</a>
+                <a href="#" class="btn btn-outline">How It Works</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="assets/imgs/img01.png" alt="">
+        </div>
+    </section> -->
+    
+    <!-- Classes Section -->
+    <section class="classes" id="classes">
+        <div class="section-header">
+            <h2>Learning Platform</h2>
+            <p>Discover our classes and start your learning journey</p>
+        </div>
+        
+        <div class="classes-grid">
+            <!-- Class 1 -->
+            <div class="class-card">
+                <div class="class-image">
+                    <!-- Dynamic shapes will be inserted here by JavaScript -->
+                    <img src="assets/imgs/img01.png" alt="Web Development Masterclass" class="class-img">
+                </div>
+                <div class="class-content">
+                    <div class="class-meta">
+                        <span><i class="far fa-clock"></i> 8 Weeks</span>
+                        <span><i class="far fa-user"></i> Intermediate</span>
+                    </div>
+                    <h3>Get to Know the Metaverse</h3>
+                    <p class="class-desc">Chapter 1</p>
+                    <a href="#" class="class-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Class 2 -->
+            <div class="class-card">
+                <div class="class-image">
+                    <!-- Dynamic shapes will be inserted here by JavaScript -->
+                    <img src="assets/imgs/img02.png" alt="Data Science Fundamentals" class="class-img">
+                </div>
+                <div class="class-content">
+                    <div class="class-meta">
+                        <span><i class="far fa-clock"></i> 10 Weeks</span>
+                        <span><i class="far fa-user"></i> Advanced</span>
+                    </div>
+                    <h3>Application and Technology</h3>
+                    <p class="class-desc">Chapter 2</p>
+                    <a href="#" class="class-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Class 3 -->
+            <div class="class-card">
+                <div class="class-image">
+                    <!-- Dynamic shapes will be inserted here by JavaScript -->
+                    <img src="assets/imgs/img03.png" alt="UI/UX Design" class="class-img">
+                </div>
+                <div class="class-content">
+                    <div class="class-meta">
+                        <span><i class="far fa-clock"></i> 6 Weeks</span>
+                        <span><i class="far fa-user"></i> Beginner</span>
+                    </div>
+                    <h3>Ecology and Development</h3>
+                    <p class="class-desc">Chapter 3</p>
+                    <a href="#" class="class-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <!-- Class 4 -->
+            <div class="class-card">
+                <div class="class-image">
+                    <!-- Dynamic shapes will be inserted here by JavaScript -->
+                    <img src="assets/imgs/img04.png" alt="Mobile App Development" class="class-img">
+                </div>
+                <div class="class-content">
+                    <div class="class-meta">
+                        <span><i class="far fa-clock"></i> 12 Weeks</span>
+                        <span><i class="far fa-user"></i> Intermediate</span>
+                    </div>
+                    <h3>Future with AI and Its Practices</h3>
+                    <p class="class-desc">Chapter 4</p>
+                    <a href="#" class="class-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <!-- CTA Section -->
+    <section class="cta" id="about">
+        <div class="container">
+            <h2>Ready to Start Learning?</h2>
+            <p>Join thousands of students!</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">Get Started for Free</a>
+                <a href="#" class="btn btn-outline">View All Courses</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+            <div class="footer-about">
+                <class="footer-logo">EducAlte</class>
+                <p>Empowering accessible education</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li>MC<sup>2</sup> Lab</li>
+                    <li>HKUST(GZ)</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Nansha, Guangzhou, China</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 EducAlte. All rights reserved.</p>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script>
+        // Initialize shapes after DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load scripts in order
+            const scripts = [
+                'js/scrollEffects.js',
+                'js/dynamicShapes.js'
+            ];
+            
+            function loadScript(index) {
+                if (index >= scripts.length) {
+                    // All scripts loaded, initialize shapes
+                    if (typeof initShapes === 'function') {
+                        initShapes();
+                    }
+                    initPage();
+                    return;
+                }
+                
+                const script = document.createElement('script');
+                script.src = scripts[index];
+                script.onload = () => loadScript(index + 1);
+                document.body.appendChild(script);
+            }
+            
+            // Start loading scripts
+            loadScript(0);
+            
+            function initPage() {
+                // Mobile Menu Toggle
+                const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+                const mobileMenu = document.getElementById('mobileMenu');
+                
+                if (mobileMenuBtn && mobileMenu) {
+                    mobileMenuBtn.addEventListener('click', () => {
+                        mobileMenu.classList.toggle('active');
+                    });
+                    
+                    // Close mobile menu when clicking on a link
+                    document.querySelectorAll('.mobile-menu a').forEach(link => {
+                        link.addEventListener('click', () => {
+                            mobileMenu.classList.remove('active');
+                        });
+                    });
+                }
+                
+                // Smooth scrolling for anchor links
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        
+                        const targetId = this.getAttribute('href');
+                        if (targetId === '#') return;
+                        
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 80,
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+                
+                // Add scroll animation to elements
+                const animateOnScroll = () => {
+                    const elements = document.querySelectorAll('.class-card, .feature-card');
+                    
+                    elements.forEach(element => {
+                        const elementTop = element.getBoundingClientRect().top;
+                        const windowHeight = window.innerHeight;
+                        
+                        if (elementTop < windowHeight - 100) {
+                            element.style.opacity = '1';
+                            element.style.transform = 'translateY(0)';
+                        }
+                    });
+                };
+                
+                // Add animation classes after a short delay
+                setTimeout(() => {
+                    document.querySelectorAll('.class-card, .feature-card').forEach((el, index) => {
+                        el.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
+                        el.style.opacity = '0';
+                        el.style.transform = 'translateY(20px)';
+                    });
+                    
+                    // Trigger initial animation
+                    animateOnScroll();
+                }, 300);
+                
+                // Add scroll event listener
+                window.addEventListener('scroll', animateOnScroll);
+            }
+            
+            // Initialize the page
+            initPage();
+        });
+    </script>
+</body>
+</html>
