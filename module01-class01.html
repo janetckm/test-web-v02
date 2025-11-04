@@ -38,6 +38,43 @@
             align-items: center;
             gap: 1.5rem;
             text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .progress-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #4696f7, #ed7285, #f9db6d, #64c79a, #4696f7);
+            background-size: 400% 400%;
+            animation: gradientBG 8s ease infinite;
+            transition: width 0.5s ease;
+            border-radius: 10px;
+        }
+        
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .progress-percentage {
+            position: absolute;
+            right: 1rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            opacity: 0.8;
+            color: var(--text);
         }
         
         .chapter-card:hover {
@@ -70,8 +107,8 @@
         /* Different colors for each chapter number */
         .chapter-card:nth-child(1) .chapter-number { background-color: var(--green); }
         .chapter-card:nth-child(2) .chapter-number { background-color: var(--red); }
-        .chapter-card:nth-child(3) .chapter-number { background-color: var(--yellow); color: white; }
-        .chapter-card:nth-child(4) .chapter-number { background-color: var(--blue); }
+        .chapter-card:nth-child(3) .chapter-number { background-color: var(--blue) }
+        .chapter-card:nth-child(4) .chapter-number { background-color: var(--yellow);  color: white;}
         .chapter-card:nth-child(5) .chapter-number { background-color: var(--green); }
         .chapter-card:nth-child(6) .chapter-number { background-color: var(--red); }
         
@@ -101,6 +138,9 @@
             font-size: 1.5rem;
             opacity: 0.7;
             transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+            margin-right: 5px; /* Move arrow 5px to the left */
         }
         
         .chapter-card:hover .chapter-arrow {
@@ -169,15 +209,10 @@
     
     <!-- Classes Section -->
     <section class="classes" id="classes">
-        <div class="section-header">
-              <div class="class-image" style="position: relative; width: 100%; height: 200px; margin: 0 auto 2rem; overflow: visible;">
-                    <!-- Dynamic shapes container -->
-                    <div class="shapes-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
-                    <!-- Main image -->
-                    <img src="assets/imgs/img01.png" alt="AI Literacy" class="class-img" style="position: relative; z-index: 2; max-width: 200px; height: auto; display: block; margin: 0 auto; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));">
-                </div>
-            <p>Module 1</p>
-            <h2>AI Literacy</h2>
+        <div class="shapes-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden;"></div>
+        <div class="section-header" style="position: relative; z-index: 1;">
+            <p>Chapter 1</p>
+            <h2>Understanding AI Fundamentals</h2>
         </div>
     </section>
     
@@ -187,8 +222,12 @@
         <a href="module01-class01.html" class="chapter-card">
             <div class="chapter-number">1</div>
             <div class="chapter-content">
-                <h3>Understanding AI Fundamentals</h3>
-                <p>Learn the core concepts and principles that form the foundation of Artificial Intelligence</p>
+                <p>Section 1</p>
+                <h3>What is AI? A Historical Perspective</h3>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 100%"></div>
+                </div>
+                <div class="progress-percentage">100%</div>
             </div>
             <div class="chapter-arrow">
                 <i class="fas fa-chevron-right"></i>
@@ -199,8 +238,12 @@
         <a href="#" class="chapter-card">
             <div class="chapter-number">2</div>
             <div class="chapter-content">
-                <h3>AI in Everyday Life</h3>
-                <p>Discover how AI is integrated into daily activities and common applications</p>
+                <p>Section 2</p>
+                <h3>Key Concepts in AI: Machine Learning, Deep Learning, and Neural Networks</h3>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 65%"></div>
+                </div>
+                <div class="progress-percentage">65%</div>
             </div>
             <div class="chapter-arrow">
                 <i class="fas fa-chevron-right"></i>
@@ -211,49 +254,34 @@
         <a href="#" class="chapter-card">
             <div class="chapter-number">3</div>
             <div class="chapter-content">
-                <h3>Tools and Technologies Behind AI</h3>
-                <p>Explore the key technologies and tools that power modern AI systems</p>
+                <p>Section 3</p>
+                <h3>AI vs. Human Intelligence</h3>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 25%"></div>
+                </div>
+                <div class="progress-percentage">25%</div>
             </div>
             <div class="chapter-arrow">
                 <i class="fas fa-chevron-right"></i>
             </div>
         </a>
-        
+
         <!-- Chapter 4 -->
         <a href="#" class="chapter-card">
             <div class="chapter-number">4</div>
             <div class="chapter-content">
-                <h3>AI in Business and Industry</h3>
-                <p>Understand how AI is transforming various industries and business operations</p>
+                <p>Checkpoint</p>
+                <h3>3 Exercises</h3>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 0%"></div>
+                </div>
+                <div class="progress-percentage">0%</div>
             </div>
             <div class="chapter-arrow">
                 <i class="fas fa-chevron-right"></i>
             </div>
         </a>
         
-        <!-- Chapter 5 -->
-        <a href="#" class="chapter-card">
-            <div class="chapter-number">5</div>
-            <div class="chapter-content">
-                <h3>AI Trends and Future Directions</h3>
-                <p>Stay ahead by learning about the latest trends and future possibilities in AI</p>
-            </div>
-            <div class="chapter-arrow">
-                <i class="fas fa-chevron-right"></i>
-            </div>
-        </a>
-        
-        <!-- Chapter 6 -->
-        <a href="#" class="chapter-card">
-            <div class="chapter-number">6</div>
-            <div class="chapter-content">
-                <h3>AI Literacy QnA</h3>
-                <p>Interact with virtual teachers</p>
-            </div>
-            <div class="chapter-arrow">
-                <i class="fas fa-chevron-right"></i>
-            </div>
-        </a>
     </div>
     
     
