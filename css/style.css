@@ -9,7 +9,7 @@
     
     /* Neutral Colors */
     --light: #F8F9FA;
-    --text: #333333;
+    --text: #444444;
     --text-light: #6C757D;
     
     /* Derived Colors */
@@ -23,10 +23,10 @@
     --gradient-secondary: linear-gradient(135deg, var(--secondary) 0%, #ffde7d 100%);
     
     /* UI Colors */
-    --success: #64c79a;
-    --warning: #f9db6d;
-    --danger: #ed7285;
-    --info: #4696f7;
+    --green: #64c79a;
+    --yellow: #f9db6d;
+    --red: #ed7285;
+    --blue: #4696f7;
 }
 
 * {
@@ -335,7 +335,7 @@ p {
 
 /* Classes Section */
 .classes {
-    padding: 150px 5%;
+    padding: 50px 5% 30px;
     background: rgb(255, 255, 255);
     position: relative;
     overflow: hidden;
@@ -357,7 +357,7 @@ p {
 .section-header {
     text-align: center;
     max-width: 700px;
-    margin: 0 auto 80px;
+    margin: 30px auto 20px;
     position: relative;
     z-index: 1;
 }
@@ -668,6 +668,123 @@ p {
     font-size: 1.5rem;
     margin-bottom: 0.8rem;
     color: var(--dark);
+    transition: color 0.3s ease;
+}
+
+.class-content h3:hover {
+    color: var(--green);
+    transition: color 0.3s ease;
+}
+
+/* Bubble List Styles */
+.bubble-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.bubble-list li {
+    /* background-color: rgba(70, 150, 247, 0.1); */
+    color: var(--text);
+    padding: 0.2rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    /* border: 1px solid rgba(70, 150, 247, 0.2); */
+}
+
+.bubble-list li:before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    /* background-color: white; */
+    border-radius: 50%;
+    margin-right: 10px;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.bubble-list li:hover {
+    /* background-color: var(--green); */
+    /* color: white; */
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(70, 150, 247, 0.2);
+}
+
+.bubble-list li:hover:before {
+    /* background-color: white; */
+    transform: scale(1.2);
+}
+
+/* Animation for list items */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Continuous highlight animation */
+@keyframes highlightItem {
+    0%, 100% {
+        background-color: transparent;
+        color: var(--text);
+    }
+    10%, 30% {
+        /* background-color: rgba(70, 150, 247, 0.1); */
+        color: var(--text-light);
+        transform: translateX(5px);
+        box-shadow: 0 4px 12px rgba(70, 150, 247, 0.1);
+    }
+}
+
+.bubble-list {
+    position: relative;
+}
+
+.bubble-list li {
+    animation: 
+        fadeInUp 0.5s ease-out forwards,
+        highlightItem 12s infinite ease-in-out;
+    opacity: 0;
+    animation-fill-mode: both;
+}
+
+/* Stagger the highlight animation */
+.bubble-list li:nth-child(1) { 
+    animation-delay: 0.1s, 0s; 
+}
+.bubble-list li:nth-child(2) { 
+    animation-delay: 0.2s, 2s; 
+}
+.bubble-list li:nth-child(3) { 
+    animation-delay: 0.3s, 4s; 
+}
+.bubble-list li:nth-child(4) { 
+    animation-delay: 0.4s, 6s; 
+}
+.bubble-list li:nth-child(5) { 
+    animation-delay: 0.5s, 8s; 
+}
+.bubble-list li:nth-child(6) { 
+    animation-delay: 0.6s, 10s; 
+}
+
+/* Pause animation on hover */
+.bubble-list:hover li {
+    animation-play-state: paused;
 }
 
 .class-meta {
@@ -831,9 +948,9 @@ p {
 }
 
 .cta .btn-outline:hover {
-    background: white;
+    background: var(--red);
     color: var(--dark);
-    border-color: white;
+    border-color: var(--red);
 }
 
 /* Footer */

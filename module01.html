@@ -18,6 +18,118 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/auth.css">
+    <style>
+        
+       
+        .chapters-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+        
+        .chapter-card {
+            background: transparent;
+            border-radius: 0;
+            padding: 1.5rem 0;
+            margin-bottom: 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            text-decoration: none;
+        }
+        
+        .chapter-card:hover {
+            transform: translateX(5px);
+            /* border-bottom-color: var(--primary); */
+        }
+        
+        .chapter-card a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .chapter-card a:hover {
+            text-decoration: none;
+        }
+
+        .chapter-number {
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        /* Different colors for each chapter number */
+        .chapter-card:nth-child(1) .chapter-number { background-color: var(--green); }
+        .chapter-card:nth-child(2) .chapter-number { background-color: var(--red); }
+        .chapter-card:nth-child(3) .chapter-number { background-color: var(--yellow); color: white; }
+        .chapter-card:nth-child(4) .chapter-number { background-color: var(--blue); }
+        .chapter-card:nth-child(5) .chapter-number { background-color: var(--green); }
+        .chapter-card:nth-child(6) .chapter-number { background-color: var(--red); }
+        
+        .chapter-content {
+            flex-grow: 1;
+        }
+        
+        .chapter-content h3 {
+            margin: 0 0 0.5rem;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .chapter-content h3:hover {
+            color: var(--text-light);
+        }
+        
+        .chapter-content p {
+            margin: 0;
+            color: var(--text-light);
+            line-height: 1.6;
+            text-decoration: none;
+        }
+        
+        .chapter-arrow {
+            color: var(--text-light);
+            font-size: 1.5rem;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+        
+        .chapter-card:hover .chapter-arrow {
+            transform: translateX(5px);
+            opacity: 1;
+            color: var(--primary);
+        }
+        
+        @media (max-width: 768px) {
+            .module-header {
+                padding: 3rem 1.5rem;
+            }
+            
+            .chapters-container {
+                padding: 0 1.5rem 3rem;
+            }
+            
+            .chapter-card {
+                padding: 1.5rem 0;
+                flex-direction: row;
+                text-align: left;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            }
+            
+            .chapter-number {
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -26,14 +138,14 @@
             <a href="index.html" class="logo">Educ<span style="color: var(--primary);">Alte</span></a>
             
             <div class="nav-links">
-                <a href="#classes">Class</a>
+                <a href="index.html#classes">Class</a>
                 <a href="#teacher">Teacher</a>
             </div>
             
             <!-- Desktop Auth Buttons -->
             <div class="auth-buttons desktop-auth">
-                <a href="#" class="btn btn-outline login-btn">Log In</a>
-                <a href="#" class="btn btn-primary signup-btn">Sign Up</a>
+                <a href="#" class="btn btn-outline login-btn">Login / Sign up</a>
+                <!-- <a href="#" class="btn btn-primary signup-btn">Sign Up</a> -->
             </div>
             
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
@@ -49,109 +161,101 @@
             <a href="#classes">Class</a>
             <a href="#contact">Teacher</a>
             <div class="mobile-auth" style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
-                <a href="#" class="btn btn-outline login-btn" style="width: 100%; text-align: center;">Log In</a>
-                <a href="#" class="btn btn-primary signup-btn" style="width: 100%; text-align: center;">Sign Up</a>
+                <a href="#" class="btn btn-outline login-btn" style="width: 100%; text-align: center;">Login / Sign up</a>
+                <!-- <a href="#" class="btn btn-primary signup-btn" style="width: 100%; text-align: center;">Sign Up</a> -->
             </div>
         </div>
     </div>
     
-    <!--    
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Learn the Skills of Tomorrow, Today</h1>
-            <p>Learning Platform for Metaverse</p>
-            <div class="hero-buttons">
-                <a href="#classes" class="btn btn-primary">Explore Classes</a>
-                <a href="#" class="btn btn-outline">How It Works</a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <img src="assets/imgs/img01.png" alt="">
-        </div>
-    </section> -->
-    
     <!-- Classes Section -->
     <section class="classes" id="classes">
         <div class="section-header">
-            <h2>All One Needs to Know About AI</h2>
-            <p>AI-assisted personalized learning for AI literacy</p>
+              <div class="class-image" style="position: relative; width: 100%; height: 200px; margin: 0 auto 2rem; overflow: visible;">
+                    <!-- Dynamic shapes container -->
+                    <div class="shapes-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+                    <!-- Main image -->
+                    <img src="assets/imgs/img01.png" alt="AI Literacy" class="class-img" style="position: relative; z-index: 2; max-width: 200px; height: auto; display: block; margin: 0 auto; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));">
+                </div>
+            <p>Module 1</p>
+            <h2>AI Literacy</h2>
         </div>
+    </section>
+    
+    <!-- Chapters List -->
+    <div class="chapters-container">
+        <!-- Chapter 1 -->
+        <a href="#" class="chapter-card">
+            <div class="chapter-number">1</div>
+            <div class="chapter-content">
+                <h3>Understanding AI Fundamentals</h3>
+                <p>Learn the core concepts and principles that form the foundation of Artificial Intelligence</p>
+            </div>
+            <div class="chapter-arrow">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </a>
         
-        <div class="classes-grid">
-            <!-- Module 1 -->
-            <div class="class-card">
-                <div class="class-image">
-                    <!-- Dynamic shapes will be inserted here by JavaScript -->
-                    <img src="assets/imgs/img01.png" alt="Web Development Masterclass" class="class-img">
-                </div>
-                <div class="class-content">
-                    <div class="class-meta">
-                        <span><i class="far fa-clock"></i> 8 Weeks</span>
-                        <span><i class="far fa-user"></i> Beginner</span>
-                    </div>
-                    <h3>AI Literacy</h3>
-                    <p class="class-desc">Module 1</p>
-                    <ul class="bubble-list">
-                        <li>Understanding AI Fundamentals</li>
-                        <li>AI in Everyday Life</li>
-                        <li>Tools and Technologies Behind AI</li>
-                        <li>AI in Business and Industry</li>
-                        <li>AI Trends and Future Directions</li>
-                        <li>AI Literacy QnA</li>
-                    </ul>
-                    <a href="module01.html" class="class-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
+        <!-- Chapter 2 -->
+        <a href="#" class="chapter-card">
+            <div class="chapter-number">2</div>
+            <div class="chapter-content">
+                <h3>AI in Everyday Life</h3>
+                <p>Discover how AI is integrated into daily activities and common applications</p>
             </div>
-            
-            <!-- Module 2 -->
-            <div class="class-card">
-                <div class="class-image">
-                    <!-- Dynamic shapes will be inserted here by JavaScript -->
-                    <img src="assets/imgs/img02.png" alt="Data Science Fundamentals" class="class-img">
-                </div>
-                <div class="class-content">
-                    <div class="class-meta">
-                        <span><i class="far fa-clock"></i> 10 Weeks</span>
-                        <span><i class="far fa-user"></i> Advanced</span>
-                    </div>
-                    <h3>AI in Practical Use: Coding with AI</h3>
-                    <p class="class-desc">Module 2</p>
-                    <a href="#" class="class-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
+            <div class="chapter-arrow">
+                <i class="fas fa-chevron-right"></i>
             </div>
-            
-            <!-- Module 3 -->
-            <div class="class-card">
-                <div class="class-image">
-                    <!-- Dynamic shapes will be inserted here by JavaScript -->
-                    <img src="assets/imgs/img03.png" alt="AI Ethics" class="class-img">
-                </div>
-                <div class="class-content">
-                    <div class="class-meta">
-                        <span><i class="far fa-clock"></i> 6 Weeks</span>
-                        <span><i class="far fa-user"></i> Intermediate </span>
-                    </div>
-                    <h3>AI Ethics</h3>
-                    <p class="class-desc">Module 3</p>
-                    <a href="#" class="class-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
+        </a>
+        
+        <!-- Chapter 3 -->
+        <a href="#" class="chapter-card">
+            <div class="chapter-number">3</div>
+            <div class="chapter-content">
+                <h3>Tools and Technologies Behind AI</h3>
+                <p>Explore the key technologies and tools that power modern AI systems</p>
             </div>
-        </div>
-    </section>
+            <div class="chapter-arrow">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </a>
+        
+        <!-- Chapter 4 -->
+        <a href="#" class="chapter-card">
+            <div class="chapter-number">4</div>
+            <div class="chapter-content">
+                <h3>AI in Business and Industry</h3>
+                <p>Understand how AI is transforming various industries and business operations</p>
+            </div>
+            <div class="chapter-arrow">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </a>
+        
+        <!-- Chapter 5 -->
+        <a href="#" class="chapter-card">
+            <div class="chapter-number">5</div>
+            <div class="chapter-content">
+                <h3>AI Trends and Future Directions</h3>
+                <p>Stay ahead by learning about the latest trends and future possibilities in AI</p>
+            </div>
+            <div class="chapter-arrow">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </a>
+        
+        <!-- Chapter 6 -->
+        <a href="#" class="chapter-card">
+            <div class="chapter-number">6</div>
+            <div class="chapter-content">
+                <h3>AI Literacy QnA</h3>
+                <p>Interact with virtual teachers</p>
+            </div>
+            <div class="chapter-arrow">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </a>
+    </div>
     
-    
-    
-    <!-- CTA Section -->
-    <section class="cta" id="about">
-        <div class="container">
-            <h2>Ready to Start Learning?</h2>
-            <p>Join thousands of students!</p>
-            <div class="cta-buttons">
-                <a href="#" class="btn btn-primary">Get Started for Free</a>
-                <a href="#" class="btn btn-outline">View All Courses</a>
-            </div>
-        </div>
-    </section>
     
     <!-- Footer -->
     <footer class="footer" id="contact">
@@ -200,6 +304,9 @@
             });
         });
     </script>
+    
+    <!-- Dynamic Shapes Script -->
+    <script src="js/dynamicShapes.js"></script>
     
     <!-- JavaScript -->
     <script>
@@ -299,6 +406,16 @@
             
             // Initialize the page
             initPage();
+            
+            // Initialize shapes for the module page
+            const shapesContainer = document.querySelector('.shapes-container');
+            if (shapesContainer) {
+                // Create multiple shapes
+                for (let i = 0; i < 8; i++) {
+                    const shape = createRandomShape();
+                    setupShape(shape, shapesContainer);
+                }
+            }
         });
     </script>
     <script src="js/auth.js"></script>
