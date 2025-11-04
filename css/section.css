@@ -1,0 +1,566 @@
+
+        /* Video Section Styles */
+        .video-section {
+            width: 100%;
+            max-width: 100%;
+            margin: 2rem 0;
+            padding: 0;
+        }
+        
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            background: #000;
+            margin-bottom: 1.5rem;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .video-description {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .video-description {
+                padding: 0 1.5rem;
+            }
+        }
+        
+        /* Back Link Styles */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+        
+        .back-link:hover {
+            color: var(--primary-dark);
+            transform: translateX(-3px);
+        }
+        
+        .back-link i {
+            transition: transform 0.3s ease;
+        }
+        
+        .back-link:hover i {
+            transform: translateX(-3px);
+        }
+        
+        /* Virtual Teacher Dashboard Styles */
+        .teacher-dashboard {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .teacher-dashboard h3 {
+            margin-top: 0;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .teacher-dashboard h3 i {
+            color: var(--primary);
+        }
+        
+        /* Filter buttons */
+        .teacher-filters {
+            display: flex;
+            gap: 0.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            background: #f0f2f5;
+            border: none;
+            border-radius: 20px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .filter-btn i {
+            font-size: 0.8rem;
+        }
+        
+        .filter-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .filter-btn:hover {
+            background: #e0e3e7;
+        }
+        
+        .filter-btn.active:hover {
+            background: var(--primary-dark);
+        }
+        
+        .teacher-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .teacher-option {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            /* border: 1px solid #e0e0e0; */
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .teacher-option:hover {
+            /* transform: translateY(-2px); */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        
+        .teacher-option.active {
+            /* border-color: var(--primary); */
+            background-color: rgba(74, 111, 165, 0.05);
+        }
+        
+        .teacher-option.active .teacher-select {
+            background-color: var(--green);
+            color: white;
+        }
+        
+        .teacher-avatar img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 1rem;
+            border: 2px solid #f0f0f0;
+        }
+        
+        .teacher-info h4 {
+            margin: 0 0 0.25rem 0;
+            color: var(--text);
+        }
+        
+        .teacher-info p {
+            margin: 0 0 0.5rem 0;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .teacher-specialty .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            background: #f5f7fa;
+            color: var(--text);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+        
+        .teacher-specialty .badge i {
+            color: var(--primary);
+            font-size: 0.7rem;
+        }
+        
+        .teacher-select {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            color: transparent;
+            border: 1px solid #ddd;
+        }
+        
+        .teacher-preview {
+            background: #f9fafc;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            border: 1px dashed #e0e6ed;
+        }
+        
+        .preview-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+            color: var(--text-light);
+            text-align: center;
+        }
+        
+        .preview-placeholder i {
+            font-size: 2rem;
+            color: #d1d9e6;
+            margin-bottom: 0.75rem;
+        }
+        
+        .preview-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .preview-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 1rem;
+            border: 2px solid #e0e6ed;
+        }
+        
+        .preview-name {
+            margin: 0 0 0.25rem 0;
+            color: var(--text);
+        }
+        
+        .preview-title {
+            margin: 0;
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+        
+        .preview-bio {
+            color: var(--text);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .teacher-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .teacher-option {
+                padding: 0.75rem;
+            }
+            
+            .teacher-avatar img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        
+        /* Caption Styles */
+        .caption-section {
+            margin-top: 2rem;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            padding-top: 1.5rem;
+        }
+        
+        .caption-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.25rem;
+        }
+        
+        .caption-header h4 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .caption-header i {
+            color: var(--primary);
+        }
+        
+        .language-selector select {
+            padding: 0.4rem 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background: white;
+            font-size: 0.9rem;
+            color: var(--text);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .language-selector select:hover {
+            border-color: var(--primary);
+        }
+        
+        .captions-container {
+            max-height: 300px;
+            overflow-y: auto;
+            padding-right: 0.5rem;
+            margin-bottom: 1rem;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary) #f0f0f0;
+        }
+        
+        .captions-container::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        .captions-container::-webkit-scrollbar-track {
+            background: #f0f0f0;
+            border-radius: 3px;
+        }
+        
+        .captions-container::-webkit-scrollbar-thumb {
+            background-color: var(--primary);
+            border-radius: 3px;
+        }
+        
+        .caption-line {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border-radius: 6px;
+            transition: background-color 0.2s ease;
+        }
+        
+        .caption-line:hover {
+            background-color: rgba(0, 0, 0, 0.03);
+        }
+        
+        .timestamp {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            min-width: 40px;
+            font-family: sans-serif;
+            padding-top: 2px;
+        }
+        
+        .caption-line p {
+            margin: 0;
+            line-height: 1.5;
+            color: var(--text);
+        }
+        
+        .caption-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn-caption {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: none;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .btn-caption:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-caption i {
+            font-size: 0.9em;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .captions-container {
+                max-height: 250px;
+            }
+            
+            .caption-line {
+                flex-direction: column;
+                gap: 0.25rem;
+            }
+            
+            .caption-actions {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            
+            .btn-caption {
+                justify-content: center;
+                width: 100%;
+            }
+        }
+        
+       
+        .chapters-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem 4rem;
+        }
+        
+        .chapter-card {
+            background: transparent;
+            border-radius: 0;
+            padding: 1.5rem 0;
+            margin-bottom: 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .progress-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #4696f7, #ed7285, #f9db6d, #64c79a, #4696f7);
+            background-size: 400% 400%;
+            animation: gradientBG 8s ease infinite;
+            transition: width 0.5s ease;
+            border-radius: 10px;
+        }
+        
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .progress-percentage {
+            position: absolute;
+            right: 1rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            opacity: 0.8;
+            color: var(--text);
+        }
+        
+
+        
+        .chapter-card a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+
+        .chapter-number {
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        
+        /* Different colors for each chapter number */
+        .chapter-card:nth-child(1) .chapter-number { background-color: var(--green); }
+        .chapter-card:nth-child(2) .chapter-number { background-color: var(--red); }
+        .chapter-card:nth-child(3) .chapter-number { background-color: var(--blue) }
+        .chapter-card:nth-child(4) .chapter-number { background-color: var(--yellow);  color: white;}
+        .chapter-card:nth-child(5) .chapter-number { background-color: var(--green); }
+        .chapter-card:nth-child(6) .chapter-number { background-color: var(--red); }
+        
+        .chapter-content {
+            flex-grow: 1;
+        }
+        
+        .chapter-content h3 {
+            margin: 0 0 0.5rem;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .chapter-content h3:hover {
+            color: var(--text-light);
+        }
+        
+        .chapter-content p {
+            margin: 0;
+            color: var(--text-light);
+            line-height: 1.6;
+            text-decoration: none;
+        }
+        
+        .chapter-arrow {
+            color: var(--text-light);
+            font-size: 1.5rem;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
+            margin-right: 5px; /* Move arrow 5px to the left */
+        }
+        
+        
+        
+        @media (max-width: 768px) {
+            .module-header {
+                padding: 3rem 1.5rem;
+            }
+            
+            .chapters-container {
+                padding: 0 1.5rem 3rem;
+            }
+            
+            .chapter-card {
+                padding: 1.5rem 0;
+                flex-direction: row;
+                text-align: left;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            }
+            
+            .chapter-number {
+                margin-bottom: 1rem;
+            }
+        }
+   
