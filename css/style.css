@@ -76,7 +76,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 5%;
+    padding: 0.5rem 5%;
     position: fixed;
     top: 0;
     left: 0;
@@ -162,7 +162,7 @@ p {
 /* Buttons */
 .btn {
     display: inline-block;
-    padding: 0.8rem 1.8rem;
+    padding: 0.5rem 1.8rem;
     border-radius: 50px;
     font-weight: 600;
     text-align: center;
@@ -225,7 +225,7 @@ p {
     top: 0;
     left: 0;
     right: 0;
-    padding: 1.5rem 5%;
+    padding: 0.8rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;

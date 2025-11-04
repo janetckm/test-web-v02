@@ -175,7 +175,7 @@
 
                 <div class="teacher-option" data-teacher="Ahmed Khan">
                     <div class="teacher-avatar">
-                        <img src="assets/imgs/teacher/Ahmed Khan.png" alt="Ahmed Khan">
+                        <img src="assets/imgs/teacher/AhmedKhan.png" alt="Ahmed Khan">
                     </div>
                     <div class="teacher-info">
                         <h4>Ahmed Khan</h4>
@@ -206,10 +206,10 @@
                 </div>
                 <div class="teacher-option" data-teacher="Niel">
                     <div class="teacher-avatar">
-                        <img src="assets/imgs/teacher/niel.png" alt="yuri">
+                        <img src="assets/imgs/teacher/niel.png" alt="Niel">
                     </div>
                     <div class="teacher-info">
-                        <h4>Yuri</h4>
+                        <h4>Niel</h4>
                         <p>AI Avatar</p>
                         <div class="teacher-specialty">
                             <span class="badge"><i class="fa-solid fa-palette"></i> Anime</span>
@@ -243,15 +243,13 @@
         </div>
         
         <!-- Video Section -->
+        
         <div class="video-section">
             <div class="video-container">
-                <!-- Replace the iframe src with your actual video embed URL -->
-                <iframe 
-                    src="https://www.youtube.com/embed/YOUR_VIDEO_ID?cc_load_policy=1&cc_lang_pref=en" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
+                <video id="lessonVideo" width="100%" controls>
+                    <source src="assets/vids/demo_section01.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>
             </div>
             <div class="video-description">
                 <!-- <h3>What is AI? A Historical Perspective</h3>
@@ -274,35 +272,35 @@
                     <div class="captions-container">
                         <div class="captions" id="englishCaptions">
                             <div class="caption-line">
-                                <span class="timestamp">0:01</span>
+                                <span class="timestamp" data-time="1">0:01</span>
                                 <p>Hello everyone, and welcome to All One Needs to Know About AI.</p>
                             </div>
                             <div class="caption-line">
-                                <span class="timestamp">0:05</span>
+                                <span class="timestamp" data-time="5">0:05</span>
                                 <p>I’m so glad you’re joining me for this journey into one of the most transformative forces shaping our world — Artificial Intelligence.</p>
                             </div>
                             <div class="caption-line">
-                                <span class="timestamp">0:12</span>
+                                <span class="timestamp" data-time="12">0:12</span>
                                 <p>This is Module 1: AI Literacy, the foundation of our course. Over the next few classes, you’ll build a clear, conceptual understanding of what AI is, how it impacts our daily lives, and where it’s taking us next. </p>
                             </div>
                             <div class="caption-line">
-                                <span class="timestamp">0:20</span>
+                                <span class="timestamp" data-time="26">0:26</span>
                                 <p>We begin with Chapter 1: Understanding AI Fundamentals.</p>
                             </div>
                             <div class="caption-line">
-                                <span class="timestamp">0:25</span>
+                                <span class="timestamp" data-time="31">0:31</span>
                                 <p>Before we dive into complex systems or neural networks, we’ll look back — where did it all start? We’ll trace AI’s history, from its early days of symbolic reasoning and expert systems, to the machine learning revolution that powers today’s smart technologies.</p>
                             </div>
                             <div class="caption-line">
-                                <span class="timestamp">0:40</span>
+                                <span class="timestamp" data-time="47">0:47</span>
                                 <p>You’ll learn what distinguishes Artificial Intelligence, Machine Learning, and Deep Learning, and explore how neural networks mimic — and differ from — how our own brains process information. </p>
                             </div>
                             <div class="caption-line">
-                                <span class="timestamp">0:55</span>
+                                <span class="timestamp" data-time="58">0:58</span>
                                 <p>We’ll also reflect on an important question: How does AI compare to human intelligence? Where do machines currently outperform us, and where does human creativity, empathy, and judgment still matter most?</p>
                             </div>
                             <div class="caption-line">
-                                <span class="timestamp">1:10</span>
+                                <span class="timestamp" data-time="71">1:11</span>
                                 <p>By the end of Chapter 1, you’ll not only be able to define AI — you’ll understand it as a continuum of progress fueled by data, computation, and imagination.</p>
                             </div>
                         </div>
@@ -310,69 +308,185 @@
                         
                         <div class="captions" id="spanishCaptions" style="display: none;">
                             <div class="caption-line">
-                                <span class="timestamp">0:01</span>
+                                <span class="timestamp" data-time="1">0:01</span>
                                 <p>La Inteligencia Artificial, o IA, se ha convertido en una de las tecnologías más transformadoras de nuestro tiempo.</p>
                             </div>
                             <div class="caption-line">
-                                <span class="timestamp">0:05</span>
+                                <span class="timestamp" data-time="5">0:05</span>
                                 <p>¿Pero dónde empezó todo? Hagamos un recorrido por la historia de la IA.</p>
                             </div>
                             <div class="caption-line">
-                                <span class="timestamp">0:12</span>
+                                <span class="timestamp" data-time="12">0:12</span>
                                 <p>El concepto de seres artificiales con inteligencia se remonta a la antigüedad...</p>
                             </div>
                         </div>
                         
                         <div class="captions" id="frenchCaptions" style="display: none;">
                             <div class="caption-line">
-                                <span class="timestamp">0:01</span>
+                                <span class="timestamp" data-time="1">0:01</span>
                                 <p>L'intelligence artificielle, ou IA, est devenue l'une des technologies les plus transformatrices de notre époque.</p>
                             </div>
                             <div class="caption-line">
-                                <span class="timestamp">0:05</span>
+                                <span class="timestamp" data-time="5">0:05</span>
                                 <p>Mais où tout a-t-il commencé ? Faisons un voyage à travers l'histoire de l'IA.</p>
                             </div>
                             <div class="caption-line">
-                                <span class="timestamp">0:12</span>
+                                <span class="timestamp" data-time="12">0:12</span>
                                 <p>Le concept d'êtres artificiels dotés d'intelligence remonte à l'Antiquité...</p>
                             </div>
                         </div>
                         
                         <div class="captions" id="chineseCaptions" style="display: none;">
                             <div class="caption-line">
-                                <span class="timestamp">0:01</span>
+                                <span class="timestamp" data-time="0">0:00</span>
                                 <p>大家好，欢迎来到《人工智能通识课》。</p>
                             </div>
                             <div class="caption-line">
-                                <span class="timestamp">0:05</span>
+                                <span class="timestamp" data-time="5">0:05</span>
                                 <p>很高兴能与您共同踏上这段探索之旅，深入了解正在重塑世界格局的最具变革性力量——人工智能。</p>
                             </div>
                             <div class="caption-line">
-                                <span class="timestamp">0:12</span>
+                                <span class="timestamp" data-time="12">0:12</span>
                                 <p>这里是第一模块：人工智能素养，也是本课程的基石。在接下来的课程中，您将建立起对人工智能的清晰概念性认知——理解其本质、对日常生活的深远影响以及未来发展方向。</p>
                             </div>
                             <div class="caption-line">
-                                <span class="timestamp">0:20</span>
+                                <span class="timestamp" data-time="26">0:26</span>
                                 <p>现在开始第一章：人工智能基础解析。</p>
                             </div>
                             <div class="caption-line">
-                                <span class="timestamp">0:25</span>
+                                <span class="timestamp" data-time="31">0:31</span>
                                 <p>在深入复杂系统或神经网络之前，让我们回溯源头——这一切从何开始？我们将追溯人工智能的发展历程：从早期的符号推理与专家系统，到推动当今智能技术发展的机器学习革命。</p>
                             </div>
                             <div class="caption-line">
-                                <span class="timestamp">0:40</span>
+                                <span class="timestamp" data-time="47">0:47</span>
                                 <p>您将明晰人工智能、机器学习与深度学习之间的区别，并探索神经网络如何模拟——又如何在何处超越——人脑的信息处理机制。</p>
                             </div>
                             <div class="caption-line">
-                                <span class="timestamp">0:55</span>
+                                <span class="timestamp" data-time="58">0:58</span>
                                 <p>我们还将深入思考一个重要命题：人工智能与人类智能如何比较？机器在哪些领域已然超越人类？而人类的创造力、共情力与判断力又在哪些维度始终不可替代？</p>
                             </div>
                             <div class="caption-line">
-                                <span class="timestamp">1:10</span>
+                                <span class="timestamp" data-time="71">1:11</span>
                                 <p>通过本章学习，您不仅能准确界定人工智能，更将理解其本质——这是由数据、算力与想象力共同驱动的持续演进之路。</p>
                             </div>
                         </div>
                     </div>
+                    
+                    <style>
+                        /* Style for caption lines */
+                        .caption-line {
+                            cursor: pointer;
+                            padding: 8px 12px;
+                            margin: 2px 0;
+                            border-radius: 4px;
+                            transition: background-color 0.2s ease;
+                        }
+                        
+                        .caption-line:hover {
+                            background-color: rgba(74, 144, 226, 0.1);
+                        }
+                        
+                        .caption-line.active {
+                            background-color: rgba(74, 144, 226, 0.15);
+                            font-weight: 500;
+                        }
+                        
+                        .timestamp {
+                            color: #4a90e2;
+                            font-weight: 500;
+                            margin-right: 8px;
+                        }
+                    </style>
+                    
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const video = document.getElementById('lessonVideo');
+                            const captionLines = document.querySelectorAll('.caption-line');
+                            
+                            // Make caption lines clickable
+                            captionLines.forEach(line => {
+                                const timestamp = line.querySelector('.timestamp');
+                                if (!timestamp) return;
+                                
+                                // Style the timestamp
+                                timestamp.style.cursor = 'pointer';
+                                
+                                // Handle click on the entire line or timestamp
+                                const handleClick = () => {
+                                    const seconds = parseInt(timestamp.getAttribute('data-time'));
+                                    if (!isNaN(seconds) && video) {
+                                        video.currentTime = seconds;
+                                        video.play();
+                                    }
+                                };
+                                
+                                line.addEventListener('click', handleClick);
+                                timestamp.addEventListener('click', (e) => {
+                                    e.stopPropagation(); // Prevent double trigger
+                                    handleClick();
+                                });
+                                
+                                // Add hover effect
+                                line.addEventListener('mouseover', function() {
+                                    this.style.backgroundColor = 'rgba(74, 144, 226, 0.1)';
+                                });
+                                
+                                line.addEventListener('mouseout', function() {
+                                    if (!this.classList.contains('active')) {
+                                        this.style.backgroundColor = 'transparent';
+                                    }
+                                });
+                            });
+                            
+                            // Update active caption line as video plays
+                            video.addEventListener('timeupdate', function() {
+                                const currentTime = Math.floor(video.currentTime);
+                                let activeFound = false;
+                                
+                                captionLines.forEach(line => {
+                                    const timestamp = line.querySelector('.timestamp');
+                                    if (!timestamp) return;
+                                    
+                                    const timestampSeconds = parseInt(timestamp.getAttribute('data-time'));
+                                    if (isNaN(timestampSeconds)) return;
+                                    
+                                    const nextLine = line.nextElementSibling;
+                                    let nextTimestamp = null;
+                                    
+                                    if (nextLine) {
+                                        const nextTimestampEl = nextLine.querySelector('.timestamp');
+                                        if (nextTimestampEl) {
+                                            nextTimestamp = parseInt(nextTimestampEl.getAttribute('data-time')) || Infinity;
+                                        }
+                                    }
+                                    
+                                    if (currentTime >= timestampSeconds && 
+                                        (nextTimestamp === null || currentTime < nextTimestamp)) {
+                                        // Remove active class from all lines
+                                        captionLines.forEach(l => l.classList.remove('active'));
+                                        // Add active class to current line
+                                        line.classList.add('active');
+                                        line.style.backgroundColor = 'rgba(74, 144, 226, 0.1)';
+                                        activeFound = true;
+                                        
+                                        // Scroll to the active line if needed
+                                        const rect = line.getBoundingClientRect();
+                                        if (rect.bottom > window.innerHeight || rect.top < 0) {
+                                            line.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                                        }
+                                    }
+                                });
+                                
+                                // If no active line found, clear all active states
+                                if (!activeFound) {
+                                    captionLines.forEach(line => {
+                                        line.classList.remove('active');
+                                        line.style.backgroundColor = 'transparent';
+                                    });
+                                }
+                            });
+                        });
+                    </script>
                     
                     <div class="caption-actions">
                         <button class="btn-caption" id="showMoreCaptions">
