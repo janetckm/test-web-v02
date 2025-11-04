@@ -234,57 +234,25 @@
         }
         
         .preview-header {
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            padding-top: 1.5rem;
             display: flex;
             align-items: center;
-            margin-bottom: 1rem;
+            gap: 1.5rem;
         }
         
         .preview-avatar {
-            width: 60px;
-            height: 60px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
-            margin-right: 1rem;
-            border: 2px solid #e0e6ed;
+            object-fit: cover;
+            border: 3px solid #e0e6ed;
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
         
-        .preview-name {
-            margin: 0 0 0.25rem 0;
-            color: var(--text);
-        }
-        
-        .preview-title {
-            margin: 0;
-            color: var(--primary);
-            font-size: 0.9rem;
-        }
-        
-        .preview-bio {
-            color: var(--text);
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .teacher-options {
-                grid-template-columns: 1fr;
-            }
-            
-            .teacher-option {
-                padding: 0.75rem;
-            }
-            
-            .teacher-avatar img {
-                width: 50px;
-                height: 50px;
-            }
-        }
-        
-        /* Caption Styles */
-        .caption-section {
-            margin-top: 2rem;
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
-            padding-top: 1.5rem;
+        .preview-avatar:hover {
+            transform: scale(1.05);
+            border-color: var(--primary);
         }
         
         .caption-header {
@@ -404,6 +372,18 @@
         
         /* Responsive adjustments */
         @media (max-width: 768px) {
+            .preview-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .preview-avatar {
+                width: 80px;
+                height: 80px;
+                margin: 0 auto;
+            }
+            
             .captions-container {
                 max-height: 250px;
             }

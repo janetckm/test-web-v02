@@ -1,0 +1,143 @@
+/* Responsive Styles */
+
+/* General Responsive Adjustments */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 2rem;
+    }
+}
+
+/* Tablet Styles */
+@media (max-width: 992px) {
+    /* Adjust container padding */
+    .container {
+        max-width: 100%;
+        padding: 0 1.5rem;
+    }
+    
+    /* Navigation */
+    .nav-links {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    /* Hero Section */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 4rem 1.5rem;
+    }
+    
+    .hero-content {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-image {
+        width: 100%;
+        margin-top: 2rem;
+    }
+    
+    /* Teacher Cards */
+    .teacher-carousel {
+        padding: 2rem 0;
+    }
+    
+    .swiper-slide {
+        padding: 0.75rem;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Typography */
+    h1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    /* Buttons */
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Hero Section */
+    .hero {
+        padding: 3rem 1rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Teacher Cards */
+    .teacher-img-container {
+        height: 180px;
+    }
+    
+    .teacher-info {
+        padding: 1rem;
+    }
+    
+    .teacher-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .teacher-title {
+        font-size: 0.85rem;
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .section-header p {
+        font-size: 1rem;
+    }
+    
+    .teacher-img-container {
+        height: 160px;
+    }
+    
+    .teacher-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .teacher-title,
+    .teacher-bio {
+        font-size: 0.8rem;
+    }
+    
+    .swiper-pagination-bullet {
+        width: 8px;
+        height: 8px;
+    }
+}

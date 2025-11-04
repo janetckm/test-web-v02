@@ -96,8 +96,8 @@ function updateAuthUI(isLoggedIn) {
             `;
         } else {
             container.innerHTML = `
-                <a href="#" class="btn btn-outline login-btn">Log In</a>
-                <a href="#" class="btn btn-primary signup-btn">Sign Up</a>
+                <a href="#" class="btn btn-outline login-btn">Log In / Sign Up</a>
+                <!-- <a href="#" class="btn btn-primary signup-btn">Sign Up</a> -->
             `;
             
             // Add event listeners to new buttons
