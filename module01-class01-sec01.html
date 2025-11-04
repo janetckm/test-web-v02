@@ -84,6 +84,222 @@
             transform: translateX(-3px);
         }
         
+        /* Virtual Teacher Dashboard Styles */
+        .teacher-dashboard {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        .teacher-dashboard h3 {
+            margin-top: 0;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .teacher-dashboard h3 i {
+            color: var(--primary);
+        }
+        
+        /* Filter buttons */
+        .teacher-filters {
+            display: flex;
+            gap: 0.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            background: #f0f2f5;
+            border: none;
+            border-radius: 20px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .filter-btn i {
+            font-size: 0.8rem;
+        }
+        
+        .filter-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .filter-btn:hover {
+            background: #e0e3e7;
+        }
+        
+        .filter-btn.active:hover {
+            background: var(--primary-dark);
+        }
+        
+        .teacher-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .teacher-option {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            /* border: 1px solid #e0e0e0; */
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .teacher-option:hover {
+            /* transform: translateY(-2px); */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+        
+        .teacher-option.active {
+            /* border-color: var(--primary); */
+            background-color: rgba(74, 111, 165, 0.05);
+        }
+        
+        .teacher-option.active .teacher-select {
+            background-color: var(--green);
+            color: white;
+        }
+        
+        .teacher-avatar img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 1rem;
+            border: 2px solid #f0f0f0;
+        }
+        
+        .teacher-info h4 {
+            margin: 0 0 0.25rem 0;
+            color: var(--text);
+        }
+        
+        .teacher-info p {
+            margin: 0 0 0.5rem 0;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .teacher-specialty .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            background: #f5f7fa;
+            color: var(--text);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+        
+        .teacher-specialty .badge i {
+            color: var(--primary);
+            font-size: 0.7rem;
+        }
+        
+        .teacher-select {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            color: transparent;
+            border: 1px solid #ddd;
+        }
+        
+        .teacher-preview {
+            background: #f9fafc;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            border: 1px dashed #e0e6ed;
+        }
+        
+        .preview-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+            color: var(--text-light);
+            text-align: center;
+        }
+        
+        .preview-placeholder i {
+            font-size: 2rem;
+            color: #d1d9e6;
+            margin-bottom: 0.75rem;
+        }
+        
+        .preview-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .preview-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 1rem;
+            border: 2px solid #e0e6ed;
+        }
+        
+        .preview-name {
+            margin: 0 0 0.25rem 0;
+            color: var(--text);
+        }
+        
+        .preview-title {
+            margin: 0;
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+        
+        .preview-bio {
+            color: var(--text);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .teacher-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .teacher-option {
+                padding: 0.75rem;
+            }
+            
+            .teacher-avatar img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        
         /* Caption Styles */
         .caption-section {
             margin-top: 2rem;
@@ -433,6 +649,163 @@
             </div>
         </a>
         
+        <!-- Virtual Teacher Dashboard -->
+        <div class="teacher-dashboard">
+            <h3>Choose Your Virtual Teacher</h3>
+            <p>Select a virtual teacher to guide you through this section</p>
+            
+            <!-- Filter Buttons -->
+            <div class="teacher-filters">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-users"></i> All Teachers
+                </button>
+                <button class="filter-btn" data-filter="professor">
+                    <i class="fas fa-graduation-cap"></i> Professors
+                </button>
+                <button class="filter-btn" data-filter="avatar">
+                    <i class="fas fa-robot"></i> AI Avatars
+                </button>
+                <button class="filter-btn" data-filter="anime">
+                    <i class="fa-solid fa-palette"></i> Anime
+                </button>
+            </div>
+            
+            <div class="teacher-options">
+                <div class="teacher-option active" data-teacher="lionelni">
+                    <div class="teacher-avatar">
+                        <img src="assets/imgs/teacher/lionelni.png" alt="Lionel Ni">
+                    </div>
+                    <div class="teacher-info">
+                        <h4>Lionel Ni</h4>
+                        <p>President, HKUST(GZ)</p>
+                        <div class="teacher-specialty">
+                            <span class="badge"><i class="fas fa-graduation-cap"></i> Professor</span>
+                        </div>
+                    </div>
+                    <div class="teacher-select">
+                        <i class="fas fa-check"></i>
+                    </div>
+                </div>
+
+                <!-- Pan Hui -->
+                <div class="teacher-option" data-teacher="panhui">
+                    <div class="teacher-avatar">
+                        <img src="assets/imgs/teacher/ben.png" alt="Pan Hui">
+                    </div>
+                    <div class="teacher-info">
+                        <h4>Pan Hui</h4>
+                        <p>Computational Media and Arts, HKUST(GZ)</p>
+                        <div class="teacher-specialty">
+                            <span class="badge"><i class="fas fa-graduation-cap"></i> Professor</span>
+                        </div>
+                    </div>
+                    <div class="teacher-select">
+                        <i class="fas fa-check"></i>
+                    </div>
+                </div>
+
+                <!-- sophia -->
+                <div class="teacher-option" data-teacher="sophia">
+                    <div class="teacher-avatar">
+                        <img src="assets/imgs/teacher/sophia.png" alt="Sophia">
+                    </div>
+                    <div class="teacher-info">
+                        <h4>Sophia</h4>
+                        <p>AI Avatar</p>
+                        <div class="teacher-specialty">
+                            <span class="badge"><i class="fas fa-brain"></i> Avatar</span>
+                        </div>
+                    </div>
+                    <div class="teacher-select">
+                        <i class="fas fa-check"></i>
+                    </div>
+                </div>
+                
+                <div class="teacher-option" data-teacher="fiona">
+                    <div class="teacher-avatar">
+                        <img src="assets/imgs/teacher/fiona.png" alt="fiona">
+                    </div>
+                    <div class="teacher-info">
+                        <h4>Fiona</h4>
+                        <p>AI Avatar</p>
+                        <div class="teacher-specialty">
+                            <span class="badge"><i class="fas fa-brain"></i> Avatar</span>
+                        </div>
+                    </div>
+                    <div class="teacher-select">
+                        <i class="fas fa-check"></i>
+                    </div>
+                </div>
+
+                <div class="teacher-option" data-teacher="Ahmed Khan">
+                    <div class="teacher-avatar">
+                        <img src="assets/imgs/teacher/Ahmed Khan.png" alt="Ahmed Khan">
+                    </div>
+                    <div class="teacher-info">
+                        <h4>Ahmed Khan</h4>
+                        <p>AI Avatar</p>
+                        <div class="teacher-specialty">
+                            <span class="badge"><i class="fas fa-brain"></i> Avatar</span>
+                        </div>
+                    </div>
+                    <div class="teacher-select">
+                        <i class="fas fa-check"></i>
+                    </div>
+                </div>
+
+                <div class="teacher-option" data-teacher="yuri">
+                    <div class="teacher-avatar">
+                        <img src="assets/imgs/teacher/yuri.png" alt="yuri">
+                    </div>
+                    <div class="teacher-info">
+                        <h4>Yuri</h4>
+                        <p>AI Avatar</p>
+                        <div class="teacher-specialty">
+                            <span class="badge"><i class="fa-solid fa-palette"></i> Anime</span>
+                        </div>
+                    </div>
+                    <div class="teacher-select">
+                        <i class="fas fa-check"></i>
+                    </div>
+                </div>
+                <div class="teacher-option" data-teacher="Niel">
+                    <div class="teacher-avatar">
+                        <img src="assets/imgs/teacher/niel.png" alt="yuri">
+                    </div>
+                    <div class="teacher-info">
+                        <h4>Yuri</h4>
+                        <p>AI Avatar</p>
+                        <div class="teacher-specialty">
+                            <span class="badge"><i class="fa-solid fa-palette"></i> Anime</span>
+                        </div>
+                    </div>
+                    <div class="teacher-select">
+                        <i class="fas fa-check"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="teacher-preview">
+                <div class="preview-placeholder">
+                    <i class="fas fa-user-graduate"></i>
+                    <p>Select a virtual teacher to see a preview</p>
+                </div>
+                <div class="preview-content" style="display: none;">
+                    <div class="preview-header">
+                        <img src="" alt="Teacher Preview" class="preview-avatar">
+                        <div>
+                            <h4 class="preview-name"></h4>
+                            <p class="preview-title"></p>
+                        </div>
+                    </div>
+                    <div class="preview-bio"></div>
+                    <button class="btn btn-primary select-teacher-btn" style="margin-top: 1rem; width: 100%;">
+                        <i class="fas fa-user-check"></i> Learn with <span class="teacher-first-name"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
         <!-- Video Section -->
         <div class="video-section">
             <div class="video-container">
@@ -646,6 +1019,90 @@
     
     <!-- JavaScript -->
     <script>
+        // Virtual Teacher Selection
+        document.addEventListener('DOMContentLoaded', function() {
+            const teacherOptions = document.querySelectorAll('.teacher-option');
+            const previewPlaceholder = document.querySelector('.preview-placeholder');
+            const previewContent = document.querySelector('.preview-content');
+            const previewAvatar = document.querySelector('.preview-avatar');
+            const previewName = document.querySelector('.preview-name');
+            const previewTitle = document.querySelector('.preview-title');
+            const previewBio = document.querySelector('.preview-bio');
+            const teacherFirstName = document.querySelector('.teacher-first-name');
+            const selectTeacherBtn = document.querySelector('.select-teacher-btn');
+            
+            // Teacher data
+            const teachers = {
+                lionelni: {
+                    name: 'Lionel Ni',
+                    title: 'President, HKUST(GZ)',
+                    bio: 'Prof. Ni is a highly accomplished scholar in computer science and engineering with broad research interests and wide international recognition. He earned his PhD degree in Electrical Engineering from Purdue University in 1980. He then joined the Department of Computer Science and Engineering at Michigan State University in 1981, and was promoted to full Professor in 1989. He served as the Microelectronic Systems Architecture program director at the US National Science Foundation (1995-1996) and was Co-Founder and CEO of CC&T Technologies, Inc., Michigan (1998-2001).',
+                    avatar: 'assets/imgs/teacher/lionelni.png',
+                    specialty: 'AI Fundamentals'
+                },
+                panhui: {
+                    name: 'Pan Hui',
+                    title: 'Chair Professor, Computational Media and Arts, HKUST(GZ)',
+                    bio: 'Prof. Hui received his PhD from the Computer Laboratory at University of Cambridge, and both his Bachelor and MPhil degrees from the University of Hong Kong. He is a Chair Professor of Computational Media and Arts and Director of the Centre for Metaverse and Computational Creativity at the Hong Kong University of Science and Technology (Guangzhou), and a Chair Professor of Emerging Interdisciplinary Areas and Director of the HKUST-DT Systems and Media Lab, Hong Kong University of Science and Technology.',
+                    avatar: 'assets/imgs/teacher/ben.png',
+                    specialty: 'Beginner-Friendly Explanations'
+                }
+            };
+            
+            // Set default teacher
+            let selectedTeacher = 'alex';
+            updateTeacherPreview(selectedTeacher);
+            
+            // Add click event to teacher options
+            teacherOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    const teacherId = this.getAttribute('data-teacher');
+                    selectTeacher(teacherId);
+                });
+            });
+            
+            // Select teacher function
+            function selectTeacher(teacherId) {
+                // Update active state
+                teacherOptions.forEach(opt => {
+                    if (opt.getAttribute('data-teacher') === teacherId) {
+                        opt.classList.add('active');
+                    } else {
+                        opt.classList.remove('active');
+                    }
+                });
+                
+                // Update preview
+                updateTeacherPreview(teacherId);
+                selectedTeacher = teacherId;
+            }
+            
+            // Update teacher preview
+            function updateTeacherPreview(teacherId) {
+                const teacher = teachers[teacherId];
+                
+                if (teacher) {
+                    previewPlaceholder.style.display = 'none';
+                    previewContent.style.display = 'block';
+                    
+                    previewAvatar.src = teacher.avatar;
+                    previewName.textContent = teacher.name;
+                    previewTitle.textContent = teacher.title;
+                    previewBio.textContent = teacher.bio;
+                    teacherFirstName.textContent = teacher.name.split(' ')[0];
+                } else {
+                    previewPlaceholder.style.display = 'flex';
+                    previewContent.style.display = 'none';
+                }
+            }
+            
+            // Handle select teacher button click
+            selectTeacherBtn.addEventListener('click', function() {
+                // Here you would typically start the lesson with the selected teacher
+                alert(`Starting lesson with ${teachers[selectedTeacher].name}!`);
+                // You can add logic to load the appropriate teacher's video/avatar here
+            });
+        });
         // Language switching functionality
         document.addEventListener('DOMContentLoaded', function() {
             const languageSelect = document.getElementById('translationLanguage');
@@ -731,10 +1188,6 @@
             
             function loadScript(index) {
                 if (index >= scripts.length) {
-                    // All scripts loaded, initialize shapes
-                    if (typeof initShapes === 'function') {
-                        initShapes();
-                    }
                     initPage();
                     return;
                 }
@@ -817,6 +1270,34 @@
             
             // Initialize the page
             initPage();
+            
+            // Teacher filtering functionality
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const teacherOptions = document.querySelectorAll('.teacher-option');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    const filter = button.getAttribute('data-filter');
+                    
+                    teacherOptions.forEach(option => {
+                        const specialty = option.querySelector('.badge').textContent.toLowerCase();
+                        
+                        if (filter === 'all' || 
+                            (filter === 'professor' && specialty.includes('professor')) ||
+                            (filter === 'avatar' && specialty.includes('avatar')) ||
+                            (filter === 'anime' && specialty.includes('anime'))) {
+                            option.style.display = 'flex';
+                        } else {
+                            option.style.display = 'none';
+                        }
+                    });
+                });
+            });
             
             // Initialize shapes for the module page
             const shapesContainer = document.querySelector('.shapes-container');
