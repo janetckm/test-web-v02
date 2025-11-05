@@ -15,6 +15,9 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/auth.css">
@@ -91,134 +94,158 @@
             <p>Select a virtual teacher to guide you through this section</p>
             
             <!-- Filter Buttons -->
-            <div class="teacher-filters">
+            <!-- <div class="teacher-filters">
                 <button class="filter-btn active" data-filter="all">
                     <i class="fas fa-users"></i> All Teachers
                 </button>
                 <button class="filter-btn" data-filter="professor">
-                    <i class="fas fa-graduation-cap"></i> Professors
+                    <i class="fas fa-graduation-cap"></i> Professor
                 </button>
                 <button class="filter-btn" data-filter="avatar">
-                    <i class="fas fa-robot"></i> AI Avatars
+                    <i class="fas fa-robot"></i> Avatar
                 </button>
                 <button class="filter-btn" data-filter="anime">
                     <i class="fa-solid fa-palette"></i> Anime
                 </button>
-            </div>
+            </div> -->
             
-            <div class="teacher-options">
-                <div class="teacher-option active" data-teacher="lionelni">
-                    <div class="teacher-avatar">
-                        <img src="assets/imgs/teacher/lionelni.png" alt="Lionel Ni">
-                    </div>
-                    <div class="teacher-info">
-                        <h4>Lionel Ni</h4>
-                        <p>President, HKUST(GZ)</p>
-                        <div class="teacher-specialty">
-                            <span class="badge"><i class="fas fa-graduation-cap"></i> Professor</span>
+            <div class="swiper teacher-carousel">
+                <div class="swiper-wrapper">
+                    <!-- Teacher 1 -->
+                    <div class="swiper-slide">
+                        <div class="teacher-card" data-teacher="lionelni">
+                            <div class="teacher-img-container">
+                                <img src="assets/imgs/teacher/lionelni.png" alt="Lionel Ni" class="teacher-img">
+                            </div>
+                            <div class="teacher-info">
+                                <h4>Prof. Lionel Ni</h4>
+                                <p class="teacher-title">President, HKUST(GZ)</p>
+                                <div class="teacher-specialty">
+                                    <span class="badge"><i class="fas fa-graduation-cap"></i> Professor</span>
+                                </div>
+                            </div>
+                            <div class="teacher-select">
+                                <i class="fas fa-check"></i>
+                            </div>
                         </div>
                     </div>
-                    <div class="teacher-select">
-                        <i class="fas fa-check"></i>
-                    </div>
-                </div>
 
-                <!-- Pan Hui -->
-                <div class="teacher-option" data-teacher="panhui">
-                    <div class="teacher-avatar">
-                        <img src="assets/imgs/teacher/ben.png" alt="Pan Hui">
-                    </div>
-                    <div class="teacher-info">
-                        <h4>Pan Hui</h4>
-                        <p>Computational Media and Arts, HKUST(GZ)</p>
-                        <div class="teacher-specialty">
-                            <span class="badge"><i class="fas fa-graduation-cap"></i> Professor</span>
+                    <!-- Teacher 2 -->
+                    <div class="swiper-slide">
+                        <div class="teacher-card" data-teacher="panhui">
+                            <div class="teacher-img-container">
+                                <img src="assets/imgs/teacher/ben.png" alt="Pan Hui" class="teacher-img">
+                            </div>
+                            <div class="teacher-info">
+                                <h4>Prof. Pan Hui</h4>
+                                <p class="teacher-title">Computational Media and Arts, HKUST(GZ)</p>
+                                <div class="teacher-specialty">
+                                    <span class="badge"><i class="fas fa-graduation-cap"></i> Professor</span>
+                                </div>
+                            </div>
+                            <div class="teacher-select">
+                                <i class="fas fa-check"></i>
+                            </div>
                         </div>
                     </div>
-                    <div class="teacher-select">
-                        <i class="fas fa-check"></i>
-                    </div>
-                </div>
 
-                <!-- sophia -->
-                <div class="teacher-option" data-teacher="sophia">
-                    <div class="teacher-avatar">
-                        <img src="assets/imgs/teacher/sophia.png" alt="Sophia">
-                    </div>
-                    <div class="teacher-info">
-                        <h4>Sophia</h4>
-                        <p>AI Avatar</p>
-                        <div class="teacher-specialty">
-                            <span class="badge"><i class="fas fa-brain"></i> Avatar</span>
+                    <!-- Teacher 3 -->
+                    <div class="swiper-slide">
+                        <div class="teacher-card" data-teacher="sophia">
+                            <div class="teacher-img-container">
+                                <img src="assets/imgs/teacher/sophia.png" alt="Sophia" class="teacher-img">
+                            </div>
+                            <div class="teacher-info">
+                                <h4>Sophia</h4>
+                                <p class="teacher-title">AI Avatar</p>
+                                <div class="teacher-specialty">
+                                    <span class="badge"><i class="fas fa-brain"></i> Avatar</span>
+                                </div>
+                            </div>
+                            <div class="teacher-select">
+                                <i class="fas fa-check"></i>
+                            </div>
                         </div>
                     </div>
-                    <div class="teacher-select">
-                        <i class="fas fa-check"></i>
-                    </div>
-                </div>
-                
-                <div class="teacher-option" data-teacher="fiona">
-                    <div class="teacher-avatar">
-                        <img src="assets/imgs/teacher/fiona.png" alt="fiona">
-                    </div>
-                    <div class="teacher-info">
-                        <h4>Fiona</h4>
-                        <p>AI Avatar</p>
-                        <div class="teacher-specialty">
-                            <span class="badge"><i class="fas fa-brain"></i> Avatar</span>
-                        </div>
-                    </div>
-                    <div class="teacher-select">
-                        <i class="fas fa-check"></i>
-                    </div>
-                </div>
 
-                <div class="teacher-option" data-teacher="Ahmed Khan">
-                    <div class="teacher-avatar">
-                        <img src="assets/imgs/teacher/AhmedKhan.png" alt="Ahmed Khan">
-                    </div>
-                    <div class="teacher-info">
-                        <h4>Ahmed Khan</h4>
-                        <p>AI Avatar</p>
-                        <div class="teacher-specialty">
-                            <span class="badge"><i class="fas fa-brain"></i> Avatar</span>
+                    <!-- Teacher 4 -->
+                    <div class="swiper-slide">
+                        <div class="teacher-card" data-teacher="fiona">
+                            <div class="teacher-img-container">
+                                <img src="assets/imgs/teacher/fiona.png" alt="Fiona" class="teacher-img">
+                            </div>
+                            <div class="teacher-info">
+                                <h4>Fiona</h4>
+                                <p class="teacher-title">AI Avatar</p>
+                                <div class="teacher-specialty">
+                                    <span class="badge"><i class="fas fa-brain"></i> Avatar</span>
+                                </div>
+                            </div>
+                            <div class="teacher-select">
+                                <i class="fas fa-check"></i>
+                            </div>
                         </div>
                     </div>
-                    <div class="teacher-select">
-                        <i class="fas fa-check"></i>
-                    </div>
-                </div>
 
-                <div class="teacher-option" data-teacher="yuri">
-                    <div class="teacher-avatar">
-                        <img src="assets/imgs/teacher/yuri.png" alt="yuri">
-                    </div>
-                    <div class="teacher-info">
-                        <h4>Yuri</h4>
-                        <p>AI Avatar</p>
-                        <div class="teacher-specialty">
-                            <span class="badge"><i class="fa-solid fa-palette"></i> Anime</span>
+                    <!-- Teacher 5 -->
+                    <div class="swiper-slide">
+                        <div class="teacher-card" data-teacher="Ahmed Khan">
+                            <div class="teacher-img-container">
+                                <img src="assets/imgs/teacher/AhmedKhan.png" alt="Ahmed Khan" class="teacher-img">
+                            </div>
+                            <div class="teacher-info">
+                                <h4>Ahmed Khan</h4>
+                                <p class="teacher-title">AI Avatar</p>
+                                <div class="teacher-specialty">
+                                    <span class="badge"><i class="fas fa-brain"></i> Avatar</span>
+                                </div>
+                            </div>
+                            <div class="teacher-select">
+                                <i class="fas fa-check"></i>
+                            </div>
                         </div>
                     </div>
-                    <div class="teacher-select">
-                        <i class="fas fa-check"></i>
-                    </div>
-                </div>
-                <div class="teacher-option" data-teacher="Niel">
-                    <div class="teacher-avatar">
-                        <img src="assets/imgs/teacher/niel.png" alt="Niel">
-                    </div>
-                    <div class="teacher-info">
-                        <h4>Niel</h4>
-                        <p>AI Avatar</p>
-                        <div class="teacher-specialty">
-                            <span class="badge"><i class="fa-solid fa-palette"></i> Anime</span>
+
+                    <!-- Teacher 6 -->
+                    <div class="swiper-slide">
+                        <div class="teacher-card" data-teacher="yuri">
+                            <div class="teacher-img-container">
+                                <img src="assets/imgs/teacher/yuri.png" alt="Yuri" class="teacher-img">
+                            </div>
+                            <div class="teacher-info">
+                                <h4>Yuri</h4>
+                                <p class="teacher-title">AI Avatar</p>
+                                <div class="teacher-specialty">
+                                    <span class="badge"><i class="fa-solid fa-palette"></i> Anime</span>
+                                </div>
+                            </div>
+                            <div class="teacher-select">
+                                <i class="fas fa-check"></i>
+                            </div>
                         </div>
                     </div>
-                    <div class="teacher-select">
-                        <i class="fas fa-check"></i>
+
+                    <!-- Teacher 7 -->
+                    <div class="swiper-slide">
+                        <div class="teacher-card" data-teacher="niel">
+                            <div class="teacher-img-container">
+                                <img src="assets/imgs/teacher/niel.png" alt="Niel" class="teacher-img">
+                            </div>
+                            <div class="teacher-info">
+                                <h4>Niel</h4>
+                                <p class="teacher-title">AI Avatar</p>
+                                <div class="teacher-specialty">
+                                    <span class="badge"><i class="fa-solid fa-palette"></i> Anime</span>
+                                </div>
+                            </div>
+                            <div class="teacher-select">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
             </div>
             
             <div class="teacher-preview">
@@ -374,6 +401,12 @@
                     
                     <style>
                         /* Style for caption lines */
+                        .captions-container {
+                            max-height: 180px;  /* Reduced from default */
+                            overflow-y: auto;    /* Add scrollbar if needed */
+                            margin: 10px 0;
+                            padding-right: 10px;
+                        }
                         .caption-line {
                             cursor: pointer;
                             padding: 8px 12px;
@@ -860,6 +893,194 @@
             }
         });
     </script>
-    <script src="js/auth.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper for teacher carousel
+        document.addEventListener('DOMContentLoaded', function() {
+            const swiper = new Swiper('.teacher-carousel', {
+                effect: 'coverflow',
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: 'auto',
+                coverflowEffect: {
+                    rotate: 20,
+                    stretch: 0,
+                    depth: 200,
+                    modifier: 1,
+                    slideShadows: false,
+                },
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 20
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 30
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 40
+                    }
+                },
+                on: {
+                    init: function() {
+                        // Set Professor Ni as the default selected teacher
+                        const profNiCard = document.querySelector('.teacher-card[data-teacher="lionelni"]');
+                        if (profNiCard) {
+                            // Add a small delay to ensure the Swiper is fully initialized
+                            setTimeout(() => {
+                                profNiCard.classList.add('active');
+                                const checkIcon = profNiCard.querySelector('.teacher-select i');
+                                if (checkIcon) checkIcon.classList.add('fa-check');
+                                updateTeacherPreview('lionelni');
+                            }, 100);
+                        } else {
+                            // Fallback to first teacher if Professor Ni is not found
+                            const firstCard = document.querySelector('.teacher-card');
+                            if (firstCard) {
+                                firstCard.classList.add('active');
+                                const checkIcon = firstCard.querySelector('.teacher-select i');
+                                if (checkIcon) checkIcon.classList.add('fa-check');
+                                updateTeacherPreview(firstCard.getAttribute('data-teacher'));
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Teacher data
+            const teachers = {
+                lionelni: {
+                    name: 'Prof. Lionel Ni',
+                    title: 'President, HKUST(GZ)',
+                    bio: 'Prof. Ni is a highly accomplished scholar in computer science and engineering with broad research interests and wide international recognition.',
+                    avatar: 'assets/imgs/teacher/lionelni.png',
+                    specialty: 'AI Fundamentals'
+                },
+                panhui: {
+                    name: 'Prof. Pan Hui',
+                    title: 'Computational Media and Arts, HKUST(GZ)',
+                    bio: 'Prof. Hui is a Chair Professor of Computational Media and Arts and Director of the Centre for Metaverse and Computational Creativity at the Hong Kong University of Science and Technology.',
+                    avatar: 'assets/imgs/teacher/ben.png',
+                    specialty: 'Beginner-Friendly Explanations'
+                },
+                sophia: {
+                    name: 'Sophia',
+                    title: 'AI Avatar',
+                    bio: 'Sophia is an advanced AI avatar designed to provide interactive and engaging learning experiences.',
+                    avatar: 'assets/imgs/teacher/sophia.png',
+                    specialty: 'Interactive Learning'
+                },
+                fiona: {
+                    name: 'Fiona',
+                    title: 'AI Avatar',
+                    bio: 'Fiona is a friendly AI avatar specializing in making complex topics easy to understand.',
+                    avatar: 'assets/imgs/teacher/fiona.png',
+                    specialty: 'Simplified Explanations'
+                },
+                'Ahmed Khan': {
+                    name: 'Ahmed Khan',
+                    title: 'AI Avatar',
+                    bio: 'Ahmed is a knowledgeable AI avatar with expertise in various technical subjects.',
+                    avatar: 'assets/imgs/teacher/AhmedKhan.png',
+                    specialty: 'Technical Expertise'
+                },
+                yuri: {
+                    name: 'Yuri',
+                    title: 'AI Anime Avatar',
+                    bio: 'Yuri is an anime-style AI avatar that makes learning fun and engaging with a unique personality.',
+                    avatar: 'assets/imgs/teacher/yuri.png',
+                    specialty: 'Engaging Presentations'
+                },
+                niel: {
+                    name: 'Niel',
+                    title: 'AI Anime Avatar',
+                    bio: 'Niel is an anime-style AI avatar that helps break down complex concepts into easy-to-understand lessons.',
+                    avatar: 'assets/imgs/teacher/niel.png',
+                    specialty: 'Concept Breakdown'
+                }
+            };
+
+            // Initialize preview elements
+            const previewPlaceholder = document.querySelector('.preview-placeholder');
+            const previewContent = document.querySelector('.preview-content');
+            const previewAvatar = document.querySelector('.preview-avatar');
+            const previewName = document.querySelector('.preview-name');
+            const previewTitle = document.querySelector('.preview-title');
+            const previewBio = document.querySelector('.preview-bio');
+            const teacherFirstName = document.querySelector('.teacher-first-name');
+            const selectTeacherBtn = document.querySelector('.select-teacher-btn');
+
+            // Update teacher preview
+            function updateTeacherPreview(teacherId) {
+                const teacher = teachers[teacherId];
+                
+                if (teacher) {
+                    previewPlaceholder.style.display = 'none';
+                    previewContent.style.display = 'block';
+                    
+                    if (previewAvatar) previewAvatar.src = teacher.avatar;
+                    if (previewName) previewName.textContent = teacher.name;
+                    if (previewTitle) previewTitle.textContent = teacher.title;
+                    if (previewBio) previewBio.textContent = teacher.bio;
+                    // if (teacherFirstName) teacherFirstName.textContent = teacher.name.split(' ')[0];
+                    if (teacherFirstName) teacherFirstName.textContent = teacher.name;
+                } else {
+                    previewPlaceholder.style.display = 'flex';
+                    previewContent.style.display = 'none';
+                }
+            }
+
+            // Handle teacher selection
+            document.addEventListener('click', function(e) {
+                const teacherCard = e.target.closest('.teacher-card');
+                if (!teacherCard) return;
+
+                // Remove active class from all cards
+                document.querySelectorAll('.teacher-card').forEach(c => {
+                    c.classList.remove('active');
+                    const checkIcon = c.querySelector('.teacher-select i');
+                    if (checkIcon) checkIcon.classList.remove('fa-check');
+                });
+                
+                // Add active class to clicked card
+                teacherCard.classList.add('active');
+                const checkIcon = teacherCard.querySelector('.teacher-select i');
+                if (checkIcon) checkIcon.classList.add('fa-check');
+                
+                // Get the teacher ID and update preview
+                const teacherId = teacherCard.getAttribute('data-teacher');
+                updateTeacherPreview(teacherId);
+            });
+
+            // Handle select teacher button click
+            if (selectTeacherBtn) {
+                selectTeacherBtn.addEventListener('click', function() {
+                    const activeCard = document.querySelector('.teacher-card.active');
+                    if (activeCard) {
+                        const teacherId = activeCard.getAttribute('data-teacher');
+                        const teacher = teachers[teacherId];
+                        if (teacher) {
+                            alert(`Starting lesson with ${teacher.name}!`);
+                            // You can add logic to load the appropriate teacher's video/avatar here
+                        }
+                    } else {
+                        alert('Please select a teacher first!');
+                    }
+                });
+            }
+        });
+    </script>
+  
 </body>
 </html>
