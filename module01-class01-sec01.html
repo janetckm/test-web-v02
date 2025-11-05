@@ -254,14 +254,16 @@
                     <p>Select a virtual teacher to preview</p>
                 </div>
                 <div class="preview-content" style="display: none;">
-                    <div class="preview-header">
-                        <img src="" alt="Teacher Preview" class="preview-avatar">
-                        <div>
+                    <div class="preview-container">
+                        <div class="preview-avatar-container">
+                            <img src="" alt="Teacher Preview" class="preview-avatar">
+                        </div>
+                        <div class="preview-details">
                             <h4 class="preview-name"></h4>
                             <p class="preview-title"></p>
+                            <div class="preview-bio"></div>
                         </div>
                     </div>
-                    <div class="preview-bio"></div>
                     <button class="btn btn-primary select-teacher-btn" style="margin-top: 1rem; width: 100%;">
                         <i class="fas fa-user-check"></i> Learn with <span class="teacher-first-name"></span>
                     </button>
@@ -614,24 +616,6 @@
             const teacherFirstName = document.querySelector('.teacher-first-name');
             const selectTeacherBtn = document.querySelector('.select-teacher-btn');
             
-            // Teacher data
-            const teachers = {
-                lionelni: {
-                    name: 'Lionel Ni',
-                    title: 'President, HKUST(GZ)',
-                    bio: 'Prof. Ni is a highly accomplished scholar in computer science and engineering with broad research interests and wide international recognition. He earned his PhD degree in Electrical Engineering from Purdue University in 1980. He then joined the Department of Computer Science and Engineering at Michigan State University in 1981, and was promoted to full Professor in 1989. He served as the Microelectronic Systems Architecture program director at the US National Science Foundation (1995-1996) and was Co-Founder and CEO of CC&T Technologies, Inc., Michigan (1998-2001).',
-                    avatar: 'assets/imgs/teacher/lionelni.png',
-                    specialty: 'AI Fundamentals'
-                },
-                panhui: {
-                    name: 'Pan Hui',
-                    title: 'Chair Professor, Computational Media and Arts, HKUST(GZ)',
-                    bio: 'Prof. Hui received his PhD from the Computer Laboratory at University of Cambridge, and both his Bachelor and MPhil degrees from the University of Hong Kong. He is a Chair Professor of Computational Media and Arts and Director of the Centre for Metaverse and Computational Creativity at the Hong Kong University of Science and Technology (Guangzhou), and a Chair Professor of Emerging Interdisciplinary Areas and Director of the HKUST-DT Systems and Media Lab, Hong Kong University of Science and Technology.',
-                    avatar: 'assets/imgs/teacher/ben.png',
-                    specialty: 'Beginner-Friendly Explanations'
-                }
-            };
-            
             // Set default teacher
             let selectedTeacher = 'alex';
             updateTeacherPreview(selectedTeacher);
@@ -961,16 +945,16 @@
             // Teacher data
             const teachers = {
                 lionelni: {
-                    name: 'Prof. Lionel Ni',
+                    name: 'Lionel Ni',
                     title: 'President, HKUST(GZ)',
-                    bio: 'Prof. Ni is a highly accomplished scholar in computer science and engineering with broad research interests and wide international recognition.',
+                    bio: 'Prof. Ni is the Founding President of the Hong Kong University of Science and Technology (Guangzhou) (HKUST(GZ)). Professor Ni earned his PhD degree in Electrical Engineering from Purdue University in 1980. He served as Vice Rector (Academic Affairs) and Chair Professor in the Department of Computer and Information Science at the University of Macau; Chair Professor and Head of Department of Computer Science and Engineering, Dean of HKUST Fok Ying Tung Research Institute and Special Assistant to the President; Professor in Computer Science and Engineering at Michigan State University (1981 to 2002), the Microelectronic Systems Architecture program director at US National Science Foundation (1995-1996), co-founder and CEO of CC&T Technologies, Inc., Michigan (1998-2001).',
                     avatar: 'assets/imgs/teacher/lionelni.png',
                     specialty: 'AI Fundamentals'
                 },
                 panhui: {
-                    name: 'Prof. Pan Hui',
-                    title: 'Computational Media and Arts, HKUST(GZ)',
-                    bio: 'Prof. Hui is a Chair Professor of Computational Media and Arts and Director of the Centre for Metaverse and Computational Creativity at the Hong Kong University of Science and Technology.',
+                    name: 'Pan Hui',
+                    title: 'Chair Professor, Computational Media and Arts, HKUST(GZ)',
+                    bio: 'Prof. Hui is a Chair Professor of Computational Media and Arts and Director of the Centre for Metaverse and Computational Creativity at the Hong Kong University of Science and Technology (Guangzhou), and a Chair Professor of Emerging Interdisciplinary Areas and Director of the HKUST-DT Systems and Media Lab, Hong Kong University of Science and Technology.',
                     avatar: 'assets/imgs/teacher/ben.png',
                     specialty: 'Beginner-Friendly Explanations'
                 },

@@ -233,27 +233,53 @@
             margin-bottom: 0.75rem;
         }
         
-        .preview-header {
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
-            padding-top: 1.5rem;
+        .preview-container {
             display: flex;
-            align-items: center;
-            gap: 1.5rem;
+            gap: 2rem;
+            padding: 1.5rem 1rem;
+        }
+        
+        .preview-avatar-container {
+            flex: 0 0 120px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
         }
         
         .preview-avatar {
-            margin: 5px;
-            width: 120px;
-            height: 120px;
+            width: 100%;
+            height: auto;
+            max-width: 120px;
             border-radius: 50%;
             object-fit: cover;
-            /* border: 3px solid #e0e6ed; */
-            transition: transform 0.3s ease, border-color 0.3s ease;
+            aspect-ratio: 1/1;
+            transition: transform 0.3s ease;
         }
         
         .preview-avatar:hover {
             transform: scale(1.05);
-            border-color: var(--primary);
+        }
+        
+        .preview-details {
+            flex: 1;
+        }
+        
+        .preview-name {
+            margin: 0 0 0.5rem 0;
+            color: #2d3748;
+            font-size: 1.25rem;
+        }
+        
+        .preview-title {
+            margin: 0 0 1rem 0;
+            color: #718096;
+            font-size: 0.95rem;
+        }
+        
+        .preview-bio {
+            color: #4a5568;
+            line-height: 1.6;
+            font-size: 0.95rem;
         }
         
         .caption-header {
@@ -373,15 +399,16 @@
         
         /* Responsive adjustments */
         @media (max-width: 768px) {
-            .preview-header {
+            .preview-container {
                 flex-direction: column;
+                align-items: center;
                 text-align: center;
-                gap: 1rem;
+                gap: 1.5rem;
+                padding: 1.5rem 1rem;
             }
             
-            .preview-avatar {
-                width: 80px;
-                height: 80px;
+            .preview-avatar-container {
+                width: 120px;
                 margin: 0 auto;
             }
             
