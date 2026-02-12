@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducAlte</title>
+    <meta name="description" content="Discover interactive online classes in programming, design, and more. Learn from industry experts and enhance your skills.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/section.css">
+    
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">Educ<span style="color: var(--primary);">Alte</span></a>
+            
+            <div class="nav-links">
+                <a href="index.html#classes">Class</a>
+                <a href="#teacher">Teacher</a>
+            </div>
+            
+            <!-- Desktop Auth Buttons -->
+            <div class="auth-buttons desktop-auth">
+                <a href="#" class="btn btn-outline login-btn">Log In / Sign Up</a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="nav-links">
+        
+            <a href="#classes">Class</a>
+            <a href="#contact">Teacher</a>
+            <div class="mobile-auth" style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+                <a href="#" class="btn btn-outline login-btn" style="width: 100%; text-align: center;">Log In / Sign Up</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Classes Section -->
+    <section class="classes" id="classes">
+        <div class="shapes-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden;"></div>
+        <div class="section-header" style="position: relative; z-index: 1;">
+            <a href="module01-class01.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Sections
+            </a>
+            <p>Chapter 1</p>
+            <h2>Understanding AI Fundamentals</h2>
+        </div>
+    </section>
+    
+    <!-- Chapters List -->
+    <div class="chapters-container">
+        <!-- Chapter -->
+        <a class="chapter-card">
+            <div class="chapter-number">1</div>
+            <div class="chapter-content">
+                <p>Section 1</p>
+                <h3>What is AI? A Historical Perspective</h3>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 100%"></div>
+                </div>
+                <div class="progress-percentage">100%</div>
+            </div>
+            <div class="chapter-arrow">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </a>
+        
+        <!-- Virtual Teacher Dashboard -->
+        <div class="teacher-dashboard">
+            <h3>Choose Your Virtual Teacher</h3>
+            <p>Select a virtual teacher to guide you through this section</p>
+            
+            <!-- Filter Buttons -->
+            <!-- <div class="teacher-filters">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-users"></i> All Teachers
+                </button>
+                <button class="filter-btn" data-filter="professor">
+                    <i class="fas fa-graduation-cap"></i> Professor
+                </button>
+                <button class="filter-btn" data-filter="avatar">
+                    <i class="fas fa-robot"></i> Avatar
+                </button>
+                <button class="filter-btn" data-filter="anime">
+                    <i class="fa-solid fa-palette"></i> Anime
+                </button>
+            </div> -->
+            
+            <div class="swiper teacher-carousel">
+                <div class="swiper-wrapper">
+                    <!-- Teacher 1 -->
+                    <div class="swiper-slide">
+                        <div class="teacher-card" data-teacher="lionelni">
+                            <div class="teacher-img-container">
+                                <img src="assets/imgs/teacher/lionelni.png" alt="Lionel Ni" class="teacher-img">
+                            </div>
+                            <div class="teacher-info">
+                                <h4>Prof. Lionel Ni</h4>
+                                <p class="teacher-title">President, HKUST(GZ)</p>
+                                <div class="teacher-specialty">
+                                    <span class="badge"><i class="fas fa-graduation-cap"></i> Professor</span>
+                                </div>
+                            </div>
+                            <div class="teacher-select">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher 2 -->
+                    <div class="swiper-slide">
+                        <div class="teacher-card" data-teacher="panhui">
+                            <div class="teacher-img-container">
+                                <img src="assets/imgs/teacher/ben.png" alt="Pan Hui" class="teacher-img">
+                            </div>
+                            <div class="teacher-info">
+                                <h4>Prof. Pan Hui</h4>
+                                <p class="teacher-title">Computational Media and Arts, HKUST(GZ)</p>
+                                <div class="teacher-specialty">
+                                    <span class="badge"><i class="fas fa-graduation-cap"></i> Professor</span>
+                                </div>
+                            </div>
+                            <div class="teacher-select">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher 3 -->
+                    <div class="swiper-slide">
+                        <div class="teacher-card" data-teacher="elena">
+                            <div class="teacher-img-container">
+                                <img src="assets/imgs/teacher/elena.png" alt="Trinity" class="teacher-img">
+                            </div>
+                            <div class="teacher-info">
+                                <h4>Elena</h4>
+                                <p class="teacher-title">AI Avatar</p>
+                                <div class="teacher-specialty">
+                                    <span class="badge"><i class="fas fa-brain"></i> Avatar</span>
+                                </div>
+                            </div>
+                            <div class="teacher-select">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher 4 -->
+                    <div class="swiper-slide">
+                        <div class="teacher-card" data-teacher="rie">
+                            <div class="teacher-img-container">
+                                <img src="assets/imgs/teacher/Rie.png" alt="Rie" class="teacher-img">
+                            </div>
+                            <div class="teacher-info">
+                                <h4>Rie</h4>
+                                <p class="teacher-title">AI Avatar</p>
+                                <div class="teacher-specialty">
+                                    <span class="badge"><i class="fas fa-brain"></i> Avatar</span>
+                                </div>
+                            </div>
+                            <div class="teacher-select">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher 5 -->
+                    <div class="swiper-slide">
+                        <div class="teacher-card" data-teacher="neo">
+                            <div class="teacher-img-container">
+                                <img src="assets/imgs/teacher/neo.png" alt="Neo" class="teacher-img">
+                            </div>
+                            <div class="teacher-info">
+                                <h4>Neo</h4>
+                                <p class="teacher-title">AI Avatar</p>
+                                <div class="teacher-specialty">
+                                    <span class="badge"><i class="fas fa-brain"></i> Avatar</span>
+                                </div>
+                            </div>
+                            <div class="teacher-select">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teacher 6 -->
+                    <div class="swiper-slide">
+                        <div class="teacher-card" data-teacher="trinity">
+                            <div class="teacher-img-container">
+                                <img src="assets/imgs/teacher/trinity.png" alt="Trinity" class="teacher-img">
+                            </div>
+                            <div class="teacher-info">
+                                <h4>Trinity</h4>
+                                <p class="teacher-title">AI Avatar</p>
+                                <div class="teacher-specialty">
+                                    <span class="badge"><i class="fa-solid fa-palette"></i> Anime</span>
+                                </div>
+                            </div>
+                            <div class="teacher-select">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                     <div class="swiper-slide">
+                        <div class="teacher-card" data-teacher="marcus">
+                            <div class="teacher-img-container">
+                                <img src="assets/imgs/teacher/marcus.png" alt="Marcus" class="teacher-img">
+                            </div>
+                            <div class="teacher-info">
+                                <h4>Marcus</h4>
+                                <p class="teacher-title">AI Avatar</p>
+                                <div class="teacher-specialty">
+                                    <span class="badge"><i class="fa-solid fa-palette"></i> Anime</span>
+                                </div>
+                            </div>
+                            <div class="teacher-select">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Teacher 7 -->
+                    <div class="swiper-slide">
+                        <div class="teacher-card" data-teacher="claire">
+                            <div class="teacher-img-container">
+                                <img src="assets/imgs/teacher/claire.png" alt="Claire" class="teacher-img">
+                            </div>
+                            <div class="teacher-info">
+                                <h4>Claire</h4>
+                                <p class="teacher-title">AI Avatar</p>
+                                <div class="teacher-specialty">
+                                    <span class="badge"><i class="fa-solid fa-palette"></i> Anime</span>
+                                </div>
+                            </div>
+                            <div class="teacher-select">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+            
+            <div class="teacher-preview">
+                <div class="preview-placeholder">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <p>Select a virtual teacher to preview</p>
+                </div>
+                <div class="preview-content" style="display: none;">
+                    <div class="preview-container">
+                        <div class="preview-avatar-container">
+                            <img src="" alt="Teacher Preview" class="preview-avatar">
+                        </div>
+                        <div class="preview-details">
+                            <h4 class="preview-name"></h4>
+                            <p class="preview-title"></p>
+                            <div class="preview-bio"></div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary select-teacher-btn" style="margin-top: 1rem; width: 100%;">
+                        <i class="fas fa-user-check"></i> Learn with <span class="teacher-first-name"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Video Section -->
+        
+        <div class="video-section">
+            <div class="video-container">
+                <video id="lessonVideo" width="100%" controls>
+                    <source src="assets/vids/demo_section01.mp4" type="video/mp4">
+                    Your browser does not support HTML video.
+                </video>
+            </div>
+            <div class="video-description">
+                <!-- <h3>What is AI? A Historical Perspective</h3>
+                <p>This video provides an overview of artificial intelligence, tracing its development from early concepts to modern applications. Learn about the key milestones and breakthroughs that have shaped the field of AI as we know it today.</p>
+                 -->
+                <!-- Closed Caption and Translation Section -->
+                <div class="caption-section">
+                    <div class="caption-header">
+                        <h4><i class="fas fa-closed-captioning"></i> Transcript</h4>
+                        <div class="language-selector">
+                            <select id="translationLanguage" class="language-dropdown">
+                                <option value="en">English</option>
+                                <option value="zh">中文</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>   
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="captions-container">
+                        <div class="captions" id="englishCaptions">
+                            <div class="caption-line">
+                                <span class="timestamp" data-time="1">0:01</span>
+                                <p>Hello everyone, and welcome to All One Needs to Know About AI.</p>
+                            </div>
+                            <div class="caption-line">
+                                <span class="timestamp" data-time="5">0:05</span>
+                                <p>I’m so glad you’re joining me for this journey into one of the most transformative forces shaping our world — Artificial Intelligence.</p>
+                            </div>
+                            <div class="caption-line">
+                                <span class="timestamp" data-time="12">0:12</span>
+                                <p>This is Module 1: AI Literacy, the foundation of our course. Over the next few classes, you’ll build a clear, conceptual understanding of what AI is, how it impacts our daily lives, and where it’s taking us next. </p>
+                            </div>
+                            <div class="caption-line">
+                                <span class="timestamp" data-time="26">0:26</span>
+                                <p>We begin with Chapter 1: Understanding AI Fundamentals.</p>
+                            </div>
+                            <div class="caption-line">
+                                <span class="timestamp" data-time="31">0:31</span>
+                                <p>Before we dive into complex systems or neural networks, we’ll look back — where did it all start? We’ll trace AI’s history, from its early days of symbolic reasoning and expert systems, to the machine learning revolution that powers today’s smart technologies.</p>
+                            </div>
+                            <div class="caption-line">
+                                <span class="timestamp" data-time="47">0:47</span>
+                                <p>You’ll learn what distinguishes Artificial Intelligence, Machine Learning, and Deep Learning, and explore how neural networks mimic — and differ from — how our own brains process information. </p>
+                            </div>
+                            <div class="caption-line">
+                                <span class="timestamp" data-time="58">0:58</span>
+                                <p>We’ll also reflect on an important question: How does AI compare to human intelligence? Where do machines currently outperform us, and where does human creativity, empathy, and judgment still matter most?</p>
+                            </div>
+                            <div class="caption-line">
+                                <span class="timestamp" data-time="71">1:11</span>
+                                <p>By the end of Chapter 1, you’ll not only be able to define AI — you’ll understand it as a continuum of progress fueled by data, computation, and imagination.</p>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="captions" id="spanishCaptions" style="display: none;">
+                            <div class="caption-line">
+                                <span class="timestamp" data-time="1">0:01</span>
+                                <p>La Inteligencia Artificial, o IA, se ha convertido en una de las tecnologías más transformadoras de nuestro tiempo.</p>
+                            </div>
+                            <div class="caption-line">
+                                <span class="timestamp" data-time="5">0:05</span>
+                                <p>¿Pero dónde empezó todo? Hagamos un recorrido por la historia de la IA.</p>
+                            </div>
+                            <div class="caption-line">
+                                <span class="timestamp" data-time="12">0:12</span>
+                                <p>El concepto de seres artificiales con inteligencia se remonta a la antigüedad...</p>
+                            </div>
+                        </div>
+                        
+                        <div class="captions" id="frenchCaptions" style="display: none;">
+                            <div class="caption-line">
+                                <span class="timestamp" data-time="1">0:01</span>
+                                <p>L'intelligence artificielle, ou IA, est devenue l'une des technologies les plus transformatrices de notre époque.</p>
+                            </div>
+                            <div class="caption-line">
+                                <span class="timestamp" data-time="5">0:05</span>
+                                <p>Mais où tout a-t-il commencé ? Faisons un voyage à travers l'histoire de l'IA.</p>
+                            </div>
+                            <div class="caption-line">
+                                <span class="timestamp" data-time="12">0:12</span>
+                                <p>Le concept d'êtres artificiels dotés d'intelligence remonte à l'Antiquité...</p>
+                            </div>
+                        </div>
+                        
+                        <div class="captions" id="chineseCaptions" style="display: none;">
+                            <div class="caption-line">
+                                <span class="timestamp" data-time="0">0:00</span>
+                                <p>大家好，欢迎来到《人工智能通识课》。</p>
+                            </div>
+                            <div class="caption-line">
+                                <span class="timestamp" data-time="5">0:05</span>
+                                <p>很高兴能与您共同踏上这段探索之旅，深入了解正在重塑世界格局的最具变革性力量——人工智能。</p>
+                            </div>
+                            <div class="caption-line">
+                                <span class="timestamp" data-time="12">0:12</span>
+                                <p>这里是第一模块：人工智能素养，也是本课程的基石。在接下来的课程中，您将建立起对人工智能的清晰概念性认知——理解其本质、对日常生活的深远影响以及未来发展方向。</p>
+                            </div>
+                            <div class="caption-line">
+                                <span class="timestamp" data-time="26">0:26</span>
+                                <p>现在开始第一章：人工智能基础解析。</p>
+                            </div>
+                            <div class="caption-line">
+                                <span class="timestamp" data-time="31">0:31</span>
+                                <p>在深入复杂系统或神经网络之前，让我们回溯源头——这一切从何开始？我们将追溯人工智能的发展历程：从早期的符号推理与专家系统，到推动当今智能技术发展的机器学习革命。</p>
+                            </div>
+                            <div class="caption-line">
+                                <span class="timestamp" data-time="47">0:47</span>
+                                <p>您将明晰人工智能、机器学习与深度学习之间的区别，并探索神经网络如何模拟——又如何在何处超越——人脑的信息处理机制。</p>
+                            </div>
+                            <div class="caption-line">
+                                <span class="timestamp" data-time="58">0:58</span>
+                                <p>我们还将深入思考一个重要命题：人工智能与人类智能如何比较？机器在哪些领域已然超越人类？而人类的创造力、共情力与判断力又在哪些维度始终不可替代？</p>
+                            </div>
+                            <div class="caption-line">
+                                <span class="timestamp" data-time="71">1:11</span>
+                                <p>通过本章学习，您不仅能准确界定人工智能，更将理解其本质——这是由数据、算力与想象力共同驱动的持续演进之路。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <style>
+                        /* Style for caption lines */
+                        .captions-container {
+                            max-height: 180px;  /* Reduced from default */
+                            overflow-y: auto;    /* Add scrollbar if needed */
+                            margin: 10px 0;
+                            padding-right: 10px;
+                        }
+                        .caption-line {
+                            cursor: pointer;
+                            padding: 8px 12px;
+                            margin: 2px 0;
+                            border-radius: 4px;
+                            transition: background-color 0.2s ease;
+                        }
+                        
+                        .caption-line:hover {
+                            background-color: rgba(74, 144, 226, 0.1);
+                        }
+                        
+                        .caption-line.active {
+                            background-color: rgba(74, 144, 226, 0.15);
+                            font-weight: 500;
+                        }
+                        
+                        .timestamp {
+                            color: #4a90e2;
+                            font-weight: 500;
+                            margin-right: 8px;
+                        }
+                    </style>
+                    
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const video = document.getElementById('lessonVideo');
+                            const captionLines = document.querySelectorAll('.caption-line');
+                            
+                            // Make caption lines clickable
+                            captionLines.forEach(line => {
+                                const timestamp = line.querySelector('.timestamp');
+                                if (!timestamp) return;
+                                
+                                // Style the timestamp
+                                timestamp.style.cursor = 'pointer';
+                                
+                                // Handle click on the entire line or timestamp
+                                const handleClick = () => {
+                                    const seconds = parseInt(timestamp.getAttribute('data-time'));
+                                    if (!isNaN(seconds) && video) {
+                                        video.currentTime = seconds;
+                                        video.play();
+                                    }
+                                };
+                                
+                                line.addEventListener('click', handleClick);
+                                timestamp.addEventListener('click', (e) => {
+                                    e.stopPropagation(); // Prevent double trigger
+                                    handleClick();
+                                });
+                                
+                                // Add hover effect
+                                line.addEventListener('mouseover', function() {
+                                    this.style.backgroundColor = 'rgba(74, 144, 226, 0.1)';
+                                });
+                                
+                                line.addEventListener('mouseout', function() {
+                                    if (!this.classList.contains('active')) {
+                                        this.style.backgroundColor = 'transparent';
+                                    }
+                                });
+                            });
+                            
+                            // Update active caption line as video plays
+                            video.addEventListener('timeupdate', function() {
+                                const currentTime = Math.floor(video.currentTime);
+                                let activeFound = false;
+                                
+                                captionLines.forEach(line => {
+                                    const timestamp = line.querySelector('.timestamp');
+                                    if (!timestamp) return;
+                                    
+                                    const timestampSeconds = parseInt(timestamp.getAttribute('data-time'));
+                                    if (isNaN(timestampSeconds)) return;
+                                    
+                                    const nextLine = line.nextElementSibling;
+                                    let nextTimestamp = null;
+                                    
+                                    if (nextLine) {
+                                        const nextTimestampEl = nextLine.querySelector('.timestamp');
+                                        if (nextTimestampEl) {
+                                            nextTimestamp = parseInt(nextTimestampEl.getAttribute('data-time')) || Infinity;
+                                        }
+                                    }
+                                    
+                                    if (currentTime >= timestampSeconds && 
+                                        (nextTimestamp === null || currentTime < nextTimestamp)) {
+                                        // Remove active class from all lines
+                                        captionLines.forEach(l => l.classList.remove('active'));
+                                        // Add active class to current line
+                                        line.classList.add('active');
+                                        line.style.backgroundColor = 'rgba(74, 144, 226, 0.1)';
+                                        activeFound = true;
+                                        
+                                        // Scroll to the active line if needed
+                                        const rect = line.getBoundingClientRect();
+                                        if (rect.bottom > window.innerHeight || rect.top < 0) {
+                                            line.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                                        }
+                                    }
+                                });
+                                
+                                // If no active line found, clear all active states
+                                if (!activeFound) {
+                                    captionLines.forEach(line => {
+                                        line.classList.remove('active');
+                                        line.style.backgroundColor = 'transparent';
+                                    });
+                                }
+                            });
+                        });
+                    </script>
+                    
+                    <div class="caption-actions">
+                        <button class="btn-caption" id="showMoreCaptions">
+                            <i class="fas fa-chevron-down"></i> Show More
+                        </button>
+                        <button class="btn-caption" id="downloadTranscript">
+                            <i class="fas fa-download"></i> Download Transcript
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#chapter2" class="chapter-card">
+            <div class="chapter-number">2</div>
+            <div class="chapter-content">
+                <p>Section 2</p>
+                <h3>AI in Everyday Life</h3>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 65%"></div>
+                </div>
+                <div class="progress-percentage">65%</div>
+            </div>
+            <div class="chapter-arrow">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </a>
+    </div>
+    
+    
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+            <div class="footer-about">
+                <class="footer-logo"><b>EducAlte</b></class>
+                <p>Empowering accessible education</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li>MC<sup>2</sup> Lab</li>
+                    <li>HKUST(GZ)</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Nansha, Guangzhou, China</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 EducAlte. All rights reserved.</p>
+    </footer>
+    
+    <!-- Mobile Menu Toggle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('active');
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!mobileMenu.contains(event.target) && event.target !== mobileMenuBtn) {
+                    mobileMenu.classList.remove('active');
+                }
+            });
+        });
+    </script>
+    
+    <!-- Dynamic Shapes Script -->
+    <script src="js/dynamicShapes.js"></script>
+    
+    <!-- JavaScript -->
+    <script>
+        // Virtual Teacher Selection
+        document.addEventListener('DOMContentLoaded', function() {
+            const teacherOptions = document.querySelectorAll('.teacher-option');
+            const previewPlaceholder = document.querySelector('.preview-placeholder');
+            const previewContent = document.querySelector('.preview-content');
+            const previewAvatar = document.querySelector('.preview-avatar');
+            const previewName = document.querySelector('.preview-name');
+            const previewTitle = document.querySelector('.preview-title');
+            const previewBio = document.querySelector('.preview-bio');
+            const teacherFirstName = document.querySelector('.teacher-first-name');
+            const selectTeacherBtn = document.querySelector('.select-teacher-btn');
+            
+            // Set default teacher
+            let selectedTeacher = 'alex';
+            updateTeacherPreview(selectedTeacher);
+            
+            // Add click event to teacher options
+            teacherOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    const teacherId = this.getAttribute('data-teacher');
+                    selectTeacher(teacherId);
+                });
+            });
+            
+            // Select teacher function
+            function selectTeacher(teacherId) {
+                // Update active state
+                teacherOptions.forEach(opt => {
+                    if (opt.getAttribute('data-teacher') === teacherId) {
+                        opt.classList.add('active');
+                    } else {
+                        opt.classList.remove('active');
+                    }
+                });
+                
+                // Update preview
+                updateTeacherPreview(teacherId);
+                selectedTeacher = teacherId;
+            }
+            
+            // Update teacher preview
+            function updateTeacherPreview(teacherId) {
+                const teacher = teachers[teacherId];
+                
+                if (teacher) {
+                    previewPlaceholder.style.display = 'none';
+                    previewContent.style.display = 'block';
+                    
+                    previewAvatar.src = teacher.avatar;
+                    previewName.textContent = teacher.name;
+                    previewTitle.textContent = teacher.title;
+                    previewBio.textContent = teacher.bio;
+                    teacherFirstName.textContent = teacher.name.split(' ')[0];
+                } else {
+                    previewPlaceholder.style.display = 'flex';
+                    previewContent.style.display = 'none';
+                }
+            }
+            
+            // Handle select teacher button click
+            selectTeacherBtn.addEventListener('click', function() {
+                // Here you would typically start the lesson with the selected teacher
+                alert(`Starting lesson with ${teachers[selectedTeacher].name}!`);
+                // You can add logic to load the appropriate teacher's video/avatar here
+            });
+        });
+        // Language switching functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageSelect = document.getElementById('translationLanguage');
+            const showMoreBtn = document.getElementById('showMoreCaptions');
+            const downloadBtn = document.getElementById('downloadTranscript');
+            
+            // Language switching
+            if (languageSelect) {
+                // Map language codes to their corresponding caption IDs
+                const languageMap = {
+                    'en': 'englishCaptions',
+                    'es': 'spanishCaptions',
+                    'fr': 'frenchCaptions',
+                    'zh': 'chineseCaptions'
+                };
+
+                // Initialize with English captions visible
+                document.querySelectorAll('.captions').forEach(caption => {
+                    caption.style.display = 'none';
+                });
+                document.getElementById('englishCaptions').style.display = 'block';
+                
+                languageSelect.addEventListener('change', function() {
+                    const selectedLang = this.value;
+                    const targetId = languageMap[selectedLang] || 'englishCaptions';
+                    
+                    // Hide all captions
+                    document.querySelectorAll('.captions').forEach(caption => {
+                        caption.style.display = 'none';
+                    });
+                    
+                    // Show selected language captions
+                    const targetCaption = document.getElementById(targetId);
+                    if (targetCaption) {
+                        targetCaption.style.display = 'block';
+                    }
+                });
+            }
+            
+            // Show more/less functionality
+            if (showMoreBtn) {
+                const captionsContainer = document.querySelector('.captions-container');
+                let isExpanded = false;
+                
+                showMoreBtn.addEventListener('click', function() {
+                    isExpanded = !isExpanded;
+                    if (isExpanded) {
+                        captionsContainer.style.maxHeight = 'none';
+                        this.innerHTML = '<i class="fas fa-chevron-up"></i> Show Less';
+                    } else {
+                        captionsContainer.style.maxHeight = '300px';
+                        this.innerHTML = '<i class="fas fa-chevron-down"></i> Show More';
+                    }
+                });
+            }
+            
+            // Download transcript functionality
+            if (downloadBtn) {
+                downloadBtn.addEventListener('click', function() {
+                    const activeCaptions = document.querySelector('.captions[style*="display: block"]') || 
+                                          document.getElementById('englishCaptions');
+                    const textToDownload = Array.from(activeCaptions.querySelectorAll('p'))
+                        .map(p => p.textContent)
+                        .join('\n\n');
+                    
+                    const element = document.createElement('a');
+                    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(textToDownload));
+                    element.setAttribute('download', 'transcript.txt');
+                    element.style.display = 'none';
+                    document.body.appendChild(element);
+                    element.click();
+                    document.body.removeChild(element);
+                });
+            }
+        });
+        // Initialize shapes after DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load scripts in order
+            const scripts = [
+                'js/scrollEffects.js',
+                'js/dynamicShapes.js'
+            ];
+            
+            function loadScript(index) {
+                if (index >= scripts.length) {
+                    initPage();
+                    return;
+                }
+                
+                const script = document.createElement('script');
+                script.src = scripts[index];
+                script.onload = () => loadScript(index + 1);
+                document.body.appendChild(script);
+            }
+            
+            // Start loading scripts
+            loadScript(0);
+            
+            function initPage() {
+                // Mobile Menu Toggle
+                const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+                const mobileMenu = document.getElementById('mobileMenu');
+                
+                if (mobileMenuBtn && mobileMenu) {
+                    mobileMenuBtn.addEventListener('click', () => {
+                        mobileMenu.classList.toggle('active');
+                    });
+                    
+                    // Close mobile menu when clicking on a link
+                    document.querySelectorAll('.mobile-menu a').forEach(link => {
+                        link.addEventListener('click', () => {
+                            mobileMenu.classList.remove('active');
+                        });
+                    });
+                }
+                
+                // Smooth scrolling for anchor links
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        
+                        const targetId = this.getAttribute('href');
+                        if (targetId === '#') return;
+                        
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 80,
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+                
+                // Add scroll animation to elements
+                const animateOnScroll = () => {
+                    const elements = document.querySelectorAll('.class-card, .feature-card');
+                    
+                    elements.forEach(element => {
+                        const elementTop = element.getBoundingClientRect().top;
+                        const windowHeight = window.innerHeight;
+                        
+                        if (elementTop < windowHeight - 100) {
+                            element.style.opacity = '1';
+                            element.style.transform = 'translateY(0)';
+                        }
+                    });
+                };
+                
+                // Add animation classes after a short delay
+                setTimeout(() => {
+                    document.querySelectorAll('.class-card, .feature-card').forEach((el, index) => {
+                        el.style.transition = `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`;
+                        el.style.opacity = '0';
+                        el.style.transform = 'translateY(20px)';
+                    });
+                    
+                    // Trigger initial animation
+                    animateOnScroll();
+                }, 300);
+                
+                // Add scroll event listener
+                window.addEventListener('scroll', animateOnScroll);
+            }
+            
+            // Initialize the page
+            initPage();
+            
+            // Teacher filtering functionality
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const teacherOptions = document.querySelectorAll('.teacher-option');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    
+                    const filter = button.getAttribute('data-filter');
+                    
+                    teacherOptions.forEach(option => {
+                        const specialty = option.querySelector('.badge').textContent.toLowerCase();
+                        
+                        if (filter === 'all' || 
+                            (filter === 'professor' && specialty.includes('professor')) ||
+                            (filter === 'avatar' && specialty.includes('avatar')) ||
+                            (filter === 'anime' && specialty.includes('anime'))) {
+                            option.style.display = 'flex';
+                        } else {
+                            option.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Initialize shapes for the module page
+            const shapesContainer = document.querySelector('.shapes-container');
+            if (shapesContainer) {
+                // Create multiple shapes
+                for (let i = 0; i < 8; i++) {
+                    const shape = createRandomShape();
+                    setupShape(shape, shapesContainer);
+                }
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper for teacher carousel
+        document.addEventListener('DOMContentLoaded', function() {
+            const swiper = new Swiper('.teacher-carousel', {
+                effect: 'coverflow',
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: 'auto',
+                coverflowEffect: {
+                    rotate: 20,
+                    stretch: 0,
+                    depth: 200,
+                    modifier: 1,
+                    slideShadows: false,
+                },
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 20
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 30
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 40
+                    }
+                },
+                on: {
+                    init: function() {
+                        // Set Professor Ni as the default selected teacher
+                        const profNiCard = document.querySelector('.teacher-card[data-teacher="lionelni"]');
+                        if (profNiCard) {
+                            // Add a small delay to ensure the Swiper is fully initialized
+                            setTimeout(() => {
+                                profNiCard.classList.add('active');
+                                const checkIcon = profNiCard.querySelector('.teacher-select i');
+                                if (checkIcon) checkIcon.classList.add('fa-check');
+                                updateTeacherPreview('lionelni');
+                            }, 100);
+                        } else {
+                            // Fallback to first teacher if Professor Ni is not found
+                            const firstCard = document.querySelector('.teacher-card');
+                            if (firstCard) {
+                                firstCard.classList.add('active');
+                                const checkIcon = firstCard.querySelector('.teacher-select i');
+                                if (checkIcon) checkIcon.classList.add('fa-check');
+                                updateTeacherPreview(firstCard.getAttribute('data-teacher'));
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Teacher data
+            const teachers = {
+                lionelni: {
+                    name: 'Lionel Ni',
+                    title: 'President, HKUST(GZ)',
+                    bio: 'Prof. Ni is the Founding President of the Hong Kong University of Science and Technology (Guangzhou) (HKUST(GZ)). Professor Ni earned his PhD degree in Electrical Engineering from Purdue University in 1980. He served as Vice Rector (Academic Affairs) and Chair Professor in the Department of Computer and Information Science at the University of Macau; Chair Professor and Head of Department of Computer Science and Engineering, Dean of HKUST Fok Ying Tung Research Institute and Special Assistant to the President; Professor in Computer Science and Engineering at Michigan State University (1981 to 2002), the Microelectronic Systems Architecture program director at US National Science Foundation (1995-1996), co-founder and CEO of CC&T Technologies, Inc., Michigan (1998-2001).',
+                    avatar: 'assets/imgs/teacher/lionelni.png',
+                    specialty: 'AI Fundamentals'
+                },
+                panhui: {
+                    name: 'Pan Hui',
+                    title: 'Chair Professor, Computational Media and Arts, HKUST(GZ)',
+                    bio: 'Prof. Hui is a Chair Professor of Computational Media and Arts and Director of the Centre for Metaverse and Computational Creativity at the Hong Kong University of Science and Technology (Guangzhou), and a Chair Professor of Emerging Interdisciplinary Areas and Director of the HKUST-DT Systems and Media Lab, Hong Kong University of Science and Technology.',
+                    avatar: 'assets/imgs/teacher/ben.png',
+                    specialty: 'Beginner-Friendly Explanations'
+                },
+                elena: {
+                    name: 'Elena',
+                    title: 'AI Avatar',
+                    bio: 'Elena is an advanced AI avatar designed to provide interactive and engaging learning experiences.',
+                    avatar: 'assets/imgs/teacher/elena.png',
+                    specialty: 'Interactive Learning'
+                },
+                fiona: {
+                    name: 'Fiona',
+                    title: 'AI Avatar',
+                    bio: 'Fiona is a friendly AI avatar specializing in making complex topics easy to understand.',
+                    avatar: 'assets/imgs/teacher/fiona.png',
+                    specialty: 'Simplified Explanations'
+                },
+                rie: {
+                    name: 'Rie',
+                    title: 'AI Avatar',
+                    bio: 'Rie is a friendly AI avatar specializing in making complex topics easy to understand.',
+                    avatar: 'assets/imgs/teacher/Rie.png',
+                    specialty: 'Simplified Explanations'
+                },
+                claire: {
+                    name: 'Claire',
+                    title: 'AI Avatar',
+                    bio: 'Claire is a friendly AI avatar specializing in making complex topics easy to understand.',
+                    avatar: 'assets/imgs/teacher/claire.png',
+                    specialty: 'Simplified Explanations'
+                },
+                daniel: {
+                    name: 'Daniel',
+                    title: 'AI Avatar',
+                    bio: 'Daniel is a knowledgeable AI avatar with expertise in various technical subjects.',
+                    avatar: 'assets/imgs/teacher/daniel.png',
+                    specialty: 'Technical Expertise'
+                },
+                marcus: {
+                    name: 'Marcus',
+                    title: 'AI Avatar',
+                    bio: 'Marcus is a knowledgeable AI avatar with expertise in various technical subjects.',
+                    avatar: 'assets/imgs/teacher/marcus.png',
+                    specialty: 'Technical Expertise'
+                },
+                trinity: {
+                    name: 'Trinity',
+                    title: 'AI Anime Avatar',
+                    bio: 'Trinity is an anime-style AI avatar that makes learning fun and engaging with a unique personality.',
+                    avatar: 'assets/imgs/teacher/trinity.png',
+                    specialty: 'Engaging Presentations'
+                },
+                neo: {
+                    name: 'Neo',
+                    title: 'AI Anime Avatar',
+                    bio: 'Neo is an anime-style AI avatar that helps break down complex concepts into easy-to-understand lessons.',
+                    avatar: 'assets/imgs/teacher/neo.png',
+                    specialty: 'Concept Breakdown'
+                }
+            };
+
+            // Initialize preview elements
+            const previewPlaceholder = document.querySelector('.preview-placeholder');
+            const previewContent = document.querySelector('.preview-content');
+            const previewAvatar = document.querySelector('.preview-avatar');
+            const previewName = document.querySelector('.preview-name');
+            const previewTitle = document.querySelector('.preview-title');
+            const previewBio = document.querySelector('.preview-bio');
+            const teacherFirstName = document.querySelector('.teacher-first-name');
+            const selectTeacherBtn = document.querySelector('.select-teacher-btn');
+
+            // Update teacher preview
+            function updateTeacherPreview(teacherId) {
+                const teacher = teachers[teacherId];
+                
+                if (teacher) {
+                    previewPlaceholder.style.display = 'none';
+                    previewContent.style.display = 'block';
+                    
+                    if (previewAvatar) previewAvatar.src = teacher.avatar;
+                    if (previewName) previewName.textContent = teacher.name;
+                    if (previewTitle) previewTitle.textContent = teacher.title;
+                    if (previewBio) previewBio.textContent = teacher.bio;
+                    // if (teacherFirstName) teacherFirstName.textContent = teacher.name.split(' ')[0];
+                    if (teacherFirstName) teacherFirstName.textContent = teacher.name;
+                } else {
+                    previewPlaceholder.style.display = 'flex';
+                    previewContent.style.display = 'none';
+                }
+            }
+
+            // Handle teacher selection
+            document.addEventListener('click', function(e) {
+                const teacherCard = e.target.closest('.teacher-card');
+                if (!teacherCard) return;
+
+                // Remove active class from all cards
+                document.querySelectorAll('.teacher-card').forEach(c => {
+                    c.classList.remove('active');
+                    const checkIcon = c.querySelector('.teacher-select i');
+                    if (checkIcon) checkIcon.classList.remove('fa-check');
+                });
+                
+                // Add active class to clicked card
+                teacherCard.classList.add('active');
+                const checkIcon = teacherCard.querySelector('.teacher-select i');
+                if (checkIcon) checkIcon.classList.add('fa-check');
+                
+                // Get the teacher ID and update preview
+                const teacherId = teacherCard.getAttribute('data-teacher');
+                updateTeacherPreview(teacherId);
+            });
+
+            // Handle select teacher button click
+            if (selectTeacherBtn) {
+                selectTeacherBtn.addEventListener('click', function() {
+                    const activeCard = document.querySelector('.teacher-card.active');
+                    if (activeCard) {
+                        const teacherId = activeCard.getAttribute('data-teacher');
+                        const teacher = teachers[teacherId];
+                        if (teacher) {
+                            alert(`Starting lesson with ${teacher.name}!`);
+                            // You can add logic to load the appropriate teacher's video/avatar here
+                        }
+                    } else {
+                        alert('Please select a teacher first!');
+                    }
+                });
+            }
+        });
+    </script>
+  
+</body>
+</html>
