@@ -101,48 +101,48 @@
                                 <div class="scenario-item" data-scenario="1">
                                     <div class="scenario-number">1</div>
                                     <p>Detect abnormal international transfers</p>
-                                    <div class="match-input">
-                                        <input type="text" name="match1" maxlength="1" placeholder="?" class="matching-input">
+                                    <div class="match-drop-zone" data-answer="C" data-scenario="1">
+                                        <div class="drop-zone-label">Drop letter here</div>
                                     </div>
                                 </div>
                                 <div class="scenario-item" data-scenario="2">
                                     <div class="scenario-number">2</div>
                                     <p>Analyze potential of influencer-owned stores</p>
-                                    <div class="match-input">
-                                        <input type="text" name="match2" maxlength="1" placeholder="?" class="matching-input">
+                                    <div class="match-drop-zone" data-answer="D" data-scenario="2">
+                                        <div class="drop-zone-label">Drop letter here</div>
                                     </div>
                                 </div>
                                 <div class="scenario-item" data-scenario="3">
                                     <div class="scenario-number">3</div>
                                     <p>Process financial reports in milliseconds</p>
-                                    <div class="match-input">
-                                        <input type="text" name="match3" maxlength="1" placeholder="?" class="matching-input">
+                                    <div class="match-drop-zone" data-answer="A" data-scenario="3">
+                                        <div class="drop-zone-label">Drop letter here</div>
                                     </div>
                                 </div>
                                 <div class="scenario-item" data-scenario="4">
                                     <div class="scenario-number">4</div>
                                     <p>Predict loan default probability</p>
-                                    <div class="match-input">
-                                        <input type="text" name="match4" maxlength="1" placeholder="?" class="matching-input">
+                                    <div class="match-drop-zone" data-answer="B" data-scenario="4">
+                                        <div class="drop-zone-label">Drop letter here</div>
                                     </div>
                                 </div>
                             </div>
                             
                             <div class="matching-column">
-                                <h5>AI Applications</h5>
-                                <div class="application-item" data-app="A">
+                                <h5>AI Applications (Drag to match)</h5>
+                                <div class="application-item" draggable="true" data-app="A">
                                     <div class="app-letter">A</div>
                                     <p>Intelligent trading</p>
                                 </div>
-                                <div class="application-item" data-app="B">
+                                <div class="application-item" draggable="true" data-app="B">
                                     <div class="app-letter">B</div>
                                     <p>Risk assessment</p>
                                 </div>
-                                <div class="application-item" data-app="C">
+                                <div class="application-item" draggable="true" data-app="C">
                                     <div class="app-letter">C</div>
                                     <p>Anti-fraud</p>
                                 </div>
-                                <div class="application-item" data-app="D">
+                                <div class="application-item" draggable="true" data-app="D">
                                     <div class="app-letter">D</div>
                                     <p>Trend prediction</p>
                                 </div>
@@ -351,7 +351,7 @@
             </div>
 
  <!-- Next Chapter -->
-        <a href="module01-class03-sec0.html" class="chapter-card">
+        <a href="index.html" class="chapter-card">
             <div class="chapter-number">3</div>
             <div class="chapter-content">
                 <p>Next Chapter</p>
@@ -926,39 +926,63 @@
                             color: #2d3748;
                         }
 
-                        .match-input {
+                        .match-drop-zone {
                             margin-left: auto;
-                        }
-
-                        .matching-input {
-                            width: 40px;
-                            height: 40px;
-                            text-align: center;
-                            font-size: 1.1rem;
-                            font-weight: 600;
-                            border: 2px solid #e2e8f0;
+                            min-width: 60px;
+                            min-height: 40px;
+                            background: #f8fafc;
+                            border: 2px dashed #cbd5e0;
                             border-radius: 8px;
-                            background: white;
-                            color: #2d3748;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            position: relative;
                             transition: all 0.3s ease;
                         }
 
-                        .matching-input:focus {
-                            outline: none;
+                        .match-drop-zone.drag-over {
+                            background: #e6fffa;
                             border-color: var(--primary);
-                            box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.1);
+                            transform: scale(1.05);
                         }
 
-                        .matching-input.correct {
-                            border-color: #28a745;
-                            background: #d4edda;
-                            color: #155724;
+                        .drop-zone-label {
+                            color: #a0aec0;
+                            font-size: 0.85rem;
+                            font-style: italic;
+                            text-align: center;
                         }
 
-                        .matching-input.incorrect {
-                            border-color: #dc3545;
-                            background: #f8d7da;
-                            color: #721c24;
+                        .dropped-app-item {
+                            background: var(--primary);
+                            color: white;
+                            width: 32px;
+                            height: 32px;
+                            border-radius: 50%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-weight: 600;
+                            cursor: pointer;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+
+                        .application-item {
+                            cursor: grab;
+                            user-select: none;
+                        }
+
+                        .application-item.dragging {
+                            opacity: 0.5;
+                            cursor: grabbing;
+                            transform: rotate(5deg);
+                        }
+
+                        .application-item:active {
+                            cursor: grabbing;
                         }
 
                         /* Prediction Questions Styles */
@@ -1348,7 +1372,84 @@
         
         // Interactive Quiz Functionality
         function initializeQuiz() {
-            // Exercise 1: Drag and Drop Classification
+            // Exercise 1: Financial AI Matching Game - Drag and Drop
+            const applicationItems = document.querySelectorAll('.application-item');
+            const matchDropZones = document.querySelectorAll('.match-drop-zone');
+            
+            applicationItems.forEach(item => {
+                item.addEventListener('dragstart', function(e) {
+                    e.dataTransfer.setData('app', this.dataset.app);
+                    this.classList.add('dragging');
+                });
+                
+                item.addEventListener('dragend', function() {
+                    this.classList.remove('dragging');
+                });
+            });
+            
+            matchDropZones.forEach(zone => {
+                zone.addEventListener('dragover', function(e) {
+                    e.preventDefault();
+                    this.classList.add('drag-over');
+                });
+                
+                zone.addEventListener('dragleave', function() {
+                    this.classList.remove('drag-over');
+                });
+                
+                zone.addEventListener('drop', function(e) {
+                    e.preventDefault();
+                    this.classList.remove('drag-over');
+                    
+                    const app = e.dataTransfer.getData('app');
+                    const label = this.querySelector('.drop-zone-label');
+                    
+                    if (label) {
+                        label.style.display = 'none';
+                    }
+                    
+                    // Remove any existing item in this zone
+                    const existingItem = this.querySelector('.dropped-app-item');
+                    if (existingItem) {
+                        existingItem.remove();
+                    }
+                    
+                    // Remove the same app from other zones
+                    matchDropZones.forEach(otherZone => {
+                        if (otherZone !== this) {
+                            const otherItem = otherZone.querySelector(`.dropped-app-item[data-app="${app}"]`);
+                            if (otherItem) {
+                                otherItem.remove();
+                                const otherLabel = otherZone.querySelector('.drop-zone-label');
+                                if (otherLabel) {
+                                    otherLabel.style.display = 'block';
+                                }
+                            }
+                        }
+                    });
+                    
+                    // Add the dropped item
+                    const droppedItem = document.createElement('div');
+                    droppedItem.className = 'dropped-app-item';
+                    droppedItem.textContent = app;
+                    droppedItem.setAttribute('data-app', app);
+                    
+                    droppedItem.addEventListener('click', function() {
+                        this.remove();
+                        
+                        // Show label if zone is empty
+                        const zone = this.parentElement;
+                        const label = zone.querySelector('.drop-zone-label');
+                        if (label) {
+                            label.style.display = 'block';
+                        }
+                    });
+                    
+                    this.appendChild(droppedItem);
+                });
+            });
+            
+            // Exercise 1: Drag and Drop Classification (for other exercises)
             const optionItems = document.querySelectorAll('.option-item');
             const dropZones = document.querySelectorAll('.drop-zone');
             
@@ -1511,24 +1612,43 @@
                             this.innerHTML = '<i class="fas fa-redo"></i> Reset';
                             this.dataset.reset = 'true';
                             
-                            // Highlight correct answers for exercise 1 (matching)
+                            // Check answers for exercise 1 (drag and drop matching)
                             if (exerciseNum === '1') {
-                                const correctAnswers = { 'match1': 'C', 'match2': 'D', 'match3': 'A', 'match4': 'B' };
-                                Object.keys(correctAnswers).forEach(inputName => {
-                                    const input = document.querySelector(`input[name="${inputName}"]`);
-                                    const userAnswer = input ? input.value.toUpperCase() : '';
-                                    const correctAnswer = correctAnswers[inputName];
+                                const dropZones = document.querySelectorAll('.match-drop-zone');
+                                let allCorrect = true;
+                                let correctCount = 0;
+                                
+                                dropZones.forEach(zone => {
+                                    const droppedItem = zone.querySelector('.dropped-app-item');
+                                    const correctAnswer = zone.dataset.answer;
+                                    const userAnswer = droppedItem ? droppedItem.textContent : '';
                                     
-                                    if (input) {
-                                        if (userAnswer === correctAnswer) {
-                                            input.classList.add('correct');
-                                            input.classList.remove('incorrect');
-                                        } else {
-                                            input.classList.add('incorrect');
-                                            input.classList.remove('correct');
-                                        }
+                                    if (userAnswer === correctAnswer) {
+                                        zone.style.borderColor = '#28a745';
+                                        zone.style.background = '#d4edda';
+                                        correctCount++;
+                                    } else {
+                                        zone.style.borderColor = '#dc3545';
+                                        zone.style.background = '#f8d7da';
+                                        allCorrect = false;
                                     }
                                 });
+                                
+                                // Update feedback message based on results
+                                const feedbackContent = feedback.querySelector('.feedback-content');
+                                if (feedbackContent) {
+                                    if (correctCount === 4) {
+                                        feedbackContent.innerHTML = `
+                                            <h4>✅ Perfect Match!</h4>
+                                            <p>Excellent! You correctly matched all financial scenarios with their AI applications.</p>
+                                        `;
+                                    } else {
+                                        feedbackContent.innerHTML = `
+                                            <h4>❌ Not Quite Right</h4>
+                                            <p>You got ${correctCount} out of 4 correct. The correct answers are: 1-C, 2-D, 3-A, 4-B</p>
+                                        `;
+                                    }
+                                }
                             }
                             
                             // Highlight correct answers for exercise 2 (prediction)
@@ -1589,11 +1709,20 @@
                             this.innerHTML = '<i class="fas fa-check"></i> Check Answer';
                             this.dataset.reset = 'false';
                             
-                            // Reset exercise 1 (matching game)
+                            // Reset exercise 1 (drag and drop matching game)
                             if (exerciseNum === '1') {
-                                document.querySelectorAll('.matching-input').forEach(input => {
-                                    input.value = '';
-                                    input.classList.remove('correct', 'incorrect');
+                                document.querySelectorAll('.dropped-app-item').forEach(item => item.remove());
+                                document.querySelectorAll('.match-drop-zone').forEach(zone => {
+                                    zone.style.borderColor = '#cbd5e0';
+                                    zone.style.background = '#f8fafc';
+                                    const label = zone.querySelector('.drop-zone-label');
+                                    if (label) {
+                                        label.style.display = 'block';
+                                    }
+                                });
+                                document.querySelectorAll('.application-item').forEach(item => {
+                                    item.style.opacity = '1';
+                                    item.draggable = true;
                                 });
                             }
                             
