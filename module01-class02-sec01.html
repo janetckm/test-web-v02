@@ -1309,14 +1309,14 @@
                 on: {
                     init: function() {
                         // Set Professor Ni as the default selected teacher
-                        const profNiCard = document.querySelector('.teacher-card[data-teacher="lionelni"]');
+                        const profNiCard = document.querySelector('.teacher-card[data-teacher="claire"]');
                         if (profNiCard) {
                             // Add a small delay to ensure the Swiper is fully initialized
                             setTimeout(() => {
                                 profNiCard.classList.add('active');
                                 const checkIcon = profNiCard.querySelector('.teacher-select i');
                                 if (checkIcon) checkIcon.classList.add('fa-check');
-                                updateTeacherPreview('lionelni');
+                                updateTeacherPreview('claire');
                             }, 100);
                         } else {
                             // Fallback to first teacher if Professor Ni is not found

@@ -830,7 +830,7 @@
 
         
         <!-- Next Chapter -->
-        <a href="module01-class03.html" class="chapter-card">
+        <a href="module01-class02-exercise.html" class="chapter-card">
             <div class="chapter-number">4</div>
             <div class="chapter-content">
                 <p>Next Section</p>
@@ -1241,14 +1241,14 @@
                 on: {
                     init: function() {
                         // Set Professor Ni as the default selected teacher
-                        const profNiCard = document.querySelector('.teacher-card[data-teacher="lionelni"]');
+                        const profNiCard = document.querySelector('.teacher-card[data-teacher="claire"]');
                         if (profNiCard) {
                             // Add a small delay to ensure the Swiper is fully initialized
                             setTimeout(() => {
                                 profNiCard.classList.add('active');
                                 const checkIcon = profNiCard.querySelector('.teacher-select i');
                                 if (checkIcon) checkIcon.classList.add('fa-check');
-                                updateTeacherPreview('lionelni');
+                                updateTeacherPreview('claire');
                             }, 100);
                         } else {
                             // Fallback to first teacher if Professor Ni is not found
