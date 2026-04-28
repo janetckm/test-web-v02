@@ -1203,6 +1203,109 @@
                 });
             });
             
+            // Quiz Answer Validation Functions
+            function checkExercise1Answer() {
+                const relatedZone = document.querySelector('[data-category="related"]');
+                const risksZone = document.querySelector('[data-category="risks"]');
+                
+                if (!relatedZone || !risksZone) return { correct: false, message: 'Please complete the exercise first.' };
+                
+                const relatedItems = Array.from(relatedZone.querySelectorAll('.dropped-item')).map(item => item.textContent);
+                const risksItems = Array.from(risksZone.querySelectorAll('.dropped-item')).map(item => item.textContent);
+                
+                const correctRelated = ['A', 'B', 'D'].sort();
+                const correctRisks = ['C'];
+                
+                const userRelatedSorted = relatedItems.sort();
+                const userRisksSorted = risksItems.sort();
+                
+                const relatedCorrect = JSON.stringify(userRelatedSorted) === JSON.stringify(correctRelated);
+                const risksCorrect = JSON.stringify(userRisksSorted) === JSON.stringify(correctRisks);
+                
+                if (relatedCorrect && risksCorrect) {
+                    return { correct: true, message: 'Excellent! You correctly identified all directly related recommendations and potential risks.' };
+                } else {
+                    let feedback = 'Not quite right. ';
+                    if (!relatedCorrect) {
+                        feedback += `Directly related items should be: ${correctRelated.join(', ')}. `;
+                    }
+                    if (!risksCorrect) {
+                        feedback += `Potential risks should be: ${correctRisks.join(', ')}.`;
+                    }
+                    return { correct: false, message: feedback };
+                }
+            }
+            
+            function checkExercise2Answer() {
+                const slots = document.querySelectorAll('.sequence-slot');
+                const userSequence = [];
+                
+                slots.forEach(slot => {
+                    const slotContent = slot.querySelector('.slot-content');
+                    if (slotContent && slotContent.dataset.filled) {
+                        userSequence.push(slotContent.dataset.filled);
+                    }
+                });
+                
+                const correctSequence = ['C', 'A', 'B', 'D'];
+                
+                if (userSequence.length !== 4) {
+                    return { correct: false, message: 'Please complete all 4 sequence slots.' };
+                }
+                
+                if (JSON.stringify(userSequence) === JSON.stringify(correctSequence)) {
+                    return { correct: true, message: 'Perfect! You correctly ordered the AI-assisted cancer diagnosis steps.' };
+                } else {
+                    return { correct: false, message: `Not quite. The correct sequence is: ${correctSequence.join(' → ')}` };
+                }
+            }
+            
+            function checkExercise3Answer() {
+                const q1Answer = document.querySelector('input[name="q1"]:checked');
+                const q2Answer = document.querySelector('input[name="q2"]:checked');
+                
+                if (!q1Answer || !q2Answer) {
+                    return { correct: false, message: 'Please answer both questions.' };
+                }
+                
+                const correctQ1 = 'immediate intuition';
+                const correctQ2 = 'traffic regulations';
+                
+                const q1Correct = q1Answer.value === correctQ1;
+                const q2Correct = q2Answer.value === correctQ2;
+                
+                if (q1Correct && q2Correct) {
+                    return { correct: true, message: 'Excellent! You understand both the human decision-making process and the regulatory implications.' };
+                } else {
+                    let feedback = 'Not quite right. ';
+                    if (!q1Correct) {
+                        feedback += `Question 1: The correct answer is "immediate intuition". `;
+                    }
+                    if (!q2Correct) {
+                        feedback += `Question 2: The correct answer is "traffic regulations" (because the motorcyclist\'s violation should bear responsibility).`;
+                    }
+                    return { correct: false, message: feedback };
+                }
+            }
+            
+            function checkAnswer(exerciseNum) {
+                let result;
+                switch(exerciseNum) {
+                    case '1':
+                        result = checkExercise1Answer();
+                        break;
+                    case '2':
+                        result = checkExercise2Answer();
+                        break;
+                    case '3':
+                        result = checkExercise3Answer();
+                        break;
+                    default:
+                        result = { correct: false, message: 'Invalid exercise number.' };
+                }
+                return result;
+            }
+            
             // Check Answer functionality
             const checkAnswerBtns = document.querySelectorAll('.check-answer-btn');
             
@@ -1212,16 +1315,44 @@
                     const feedback = document.getElementById(`feedback${exerciseNum}`);
                     
                     if (feedback) {
-                        feedback.style.display = 'block';
-                        this.innerHTML = '<i class="fas fa-redo"></i> Reset';
-                        
                         if (this.dataset.reset !== 'true') {
+                            // Check the answer
+                            const result = checkAnswer(exerciseNum);
+                            
+                            // Update feedback content
+                            const feedbackContent = feedback.querySelector('.feedback-content');
+                            if (feedbackContent) {
+                                feedbackContent.innerHTML = `
+                                    <h4>${result.correct ? '✅ Correct!' : '❌ Incorrect'}</h4>
+                                    <p>${result.message}</p>
+                                `;
+                                
+                                // Update feedback styling based on correctness
+                                if (result.correct) {
+                                    feedback.style.background = '#f0fff4';
+                                    feedback.style.borderColor = '#9ae6b4';
+                                    feedbackContent.querySelector('h4').style.color = '#22543d';
+                                    feedbackContent.querySelector('p').style.color = '#2f855a';
+                                } else {
+                                    feedback.style.background = '#fff5f5';
+                                    feedback.style.borderColor = '#feb2b2';
+                                    feedbackContent.querySelector('h4').style.color = '#742a2a';
+                                    feedbackContent.querySelector('p').style.color = '#c53030';
+                                }
+                            }
+                            
+                            feedback.style.display = 'block';
+                            this.innerHTML = result.correct ? '<i class="fas fa-redo"></i> Try Again' : '<i class="fas fa-redo"></i> Reset';
                             this.dataset.reset = 'true';
                         } else {
                             // Reset functionality
                             feedback.style.display = 'none';
                             this.innerHTML = '<i class="fas fa-check"></i> Check Answer';
                             this.dataset.reset = 'false';
+                            
+                            // Reset feedback styling
+                            feedback.style.background = '#f0fff4';
+                            feedback.style.borderColor = '#9ae6b4';
                             
                             // Reset exercise 1
                             if (exerciseNum === '1') {
