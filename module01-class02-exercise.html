@@ -70,510 +70,664 @@
         </div>
     </section>
     
-    <!-- Chapters List -->
-    <div class="chapters-container">
-        <!-- Chapter -->
-        <a class="chapter-card">
+    
+    
+    <!-- Interactive Quiz Section -->
+    <div class="quiz-section">
+            <div class="quiz-header">
+                <h2><i class="fas fa-question"></i>Interactive Exercises</h2>
+                <p>Test your understanding of AI applications in social media, healthcare, and transportation</p>
+            </div>
+            
+            <!-- Exercise 1: Social Media Recommendation Puzzle -->
+            <div class="exercise-card" id="exercise1">
+                <div class="exercise-header">
+                    <div class="exercise-number">1</div>
+                    <div class="exercise-title">
+                        <h3>Social Media Recommendation Puzzle</h3>
+                        <span class="exercise-type">Classification Task</span>
+                    </div>
+                </div>
+                <div class="exercise-content">
+                    <div class="scenario">
+                        <h4>Scenario:</h4>
+                        <p>Xiao Ming watched 3 basketball videos and liked them on Douyin. The platform then recommended the following content. Identify which are directly related recommendations vs potential risks:</p>
+                    </div>
+                    
+                    <div class="options-grid">
+                        <div class="option-item" draggable="true" data-option="A">
+                            <div class="option-letter">A</div>
+                            <p>More NBA highlight clips</p>
+                        </div>
+                        <div class="option-item" draggable="true" data-option="B">
+                            <div class="option-letter">B</div>
+                            <p>Ads for sports protective gear</p>
+                        </div>
+                        <div class="option-item" draggable="true" data-option="C">
+                            <div class="option-letter">C</div>
+                            <p>A controversial short video: "Basketball stars earn far more than scientists"</p>
+                        </div>
+                        <div class="option-item" draggable="true" data-option="D">
+                            <div class="option-letter">D</div>
+                            <p>Notification for a local basketball game registration</p>
+                        </div>
+                    </div>
+                    
+                    <div class="classification-task">
+                        <h4>Classification Task:</h4>
+                        <div class="classification-boxes">
+                            <div class="classification-box">
+                                <h5>Directly related:</h5>
+                                <div class="drop-zone" data-category="related" data-answer="A,B,D">
+                                    <div class="drop-zone-label">Drop letters here</div>
+                                </div>
+                            </div>
+                            <div class="classification-box">
+                                <h5>Potential risks:</h5>
+                                <div class="drop-zone" data-category="risks" data-answer="C">
+                                    <div class="drop-zone-label">Drop letters here</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="exercise-feedback" id="feedback1" style="display: none;">
+                        <div class="feedback-content">
+                            <h4>Answer:</h4>
+                            <p><strong>Directly related:</strong> A, B, D</p>
+                            <p><strong>Potential risks:</strong> C (May trigger value bias)</p>
+                        </div>
+                    </div>
+                    
+                    <button class="check-answer-btn" data-exercise="1">
+                        <i class="fas fa-check"></i> Check Answer
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Exercise 2: Medical AI Flowchart -->
+            <div class="exercise-card" id="exercise2">
+                <div class="exercise-header">
+                    <div class="exercise-number">2</div>
+                    <div class="exercise-title">
+                        <h3>Medical AI Flowchart</h3>
+                        <span class="exercise-type">Sequencing Task</span>
+                    </div>
+                </div>
+                <div class="exercise-content">
+                    <div class="scenario">
+                        <h4>Task:</h4>
+                        <p>Arrange the steps of AI-assisted cancer diagnosis in the correct order:</p>
+                    </div>
+                    
+                    <div class="flowchart-options">
+                        <div class="flow-step" draggable="true" data-step="A">
+                            <div class="step-letter">A</div>
+                            <p>Compare the patient's gene data with the tumor database</p>
+                        </div>
+                        <div class="flow-step" draggable="true" data-step="B">
+                            <div class="step-letter">B</div>
+                            <p>The radiologist reviews the suspicious areas marked by AI</p>
+                        </div>
+                        <div class="flow-step" draggable="true" data-step="C">
+                            <div class="step-letter">C</div>
+                            <p>The deep learning model analyzes CT scan slices</p>
+                        </div>
+                        <div class="flow-step" draggable="true" data-step="D">
+                            <div class="step-letter">D</div>
+                            <p>Generate personalized chemotherapy regimen suggestions</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flowchart-sequence">
+                        <h4>Correct Sequence:</h4>
+                        <div class="sequence-slots">
+                            <div class="sequence-slot" data-position="1">
+                                <div class="slot-number">1</div>
+                                <div class="slot-content">______</div>
+                            </div>
+                            <div class="sequence-arrow">→</div>
+                            <div class="sequence-slot" data-position="2">
+                                <div class="slot-number">2</div>
+                                <div class="slot-content">______</div>
+                            </div>
+                            <div class="sequence-arrow">→</div>
+                            <div class="sequence-slot" data-position="3">
+                                <div class="slot-number">3</div>
+                                <div class="slot-content">______</div>
+                            </div>
+                            <div class="sequence-arrow">→</div>
+                            <div class="sequence-slot" data-position="4">
+                                <div class="slot-number">4</div>
+                                <div class="slot-content">______</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="exercise-feedback" id="feedback2" style="display: none;">
+                        <div class="feedback-content">
+                            <h4>Answer:</h4>
+                            <p><strong>Correct Sequence:</strong> C → A → B → D</p>
+                        </div>
+                    </div>
+                    
+                    <button class="check-answer-btn" data-exercise="2">
+                        <i class="fas fa-check"></i> Check Answer
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Exercise 3: Autonomous Driving Ethical Dilemma -->
+            <div class="exercise-card" id="exercise3">
+                <div class="exercise-header">
+                    <div class="exercise-number">3</div>
+                    <div class="exercise-title">
+                        <h3>Autonomous Driving Ethical Dilemma</h3>
+                        <span class="exercise-type">Fill-in-the-Blank</span>
+                    </div>
+                </div>
+                <div class="exercise-content">
+                    <div class="scenario">
+                        <h4>Scenario:</h4>
+                        <p>An autonomous vehicle malfunctions and must choose between:</p>
+                        <ol>
+                            <li>Swerving to hit a motorcyclist who ran a red light (1 person)</li>
+                            <li>Proceeding straight and hitting a compliant elderly couple crossing the road (2 people)</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="fill-blank-questions">
+                        <div class="question-item">
+                            <h4>Question 1:</h4>
+                            <p>Human drivers typically rely on ______ to make such decisions</p>
+                            <div class="blank-options">
+                                <label class="blank-option">
+                                    <input type="radio" name="q1" value="legal statutes">
+                                    <span>legal statutes</span>
+                                </label>
+                                <label class="blank-option">
+                                    <input type="radio" name="q1" value="immediate intuition">
+                                    <span>immediate intuition</span>
+                                </label>
+                                <label class="blank-option">
+                                    <input type="radio" name="q1" value="data analysis">
+                                    <span>data analysis</span>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="question-item">
+                            <h4>Question 2:</h4>
+                            <p>If the AI chooses Option 1 based on the "minimal casualty principle", it may violate the ______ principle</p>
+                            <div class="blank-options">
+                                <label class="blank-option">
+                                    <input type="radio" name="q2" value="traffic regulations">
+                                    <span>traffic regulations</span>
+                                </label>
+                                <label class="blank-option">
+                                    <input type="radio" name="q2" value="humanitarian principles">
+                                    <span>humanitarian principles</span>
+                                </label>
+                                <label class="blank-option">
+                                    <input type="radio" name="q2" value="commercial interests">
+                                    <span>commercial interests</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="exercise-feedback" id="feedback3" style="display: none;">
+                        <div class="feedback-content">
+                            <h4>Answer:</h4>
+                            <p><strong>1.</strong> Immediate intuition</p>
+                            <p><strong>2.</strong> Traffic regulations (Because the motorcyclist's violation should bear responsibility)</p>
+                        </div>
+                    </div>
+                    
+                    <button class="check-answer-btn" data-exercise="3">
+                        <i class="fas fa-check"></i> Check Answer
+                    </button>
+                </div>
+            </div>
+
+ <!-- Next Chapter -->
+        <a href="module01-class03-sec0.html" class="chapter-card">
             <div class="chapter-number">3</div>
             <div class="chapter-content">
-                <p>Section 3</p>
-                <h3>AI in Transportation - Autonomous Vehicles & Beyond</h3>
+                <p>Next Chapter</p>
+                <h3>Chapter 3: AI in Business & Industry</h3>
                 <div class="progress-container">
-                    <div class="progress-bar" style="width: 100%"></div>
+                    <div class="progress-bar" style="width: 1%"></div>
                 </div>
-                <div class="progress-percentage">100%</div>
+                <div class="progress-percentage">1%</div>
             </div>
             <div class="chapter-arrow">
                 <i class="fas fa-chevron-right"></i>
             </div>
         </a>
-        
-        <!-- Virtual Teacher Dashboard -->
-        <div class="teacher-dashboard">
-            <h3>Choose Your Virtual Teacher</h3>
-            <p>Select a virtual teacher to guide you through this section</p>
-            
-            <!-- Filter Buttons -->
-            <!-- <div class="teacher-filters">
-                <button class="filter-btn active" data-filter="all">
-                    <i class="fas fa-users"></i> All Teachers
-                </button>
-                <button class="filter-btn" data-filter="professor">
-                    <i class="fas fa-graduation-cap"></i> Professor
-                </button>
-                <button class="filter-btn" data-filter="avatar">
-                    <i class="fas fa-robot"></i> Avatar
-                </button>
-                <button class="filter-btn" data-filter="anime">
-                    <i class="fa-solid fa-palette"></i> Anime
-                </button>
-            </div> -->
-            
-            <div class="swiper teacher-carousel">
-                <div class="swiper-wrapper">
-                    <!-- Teacher 1 -->
-                    <div class="swiper-slide">
-                        <div class="teacher-card" data-teacher="lionelni">
-                            <div class="teacher-img-container">
-                                <img src="assets/imgs/teacher/lionelni.png" alt="Lionel Ni" class="teacher-img">
-                            </div>
-                            <div class="teacher-info">
-                                <h4>Prof. Lionel Ni</h4>
-                                <p class="teacher-title">President, HKUST(GZ)</p>
-                                <div class="teacher-specialty">
-                                    <span class="badge"><i class="fas fa-graduation-cap"></i> Professor</span>
-                                </div>
-                            </div>
-                            <div class="teacher-select">
-                                <i class="fas fa-check"></i>
-                            </div>
-                        </div>
-                    </div>
 
-                    <!-- Teacher 2 -->
-                    <div class="swiper-slide">
-                        <div class="teacher-card" data-teacher="panhui">
-                            <div class="teacher-img-container">
-                                <img src="assets/imgs/teacher/ben.png" alt="Pan Hui" class="teacher-img">
-                            </div>
-                            <div class="teacher-info">
-                                <h4>Prof. Pan Hui</h4>
-                                <p class="teacher-title">Computational Media and Arts, HKUST(GZ)</p>
-                                <div class="teacher-specialty">
-                                    <span class="badge"><i class="fas fa-graduation-cap"></i> Professor</span>
-                                </div>
-                            </div>
-                            <div class="teacher-select">
-                                <i class="fas fa-check"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="teacher-card" data-teacher="zoe">
-                            <div class="teacher-img-container">
-                                <img src="assets/imgs/teacher/zoe.png" alt="Zoe" class="teacher-img">
-                            </div>
-                            <div class="teacher-info">
-                                <h4>Zoe</h4>
-                                <p class="teacher-title">AI Avatar</p>
-                                <div class="teacher-specialty">
-                                    <span class="badge"><i class="fas fa-brain"></i> Avatar</span>
-                                </div>
-                            </div>
-                            <div class="teacher-select">
-                                <i class="fas fa-check"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="teacher-card" data-teacher="neo">
-                            <div class="teacher-img-container">
-                                <img src="assets/imgs/teacher/neo.png" alt="Neo" class="teacher-img">
-                            </div>
-                            <div class="teacher-info">
-                                <h4>Neo</h4>
-                                <p class="teacher-title">AI Avatar</p>
-                                <div class="teacher-specialty">
-                                    <span class="badge"><i class="fas fa-brain"></i> Anime</span>
-                                </div>
-                            </div>
-                            <div class="teacher-select">
-                                <i class="fas fa-check"></i>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="swiper-slide">
-                        <div class="teacher-card" data-teacher="rie">
-                            <div class="teacher-img-container">
-                                <img src="assets/imgs/teacher/Rie.png" alt="Rie" class="teacher-img">
-                            </div>
-                            <div class="teacher-info">
-                                <h4>Rie</h4>
-                                <p class="teacher-title">AI Avatar</p>
-                                <div class="teacher-specialty">
-                                    <span class="badge"><i class="fas fa-brain"></i> Avatar</span>
-                                </div>
-                            </div>
-                            <div class="teacher-select">
-                                <i class="fas fa-check"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-                    <div class="swiper-slide">
-                        <div class="teacher-card" data-teacher="marcus">
-                            <div class="teacher-img-container">
-                                <img src="assets/imgs/teacher/marcus.png" alt="Marcus" class="teacher-img">
-                            </div>
-                            <div class="teacher-info">
-                                <h4>Marcus</h4>
-                                <p class="teacher-title">AI Avatar</p>
-                                <div class="teacher-specialty">
-                                    <span class="badge"><i class="fa-solid fa-palette"></i> Avatar</span>
-                                </div>
-                            </div>
-                            <div class="teacher-select">
-                                <i class="fas fa-check"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="teacher-card" data-teacher="trinity">
-                            <div class="teacher-img-container">
-                                <img src="assets/imgs/teacher/trinity.png" alt="Trinity" class="teacher-img">
-                            </div>
-                            <div class="teacher-info">
-                                <h4>Trinity</h4>
-                                <p class="teacher-title">AI Avatar</p>
-                                <div class="teacher-specialty">
-                                    <span class="badge"><i class="fa-solid fa-palette"></i> Anime</span>
-                                </div>
-                            </div>
-                            <div class="teacher-select">
-                                <i class="fas fa-check"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="teacher-card" data-teacher="elena">
-                            <div class="teacher-img-container">
-                                <img src="assets/imgs/teacher/elena.png" alt="Trinity" class="teacher-img">
-                            </div>
-                            <div class="teacher-info">
-                                <h4>Elena</h4>
-                                <p class="teacher-title">AI Avatar</p>
-                                <div class="teacher-specialty">
-                                    <span class="badge"><i class="fas fa-brain"></i> Avatar</span>
-                                </div>
-                            </div>
-                            <div class="teacher-select">
-                                <i class="fas fa-check"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="teacher-card" data-teacher="daniel">
-                            <div class="teacher-img-container">
-                                <img src="assets/imgs/teacher/daniel.png" alt="Daniel" class="teacher-img">
-                            </div>
-                            <div class="teacher-info">
-                                <h4>Daniel</h4>
-                                <p class="teacher-title">AI Avatar</p>
-                                <div class="teacher-specialty">
-                                    <span class="badge"><i class="fa-solid fa-palette"></i> Avatar</span>
-                                </div>
-                            </div>
-                            <div class="teacher-select">
-                                <i class="fas fa-check"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="teacher-card" data-teacher="claire">
-                            <div class="teacher-img-container">
-                                <img src="assets/imgs/teacher/claire.png" alt="Claire" class="teacher-img">
-                            </div>
-                            <div class="teacher-info">
-                                <h4>Claire</h4>
-                                <p class="teacher-title">AI Avatar</p>
-                                <div class="teacher-specialty">
-                                    <span class="badge"><i class="fa-solid fa-palette"></i> Avatar</span>
-                                </div>
-                            </div>
-                            <div class="teacher-select">
-                                <i class="fas fa-check"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-                </div>
-                <!-- Pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
-            
-            <div class="teacher-preview">
-                <div class="preview-placeholder">
-                    <i class="fa-solid fa-layer-group"></i>
-                    <p>Select a virtual teacher to preview</p>
-                </div>
-                <div class="preview-content" style="display: none;">
-                    <div class="preview-container">
-                        <div class="preview-avatar-container">
-                            <img src="" alt="Teacher Preview" class="preview-avatar">
-                        </div>
-                        <div class="preview-details">
-                            <h4 class="preview-name"></h4>
-                            <p class="preview-title"></p>
-                            <div class="preview-bio"></div>
-                        </div>
-                    </div>
-                    <button class="btn btn-primary select-teacher-btn" style="margin-top: 1rem; width: 100%;">
-                        <i class="fas fa-user-check"></i> Learn with <span class="teacher-first-name"></span>
-                    </button>
-                </div>
-            </div>
         </div>
         
-        <!-- Video Section -->
-        
-        <div class="video-section">
-            <div class="video-container">
-                <video id="lessonVideo" width="100%" controls>
-                    <source src="assets/vids_1-2/1.2_claire/1.2-claire-section3-1.mp4" type="video/mp4">
-                    Your browser does not support HTML video.
-                </video>
-            </div>
-            <div class="video-description">
-                <!-- <h3>What is AI? A Historical Perspective</h3>
-                <p>This video provides an overview of artificial intelligence, tracing its development from early concepts to modern applications. Learn about the key milestones and breakthroughs that have shaped the field of AI as we know it today.</p>
-                 -->
-                <!-- Closed Caption and Translation Section -->
-                <div class="caption-section">
-                    <div class="caption-header">
-                        <h4><i class="fas fa-closed-captioning"></i> Transcript</h4>
-                        <div class="language-selector">
-                            <select id="translationLanguage" class="language-dropdown">
-                                <option value="en">English</option>
-                                <option value="zh">简体中文</option>
-                                <option value="tc">繁體中文</option>
-                                <option value="fr">Français</option>   
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <div class="captions-container">
-                        <div class="captions" id="englishCaptions">
-    <div class="caption-line">
-        <p>Finally, let's hit the road. Transportation is one of AI's most visible frontiers — changing how we drive, move goods, and design our cities.</p>
-    </div>
-    <div class="caption-line">
-        <p>Let's go through the Self‑Driving Cars. Companies such as Tesla and Waymo are developing vehicles that rely on AI‑powered sensors — cameras, radar, and LiDAR (a laser‑based distance sensor) — to read the environment.</p>
-    </div>
-    <div class="caption-line">
-        <p>These sensors collect millions of data points each second, mapping traffic signs, pedestrians, and nearby cars. The onboard AI decides in real time when to accelerate, brake, or merge — with the ultimate goal of reducing accidents caused by human error, which accounts for over 90 percent of crashes today.</p>
-    </div>
-    <div class="caption-line">
-        <p>Smarter Traffic Management is also a key. AI isn't only inside cars — it's in the streets too. Cities now use predictive AI systems to adjust traffic lights, reroute flows, and even prioritize emergency vehicles.</p>
-    </div>
-    <div class="caption-line">
-        <p>For example, Pittsburgh and Singapore employ smart intersections that clear the path for ambulances automatically, cutting response times and easing congestion.</p>
-    </div>
-    <div class="caption-line">
-        <p>In terms of Delivery and Logistics, do you ever notice how your parcels arrive faster than expected?</p>
-    </div>
-    <div class="caption-line">
-        <p>AI optimizes delivery routes, factoring in weather, traffic, and package urgency. It even powers drones that handle short‑distance deliveries — groceries, medicine, or urgent supplies — especially in remote areas.</p>
-    </div>
-    <div class="caption-line">
-        <p>Amazon and UPS have begun trialing these systems to make last‑mile delivery quicker and greener.</p>
-    </div>
-</div>
-
-<!-- chineseCaptions -->
-<div class="captions" id="chineseCaptions" style="display: none;">
-    <div class="caption-line">
-        <p>最后，让我们出发吧。交通运输是人工智能最引人注目的前沿领域之一——它正在改变我们驾驶、运输货物和设计城市的方式。</p>
-    </div>
-    <div class="caption-line">
-        <p>让我们来看看自动驾驶汽车。像特斯拉和Waymo这样的公司正在开发依赖人工智能传感器——摄像头、雷达和激光雷达（一种基于激光的距离传感器）——来感知环境的车辆。</p>
-    </div>
-    <div class="caption-line">
-        <p>这些传感器每秒收集数百万个数据点，绘制交通标志、行人和附近车辆的地图。车载人工智能实时决定何时加速、刹车或并线——其最终目标是减少由人为错误造成的事故，而人为错误目前占交通事故的90%以上。</p>
-    </div>
-    <div class="caption-line">
-        <p>更智能的交通管理也是一个关键。人工智能不仅存在于汽车内部——它也存在于街道上。城市现在使用预测性人工智能系统来调整交通信号灯、重新规划交通流，甚至优先让应急车辆通行。</p>
-    </div>
-    <div class="caption-line">
-        <p>例如，匹兹堡和新加坡采用了智能交叉路口，可以自动为救护车清出道路，缩短响应时间并缓解拥堵。</p>
-    </div>
-    <div class="caption-line">
-        <p>在配送和物流方面，你有没有注意到你的包裹到达的速度比预期的要快？</p>
-    </div>
-    <div class="caption-line">
-        <p>人工智能优化配送路线，综合考虑天气、交通和包裹的紧急程度。它甚至为无人机提供动力，处理短距离配送——杂货、药品或紧急物资——尤其是在偏远地区。</p>
-    </div>
-    <div class="caption-line">
-        <p>亚马逊和UPS已经开始试用这些系统，以使最后一英里的配送更快、更环保。</p>
-    </div>
-</div>
-
-<!-- chineseTradCaptions -->
-<div class="captions" id="chinesetradCaptions" style="display: none;">
-    <div class="caption-line">
-        <p>最後，讓我們出發吧。交通運輸是人工智能最引人注目的前沿領域之一——它正在改變我們駕駛、運輸貨物和設計城市的方式。</p>
-    </div>
-    <div class="caption-line">
-        <p>讓我們來看看自動駕駛汽車。像特斯拉和Waymo這樣的公司正在開發依賴人工智能傳感器——攝像頭、雷達和激光雷達（一種基於激光的距離傳感器）——來感知環境的車輛。</p>
-    </div>
-    <div class="caption-line">
-        <p>這些傳感器每秒收集數百萬個數據點，繪製交通標誌、行人和附近車輛的地圖。車載人工智能實時決定何時加速、剎車或併線——其最終目標是減少由人為錯誤造成的事故，而人為錯誤目前佔交通事故的90%以上。</p>
-    </div>
-    <div class="caption-line">
-        <p>更智能的交通管理也是一個關鍵。人工智能不僅存在於汽車內部——它也存在於街道上。城市現在使用預測性人工智能系統來調整交通信號燈、重新規劃交通流，甚至優先讓應急車輛通行。</p>
-    </div>
-    <div class="caption-line">
-        <p>例如，匹茲堡和新加坡採用了智能交叉路口，可以自動為救護車清出道路，縮短響應時間並緩解擁堵。</p>
-    </div>
-    <div class="caption-line">
-        <p>在配送和物流方面，你有沒有注意到你的包裹到達的速度比預期的要快？</p>
-    </div>
-    <div class="caption-line">
-        <p>人工智能優化配送路線，綜合考慮天氣、交通和包裹的緊急程度。它甚至為無人機提供動力，處理短距離配送——雜貨、藥品或緊急物資——尤其是在偏遠地區。</p>
-    </div>
-    <div class="caption-line">
-        <p>亞馬遜和UPS已經開始試用這些系統，以使最後一英里的配送更快、更環保。</p>
-    </div>
-</div>
-
-<!-- frenchCaptions -->
-<div class="captions" id="frenchCaptions" style="display: none;">
-    <div class="caption-line">
-        <p>Enfin, prenons la route. Les transports sont l'une des frontières les plus visibles de l'IA — changeant notre façon de conduire, de transporter des marchandises et de concevoir nos villes.</p>
-    </div>
-    <div class="caption-line">
-        <p>Parcourons les voitures autonomes. Des entreprises comme Tesla et Waymo développent des véhicules qui s'appuient sur des capteurs alimentés par l'IA — caméras, radar et LiDAR (un capteur de distance à base de laser) — pour lire l'environnement.</p>
-    </div>
-    <div class="caption-line">
-        <p>Ces capteurs collectent des millions de points de données chaque seconde, cartographiant les panneaux de signalisation, les piétons et les voitures environnantes. L'IA embarquée décide en temps réel quand accélérer, freiner ou s'insérer — avec pour objectif ultime de réduire les accidents causés par l'erreur humaine, qui représente plus de 90 pour cent des accidents aujourd'hui.</p>
-    </div>
-    <div class="caption-line">
-        <p>Une gestion du trafic plus intelligente est également un élément clé. L'IA n'est pas seulement à l'intérieur des voitures — elle est aussi dans les rues. Les villes utilisent désormais des systèmes d'IA prédictifs pour ajuster les feux de circulation, rediriger les flux, et même prioriser les véhicules d'urgence.</p>
-    </div>
-    <div class="caption-line">
-        <p>Par exemple, Pittsburgh et Singapour emploient des intersections intelligentes qui dégagent automatiquement le chemin pour les ambulances, réduisant les temps de réponse et atténuant les embouteillages.</p>
-    </div>
-    <div class="caption-line">
-        <p>En ce qui concerne la livraison et la logistique, avez-vous déjà remarqué comment vos colis arrivent plus vite que prévu ?</p>
-    </div>
-    <div class="caption-line">
-        <p>L'IA optimise les itinéraires de livraison, prenant en compte la météo, le trafic et l'urgence des colis. Elle alimente même des drones qui effectuent des livraisons sur de courtes distances — courses, médicaments ou fournitures urgentes — en particulier dans les zones reculées.</p>
-    </div>
-    <div class="caption-line">
-        <p>Amazon et UPS ont commencé à tester ces systèmes pour rendre la livraison du dernier kilomètre plus rapide et plus verte.</p>
-    </div>
-</div>
-                        
-                </div>
-                    
-                    <style>
-                        /* Style for caption lines */
-                        .captions-container {
-                            max-height: 180px;  /* Reduced from default */
-                            overflow-y: auto;    /* Add scrollbar if needed */
-                            margin: 10px 0;
-                            padding-right: 10px;
-                        }
-                        .caption-line {
-                            cursor: pointer;
-                            padding: 8px 12px;
-                            margin: 2px 0;
-                            border-radius: 4px;
-                            transition: background-color 0.2s ease;
-                        }
-                        
-                        .caption-line:hover {
-                            background-color: rgba(74, 144, 226, 0.1);
-                        }
-                        
-                        .caption-line.active {
-                            background-color: rgba(74, 144, 226, 0.15);
-                            font-weight: 500;
-                        }
-                        
-                        .timestamp {
-                            color: #4a90e2;
-                            font-weight: 500;
-                            margin-right: 8px;
-                        }
-
-                        /* Teacher card image styling */
-                        .teacher-card .teacher-img {
-                            background-color: black;
-                            object-fit: cover;
-                        }
-
-                        /* Supplementary Resources Section Styles */
-                        .supplementary-resources {
-                            margin: 3rem 0;
-                            padding: 2rem;
-                            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-                            border-radius: 16px;
-                            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-                        }
-
-                        .supplementary-resources .section-header {
-                            text-align: center;
-                            margin-bottom: 2.5rem;
-                        }
-
-                        .supplementary-resources .section-header h3 {
-                            font-size: 2rem;
-                            font-weight: 700;
-                            color: #2d3748;
-                            margin-bottom: 0.5rem;
-                        }
-
-                        .supplementary-resources .section-header h3 i {
-                            color: var(--primary);
-                            margin-right: 0.5rem;
-                        }
-
-                        .supplementary-resources .section-header p {
-                            color: #718096;
-                            font-size: 1.1rem;
-                        }
-
-                        .resources-grid {
-                            display: grid;
-                            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-                            gap: 1.5rem;
-                            max-width: 1200px;
-                            margin: 0 auto;
-                        }
-
-                        .resource-item {
-                            background: white;
-                            border-radius: 12px;
-                            padding: 0;
-                            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-                            transition: transform 0.3s ease, box-shadow 0.3s ease;
-                            overflow: hidden;
-                        }
-
-                        .resource-item:hover {
-                            transform: translateY(-4px);
-                            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-                        }
-
-                        .resource-header {
-                            display: flex;
-                            align-items: center;
-                            gap: 1rem;
-                            padding: 1.5rem 1.5rem 1rem 1.5rem;
-                            border-bottom: 1px solid #e2e8f0;
-                        }
-
-                        .resource-icon {
-                            background: linear-gradient(135deg, var(--primary), #667eea);
-                            color: white;
-                            width: 48px;
-                            height: 48px;
-                            border-radius: 10px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            flex-shrink: 0;
-                        }
+        <style>
+            /* Quiz Section Styles */
+            .quiz-section {
+                max-width: 1200px;
+                margin: 2rem auto;
+                padding: 0 1rem;
+            }
+            
+            .quiz-header {
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+            
+            .quiz-header h2 {
+                font-size: 2.5rem;
+                font-weight: 700;
+                color: #2d3748;
+                margin-bottom: 1rem;
+            }
+            
+            .quiz-header h2 i {
+                color: var(--primary);
+                margin-right: 0.5rem;
+            }
+            
+            .quiz-header p {
+                font-size: 1.1rem;
+                color: #718096;
+            }
+            
+            .exercise-card {
+                background: white;
+                border-radius: 16px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+                margin-bottom: 2rem;
+                overflow: hidden;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            
+            .exercise-card:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            }
+            
+            .exercise-header {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                padding: 1.5rem;
+                background: linear-gradient(135deg, var(--primary), #667eea);
+                color: white;
+            }
+            
+            .exercise-number {
+                width: 48px;
+                height: 48px;
+                background: rgba(255, 255, 255, 0.2);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+            
+            .exercise-title h3 {
+                font-size: 1.5rem;
+                font-weight: 600;
+                margin-bottom: 0.25rem;
+            }
+            
+            .exercise-type {
+                font-size: 0.9rem;
+                opacity: 0.9;
+            }
+            
+            .exercise-content {
+                padding: 2rem;
+            }
+            
+            .scenario {
+                margin-bottom: 2rem;
+            }
+            
+            .scenario h4 {
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: #2d3748;
+                margin-bottom: 0.5rem;
+            }
+            
+            .scenario p {
+                color: #4a5568;
+                line-height: 1.6;
+            }
+            
+            /* Exercise 1 Styles */
+            .options-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1rem;
+                margin-bottom: 2rem;
+            }
+            
+            .option-item {
+                display: flex;
+                align-items: flex-start;
+                gap: 0.75rem;
+                padding: 1rem;
+                background: #f8fafc;
+                border-radius: 8px;
+                cursor: grab;
+                transition: all 0.3s ease;
+                border: 2px solid transparent;
+            }
+            
+            .option-item:hover {
+                background: #e2e8f0;
+                transform: translateY(-2px);
+            }
+            
+            .option-item.dragging {
+                opacity: 0.5;
+                cursor: grabbing;
+            }
+            
+            .option-letter {
+                background: var(--primary);
+                color: white;
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 600;
+                flex-shrink: 0;
+            }
+            
+            .classification-task h4 {
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: #2d3748;
+                margin-bottom: 1rem;
+            }
+            
+            .classification-boxes {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+                margin-bottom: 2rem;
+            }
+            
+            .classification-box h5 {
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: #2d3748;
+                margin-bottom: 0.5rem;
+            }
+            
+            .drop-zone {
+                min-height: 100px;
+                background: #f8fafc;
+                border: 2px dashed #cbd5e0;
+                border-radius: 8px;
+                padding: 1rem;
+                transition: all 0.3s ease;
+            }
+            
+            .drop-zone.drag-over {
+                background: #e6fffa;
+                border-color: var(--primary);
+            }
+            
+            .drop-zone-label {
+                color: #a0aec0;
+                text-align: center;
+                font-style: italic;
+            }
+            
+            .dropped-item {
+                display: inline-block;
+                background: var(--primary);
+                color: white;
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 600;
+                margin: 0.25rem;
+                cursor: pointer;
+            }
+            
+            /* Exercise 2 Styles */
+            .flowchart-options {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 1rem;
+                margin-bottom: 2rem;
+            }
+            
+            .flow-step {
+                display: flex;
+                align-items: flex-start;
+                gap: 0.75rem;
+                padding: 1rem;
+                background: #f8fafc;
+                border-radius: 8px;
+                cursor: grab;
+                transition: all 0.3s ease;
+                border: 2px solid transparent;
+            }
+            
+            .flow-step:hover {
+                background: #e2e8f0;
+                transform: translateY(-2px);
+            }
+            
+            .flow-step.dragging {
+                opacity: 0.5;
+                cursor: grabbing;
+            }
+            
+            .step-letter {
+                background: var(--primary);
+                color: white;
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 600;
+                flex-shrink: 0;
+            }
+            
+            .flowchart-sequence h4 {
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: #2d3748;
+                margin-bottom: 1rem;
+            }
+            
+            .sequence-slots {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-bottom: 2rem;
+            }
+            
+            .sequence-slot {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            
+            .slot-number {
+                background: #4a5568;
+                color: white;
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 600;
+            }
+            
+            .slot-content {
+                min-width: 60px;
+                height: 40px;
+                background: #f8fafc;
+                border: 2px dashed #cbd5e0;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 600;
+                color: #4a5568;
+                transition: all 0.3s ease;
+            }
+            
+            .slot-content.filled {
+                background: #e6fffa;
+                border-color: var(--primary);
+                color: var(--primary);
+            }
+            
+            .sequence-arrow {
+                font-size: 1.5rem;
+                color: #4a5568;
+                font-weight: bold;
+            }
+            
+            /* Exercise 3 Styles */
+            .fill-blank-questions {
+                margin-bottom: 2rem;
+            }
+            
+            .question-item {
+                margin-bottom: 2rem;
+            }
+            
+            .question-item h4 {
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: #2d3748;
+                margin-bottom: 1rem;
+            }
+            
+            .question-item p {
+                color: #4a5568;
+                line-height: 1.6;
+                margin-bottom: 1rem;
+            }
+            
+            .blank-options {
+                display: flex;
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            
+            .blank-option {
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                padding: 1rem;
+                background: #f8fafc;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                border: 2px solid transparent;
+            }
+            
+            .blank-option:hover {
+                background: #e2e8f0;
+                border-color: var(--primary);
+            }
+            
+            .blank-option input[type="radio"] {
+                accent-color: var(--primary);
+            }
+            
+            .blank-option span {
+                color: #4a5568;
+                font-weight: 500;
+            }
+            
+            /* Feedback Styles */
+            .exercise-feedback {
+                background: #f0fff4;
+                border: 2px solid #9ae6b4;
+                border-radius: 8px;
+                padding: 1.5rem;
+                margin: 1.5rem 0;
+            }
+            
+            .feedback-content h4 {
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: #22543d;
+                margin-bottom: 0.75rem;
+            }
+            
+            .feedback-content p {
+                color: #2f855a;
+                margin-bottom: 0.5rem;
+            }
+            
+            .check-answer-btn {
+                background: var(--primary);
+                color: white;
+                border: none;
+                padding: 0.75rem 1.5rem;
+                border-radius: 8px;
+                font-weight: 500;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            
+            .check-answer-btn:hover {
+                background: #667eea;
+            }
+            
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .quiz-header h2 {
+                    font-size: 2rem;
+                }
+                
+                .exercise-header {
+                    padding: 1rem;
+                }
+                
+                .exercise-content {
+                    padding: 1.5rem;
+                }
+                
+                .classification-boxes {
+                    grid-template-columns: 1fr;
+                    gap: 1rem;
+                }
+                
+                .sequence-slots {
+                    flex-direction: column;
+                    gap: 0.5rem;
+                }
+                
+                .sequence-arrow {
+                    transform: rotate(90deg);
+                }
+            }
 
                         .resource-icon i {
                             font-size: 1.2rem;
@@ -746,108 +900,14 @@
                             });
                         });
                     </script>
-                    
-                    <div class="caption-actions">
-                        <button class="btn-caption" id="showMoreCaptions">
-                            <i class="fas fa-chevron-down"></i> Show More
-                        </button>
-                        <button class="btn-caption" id="downloadTranscript">
-                            <i class="fas fa-download"></i> Download Transcript
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Supplementary Resources Section -->
-        <div class="supplementary-resources">
-            <div class="section-header">
-                <h3><i class="fas fa-book-reader"></i> Additional Learning Resources</h3>
-                <p>Explore these curated materials to deepen your understanding</p>
-            </div>
-            
-            <div class="resources-grid">
-                <!-- Book / Article -->
-                <div class="resource-item">
-                    <div class="resource-header">
-                        <div class="resource-icon">
-                            <i class="fas fa-book"></i>
-                        </div>
-                        <div class="resource-meta">
-                            <h4>Driverless: Intelligent Cars and the Road Ahead</h4>
-                            <span class="resource-type">Book / Article</span>
-                        </div>
-                    </div>
-                    <div class="resource-content">
-                        <p class="resource-author">Hod Lipson & Melba Kurman</p>
-                        <p class="resource-description">An insightful exploration of autonomous vehicle technology, its development, and the transformative impact on transportation and society.</p>
-                        <a href="https://mitpress.mit.edu/9780262534475/driverless/" target="_blank" class="resource-action-btn">
-                            <i class="fas fa-external-link-alt"></i> Learn More
-                        </a>
-                    </div>
-                </div>
 
-                <!-- Reading / Articles
-                <div class="resource-item">
-                    <div class="resource-header">
-                        <div class="resource-icon">
-                            <i class="fas fa-newspaper"></i>
-                        </div>
-                        <div class="resource-meta">
-                            <h4>Transportation Automation Insights</h4>
-                            <span class="resource-type">Reading / Articles</span>
-                        </div>
-                    </div>
-                    <div class="resource-content">
-                        <p class="resource-author">Industry Experts</p>
-                        <p class="resource-description">Collection of articles covering the latest developments in autonomous vehicles, smart traffic systems, and transportation AI.</p>
-                        <button class="resource-action-btn">
-                            <i class="fas fa-external-link-alt"></i> Read Articles
-                        </button>
-                    </div>
-                </div> -->
-
-                <!-- Discussion -->
-                <div class="resource-item">
-                    <div class="resource-header">
-                        <div class="resource-icon">
-                            <i class="fas fa-comments"></i>
-                        </div>
-                        <div class="resource-meta">
-                            <h4>Discussion</h4>
-                            <span class="resource-type">Online Playful Site / Interaction</span>
-                        </div>
-                    </div>
-                    <div class="resource-content">
-                        <p class="resource-description">Observe your commute: note where automation already appears (traffic lights, ride-sharing, GPS suggestions).</p>
-                        <button class="resource-action-btn">
-                            <i class="fas fa-sign-in-alt"></i> Join Discussion
-                        </button>
-                    </div>
-                </div>
-            </div>
         </div>
 
         
-        <!-- Next Chapter -->
-        <a href="module01-class03.html" class="chapter-card">
-            <div class="chapter-number">4</div>
-            <div class="chapter-content">
-                <p>Next Section</p>
-                <h3>Exercise</h3>
-                <div class="progress-container">
-                    <div class="progress-bar" style="width: 10%"></div>
-                </div>
-                <div class="progress-percentage">10%</div>
-            </div>
-            <div class="chapter-arrow">
-                <i class="fas fa-chevron-right"></i>
-            </div>
-        </a>
-    </div>
     
-    
-    <!-- Footer -->
+
+        
+        <!-- Footer -->
     <footer class="footer" id="contact">
         <div class="footer-content">
             <div class="footer-about">
@@ -992,6 +1052,220 @@
                 updateLessonVideoForTeacher(teacherId);
             });
         });
+        
+        // Interactive Quiz Functionality
+        function initializeQuiz() {
+            // Exercise 1: Drag and Drop Classification
+            const optionItems = document.querySelectorAll('.option-item');
+            const dropZones = document.querySelectorAll('.drop-zone');
+            
+            optionItems.forEach(item => {
+                item.addEventListener('dragstart', function(e) {
+                    e.dataTransfer.setData('option', this.dataset.option);
+                    this.classList.add('dragging');
+                });
+                
+                item.addEventListener('dragend', function() {
+                    this.classList.remove('dragging');
+                });
+            });
+            
+            dropZones.forEach(zone => {
+                zone.addEventListener('dragover', function(e) {
+                    e.preventDefault();
+                    this.classList.add('drag-over');
+                });
+                
+                zone.addEventListener('dragleave', function() {
+                    this.classList.remove('drag-over');
+                });
+                
+                zone.addEventListener('drop', function(e) {
+                    e.preventDefault();
+                    this.classList.remove('drag-over');
+                    
+                    const option = e.dataTransfer.getData('option');
+                    const label = this.querySelector('.drop-zone-label');
+                    
+                    if (label) {
+                        label.style.display = 'none';
+                    }
+                    
+                    // Check if option already exists
+                    const existingItem = this.querySelector(`[data-dropped-option="${option}"]`);
+                    if (!existingItem) {
+                        const droppedItem = document.createElement('div');
+                        droppedItem.className = 'dropped-item';
+                        droppedItem.textContent = option;
+                        droppedItem.setAttribute('data-dropped-option', option);
+                        
+                        droppedItem.addEventListener('click', function() {
+                            this.remove();
+                            
+                            // Show label if zone is empty
+                            const zone = this.parentElement;
+                            const remainingItems = zone.querySelectorAll('.dropped-item');
+                            if (remainingItems.length === 0) {
+                                const label = zone.querySelector('.drop-zone-label');
+                                if (label) {
+                                    label.style.display = 'block';
+                                }
+                            }
+                        });
+                        
+                        this.appendChild(droppedItem);
+                    }
+                });
+            });
+            
+            // Exercise 2: Drag and Drop Sequencing
+            const flowSteps = document.querySelectorAll('.flow-step');
+            const sequenceSlots = document.querySelectorAll('.slot-content');
+            
+            flowSteps.forEach(step => {
+                step.addEventListener('dragstart', function(e) {
+                    e.dataTransfer.setData('step', this.dataset.step);
+                    this.classList.add('dragging');
+                });
+                
+                step.addEventListener('dragend', function() {
+                    this.classList.remove('dragging');
+                });
+            });
+            
+            sequenceSlots.forEach(slot => {
+                slot.addEventListener('dragover', function(e) {
+                    e.preventDefault();
+                    this.style.background = '#e6fffa';
+                    this.style.borderColor = 'var(--primary)';
+                });
+                
+                slot.addEventListener('dragleave', function() {
+                    this.style.background = '#f8fafc';
+                    this.style.borderColor = '#cbd5e0';
+                });
+                
+                slot.addEventListener('drop', function(e) {
+                    e.preventDefault();
+                    this.style.background = '#f8fafc';
+                    this.style.borderColor = '#cbd5e0';
+                    
+                    const step = e.dataTransfer.getData('step');
+                    const stepElement = document.querySelector(`[data-step="${step}"]`);
+                    
+                    if (stepElement && !this.dataset.filled) {
+                        this.textContent = step;
+                        this.classList.add('filled');
+                        this.dataset.filled = step;
+                        stepElement.style.opacity = '0.5';
+                        stepElement.draggable = false;
+                    }
+                });
+                
+                slot.addEventListener('click', function() {
+                    if (this.dataset.filled) {
+                        const step = this.dataset.filled;
+                        const stepElement = document.querySelector(`[data-step="${step}"]`);
+                        
+                        if (stepElement) {
+                            stepElement.style.opacity = '1';
+                            stepElement.draggable = true;
+                        }
+                        
+                        this.textContent = '______';
+                        this.classList.remove('filled');
+                        delete this.dataset.filled;
+                    }
+                });
+            });
+            
+            // Exercise 3: Radio button selection
+            const blankOptions = document.querySelectorAll('.blank-option');
+            blankOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    const radio = this.querySelector('input[type="radio"]');
+                    if (radio) {
+                        radio.checked = true;
+                        
+                        // Update visual state
+                        const name = radio.name;
+                        document.querySelectorAll(`input[name="${name}"]`).forEach(r => {
+                            const parent = r.parentElement;
+                            if (r.checked) {
+                                parent.style.background = '#e6fffa';
+                                parent.style.borderColor = 'var(--primary)';
+                            } else {
+                                parent.style.background = '#f8fafc';
+                                parent.style.borderColor = 'transparent';
+                            }
+                        });
+                    }
+                });
+            });
+            
+            // Check Answer functionality
+            const checkAnswerBtns = document.querySelectorAll('.check-answer-btn');
+            
+            checkAnswerBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const exerciseNum = this.dataset.exercise;
+                    const feedback = document.getElementById(`feedback${exerciseNum}`);
+                    
+                    if (feedback) {
+                        feedback.style.display = 'block';
+                        this.innerHTML = '<i class="fas fa-redo"></i> Reset';
+                        
+                        if (this.dataset.reset !== 'true') {
+                            this.dataset.reset = 'true';
+                        } else {
+                            // Reset functionality
+                            feedback.style.display = 'none';
+                            this.innerHTML = '<i class="fas fa-check"></i> Check Answer';
+                            this.dataset.reset = 'false';
+                            
+                            // Reset exercise 1
+                            if (exerciseNum === '1') {
+                                document.querySelectorAll('.dropped-item').forEach(item => item.remove());
+                                document.querySelectorAll('.drop-zone-label').forEach(label => {
+                                    label.style.display = 'block';
+                                });
+                            }
+                            
+                            // Reset exercise 2
+                            if (exerciseNum === '2') {
+                                document.querySelectorAll('.slot-content').forEach(slot => {
+                                    slot.textContent = '______';
+                                    slot.classList.remove('filled');
+                                    delete slot.dataset.filled;
+                                });
+                                document.querySelectorAll('.flow-step').forEach(step => {
+                                    step.style.opacity = '1';
+                                    step.draggable = true;
+                                });
+                            }
+                            
+                            // Reset exercise 3
+                            if (exerciseNum === '3') {
+                                document.querySelectorAll('input[type="radio"]').forEach(radio => {
+                                    radio.checked = false;
+                                    const parent = radio.parentElement;
+                                    parent.style.background = '#f8fafc';
+                                    parent.style.borderColor = 'transparent';
+                                });
+                            }
+                        }
+                    }
+                });
+            });
+        }
+        
+        // Initialize quiz when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializeQuiz);
+        } else {
+            initializeQuiz();
+        }
+        
         // Language switching functionality
         document.addEventListener('DOMContentLoaded', function() {
             const languageSelect = document.getElementById('translationLanguage');
@@ -1288,7 +1562,7 @@
                     bio: 'Zoe is a friendly AI avatar specializing in making complex topics easy to understand.',
                     avatar: 'assets/imgs/teacher/zoe.png',
                     specialty: 'Simplified Explanations',
-                    video: 'assets/vids_1-2/1.2_zoe/1.2-zoe-section3-1.mp4'
+                    video: 'assets/vids_1-2/1.2_zoe/1.2-zoe-section1-1.mp4'
                 },
                 neo: {
                     name: 'Neo',
@@ -1296,7 +1570,7 @@
                     bio: 'Neo is an anime-style AI avatar that helps break down complex concepts into easy-to-understand lessons.',
                     avatar: 'assets/imgs/teacher/neo.png',
                     specialty: 'Concept Breakdown',
-                    video: 'assets/vids_1-2/1.2_neo/1.2-neo-section3-1.mp4'
+                    video: 'assets/vids_1-2/1.2_neo/1.2-neo-section1-1.mp4'
                 },
                 rie: {
                     name: 'Rie',
@@ -1304,7 +1578,7 @@
                     bio: 'Rie is a friendly AI avatar specializing in making complex topics easy to understand.',
                     avatar: 'assets/imgs/teacher/Rie.png',
                     specialty: 'Simplified Explanations',
-                    video: 'assets/vids_1-2/1.2_rie/1.2-rie-section3-1.mp4'
+                    video: 'assets/vids_1-2/1.2_rie/1.2-rie-section1-1.mp4'
                 },
                 fiona: {
                     name: 'Fiona',
@@ -1312,7 +1586,7 @@
                     bio: 'Fiona is a friendly AI avatar specializing in making complex topics easy to understand.',
                     avatar: 'assets/imgs/teacher/fiona.png',
                     specialty: 'Simplified Explanations',
-                    video: 'assets/vids_1-2/1.2_fiona/1.2-fiona-section3-1.mp4'
+                    video: 'assets/vids_1-2/1.2_fiona/1.2-fiona-section1-1.mp4'
                 },
                 claire: {
                     name: 'Claire',
@@ -1320,7 +1594,7 @@
                     bio: 'Claire is a friendly AI avatar specializing in making complex topics easy to understand.',
                     avatar: 'assets/imgs/teacher/claire.png',
                     specialty: 'Simplified Explanations',
-                    video: 'assets/vids_1-2/1.2_claire/1.2-claire-section3-1.mp4'
+                    video: 'assets/vids_1-2/1.2_claire/1.2-claire-section1-1.mp4'
                 },
                 daniel: {
                     name: 'Daniel',
@@ -1328,7 +1602,7 @@
                     bio: 'Daniel is a knowledgeable AI avatar with expertise in various technical subjects.',
                     avatar: 'assets/imgs/teacher/daniel.png',
                     specialty: 'Technical Expertise',
-                    video: 'assets/vids_1-2/1.2_daniel/1.2-daniel-section3-1.mp4'
+                    video: 'assets/vids_1-2/1.2_daniel/1.2-daniel-section1-1.mp4'
                 },
                 marcus: {
                     name: 'Marcus',
@@ -1336,7 +1610,7 @@
                     bio: 'Marcus is a knowledgeable AI avatar with expertise in various technical subjects.',
                     avatar: 'assets/imgs/teacher/marcus.png',
                     specialty: 'Technical Expertise',
-                    video: 'assets/vids_1-2/1.2_marcus/1.2-marcus-section3-1.mp4'
+                    video: 'assets/vids_1-2/1.2_marcus/1.2-marcus-section1-1.mp4'
                 },
                 trinity: {
                     name: 'Trinity',
@@ -1344,7 +1618,7 @@
                     bio: 'Trinity is an anime-style AI avatar that makes learning fun and engaging with a unique personality.',
                     avatar: 'assets/imgs/teacher/trinity.png',
                     specialty: 'Engaging Presentations',
-                    video: 'assets/vids_1-2/1.2_trinity/1.2-trinity-section3-1.mp4'
+                    video: 'assets/vids_1-2/1.2_trinity/1.2-trinity-section1-1.mp4'
                 },
                 elena: {
                     name: 'Elena',
@@ -1352,7 +1626,7 @@
                     bio: 'Elena is an advanced AI avatar designed to provide interactive and engaging learning experiences.',
                     avatar: 'assets/imgs/teacher/elena.png',
                     specialty: 'Interactive Learning',
-                    video: 'assets/vids_1-2/1.2_elena/1.2-elena-section3-1.mp4'    
+                    video: 'assets/vids_1-2/1.2_elena/1.2-elena-section1-1.mp4'    
                 }
             };
 
