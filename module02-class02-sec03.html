@@ -62,12 +62,13 @@
     <section class="classes" id="classes">
         <div class="shapes-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden;"></div>
         <div class="section-header" style="position: relative; z-index: 1;">
-            <a href="module01-class03.html" class="back-link">
+            <!-- EDIT CHANGE -->
+            <a href="module02-class02.html" class="back-link">
                 <i class="fas fa-arrow-left"></i> Back to Sections
             </a>
             <!-- EDIT CHANGE -->
-            <p>Chapter 1</p>
-            <h2>The Language of AI: Demystifying NLP & Chatbots</h2>
+            <p>Chapter 2</p>
+            <h2>Visual Perception:<br>Computer Vision</h2>
         </div>
     </section>
     
@@ -79,11 +80,11 @@
             <div class="chapter-number">3</div>
             <div class="chapter-content">
                 <p>Section 3</p>
-                <h3>Hands-on: Sentiment Analysis & Prompt Engineering</h3>
+                <h3>Object Detection and Real-World Applications</h3>
                 <div class="progress-container">
-                    <div class="progress-bar" style="width: 100%"></div>
+                    <div class="progress-bar" style="width: 20%"></div>
                 </div>
-                <div class="progress-percentage">25%</div>
+                <div class="progress-percentage">20%</div>
             </div>
             <div class="chapter-arrow">
                 <i class="fas fa-chevron-right"></i>
@@ -331,7 +332,7 @@
         <div class="video-section">
             <div class="video-container">
                 <video id="lessonVideo" width="100%" controls>
-                    <source src="assets/vids_2-1/2.1_neo/2.1-neo-section3-1.mp4" type="video/mp4">
+                    <source src="assets/vids_2-2/2.2_neo/2.2-neo-section3-1.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                 </video>
             </div>
@@ -356,112 +357,149 @@
 
                     <div class="captions" id="englishCaptions">
     <div class="caption-line">
-        <p>Now that we know how the engine works, let's see what we can build with it.</p>
+        <p>Image Classification is great for identifying a single object in a photo. But the real world isn't a static photograph. The real world is a messy, moving video.</p>
     </div>
     <div class="caption-line">
-        <p>One of the most powerful business applications of NLP today is Sentiment Analysis. Imagine a company like Apple releases a new iPhone. Within one hour, there are a million reviews online. No human team can read them all.</p>
+        <p>This brings us to a more advanced level of Computer Vision: Object Detection.</p>
     </div>
     <div class="caption-line">
-        <p>But an NLP model can. It scans every token, maps the words, and instantly classifies the text's emotion. It can detect that "The battery life is sick!" is actually a highly positive review, even though the word "sick" usually means unwell. It understands the context. Brands use this every day to monitor if customers are happy, angry, or confused.</p>
+        <p>Instead of just asking, "Is there a dog in this picture?", Object Detection asks: "Where exactly are all the dogs, cars, and humans in this live video, and where are they moving?" The AI draws invisible bounding boxes around multiple objects in real-time.</p>
     </div>
     <div class="caption-line">
-        <p>Beyond analysis, NLP allows us to create interactive agents, like Custom Chatbots.</p>
+        <p>This technology is changing our society.</p>
     </div>
     <div class="caption-line">
-        <p>In the past, building a customer service bot required months of complex coding. Today, because LLMs understand natural language so well, you can build a chatbot using nothing but English instructions. We call this Prompt Engineering.</p>
+        <p>In Healthcare, Computer Vision models scan X-rays and MRI scans. They can detect microscopic early signs of cancer that a human doctor might miss, saving countless lives.</p>
     </div>
     <div class="caption-line">
-        <p>You act as a movie director giving an actor a script. You can write: "You are a friendly customer service bot for a coffee shop. Your goal is to help users order drinks. If a user is angry, apologize and offer a free coupon. Always speak like a pirate."</p>
+        <p>In Transportation, Object Detection is the brain of self-driving cars. Cameras mounted on the car constantly scan the road, predicting if a pedestrian is about to step into the street, and telling the brakes to stop in milliseconds.</p>
     </div>
     <div class="caption-line">
-        <p>By giving the AI a persona, a goal, and specific rules through plain text, you instantly program a fully functional AI application without writing a single line of traditional code.</p>
+        <p>However, giving machines "eyes" also creates immense ethical challenges.</p>
+    </div>
+    <div class="caption-line">
+        <p>The most controversial application is Facial Recognition. In many cities around the world, AI cameras can identify citizens in a crowd instantly. While this helps catch criminals, it also raises massive privacy concerns. Are we being watched all the time?</p>
+    </div>
+    <div class="caption-line">
+        <p>Furthermore, if the training data is biased, the facial recognition system might misidentify people of certain races, leading to false arrests.</p>
+    </div>
+    <div class="caption-line">
+        <p>Technology is neutral, but how we use it is not. Giving AI the power to see the world means humans have the responsibility to decide what it is allowed to look at.</p>
     </div>
 </div>
 
 <!-- chineseCaptions -->
 <div class="captions" id="chineseCaptions" style="display: none;">
     <div class="caption-line">
-        <p>现在我们了解了引擎的工作原理，让我们看看可以用它来构建什么。</p>
+        <p>图像分类擅长识别照片中的单个物体。但现实世界不是静态的照片。现实世界是混乱的、移动的视频。</p>
     </div>
     <div class="caption-line">
-        <p>当今NLP最强大的商业应用之一是情感分析。想象一下，像苹果这样的公司发布了一款新iPhone。一小时内，网上就出现了一百万条评论。没有哪个人类团队能全部读完。</p>
+        <p>这把我们带到了计算机视觉的一个更高级的层次：物体检测。</p>
     </div>
     <div class="caption-line">
-        <p>但NLP模型可以。它扫描每一个token，映射词语，并立即对文本的情感进行分类。它能够检测出"电池续航太恶心了！"实际上是一个高度正面的评价，尽管"sick"这个词通常意味着"生病"。它理解了上下文。品牌每天都用这个来监控客户是高兴、生气还是困惑。</p>
+        <p>物体检测不仅仅是问"这张照片里有狗吗？"，而是问："在这段实时视频中，所有的狗、汽车和人究竟在哪里，它们正在往哪里移动？" AI会实时地在多个物体周围绘制出无形的边界框。</p>
     </div>
     <div class="caption-line">
-        <p>除了分析，NLP还允许我们创建交互式代理，比如自定义聊天机器人。</p>
+        <p>这项技术正在改变我们的社会。</p>
     </div>
     <div class="caption-line">
-        <p>过去，构建一个客服机器人需要数月复杂的编码。今天，由于LLM对自然语言的理解如此之好，你可以仅用英文指令就能构建一个聊天机器人。我们称之为提示工程。</p>
+        <p>在医疗保健领域，计算机视觉模型扫描X光片和核磁共振扫描图像。它们可以检测到人类医生可能错过的微观早期癌症迹象，从而拯救无数生命。</p>
     </div>
     <div class="caption-line">
-        <p>你就像电影导演给演员剧本一样。你可以这样写："你是一家咖啡店的友好客服机器人。你的目标是帮助用户点单。如果用户生气，道歉并提供一张免费优惠券。说话要像个海盗一样。"</p>
+        <p>在交通运输领域，物体检测是自动驾驶汽车的大脑。安装在汽车上的摄像头不断扫描道路，预测行人是否将要走到街上，并在毫秒内指示刹车停止。</p>
     </div>
     <div class="caption-line">
-        <p>通过用纯文本赋予AI一个人设、一个目标和具体规则，你无需编写任何传统代码，就能瞬间编程出一个功能齐全的AI应用程序。</p>
+        <p>然而，赋予机器"眼睛"也带来了巨大的伦理挑战。</p>
+    </div>
+    <div class="caption-line">
+        <p>最具争议的应用是人脸识别。在世界各地的许多城市，AI摄像头可以立即识别出人群中的公民。虽然这有助于抓捕罪犯，但也引发了巨大的隐私担忧。我们是否一直都被监视着？</p>
+    </div>
+    <div class="caption-line">
+        <p>此外，如果训练数据存在偏见，人脸识别系统可能会误识别某些种族的人，导致错误的逮捕。</p>
+    </div>
+    <div class="caption-line">
+        <p>技术是中性的，但我们如何使用它却不是。赋予AI看世界的能力，意味着人类有责任决定允许它看什么。</p>
     </div>
 </div>
 
 <!-- chineseTradCaptions -->
 <div class="captions" id="chinesetradCaptions" style="display: none;">
     <div class="caption-line">
-        <p>現在我們了解了引擎的工作原理，讓我們看看可以用它來構建什麼。</p>
+        <p>圖像分類擅長識別照片中的單個物體。但現實世界不是靜態的照片。現實世界是混亂的、移動的視頻。</p>
     </div>
     <div class="caption-line">
-        <p>當今NLP最強大的商業應用之一是情感分析。想像一下，像蘋果這樣的公司發布了一款新iPhone。一小時內，網上就出現了一百萬條評論。沒有哪個人類團隊能全部讀完。</p>
+        <p>這把我們帶到了電腦視覺的一個更高級的層次：物體檢測。</p>
     </div>
     <div class="caption-line">
-        <p>但NLP模型可以。它掃描每一個token，映射詞語，並立即對文本的情感進行分類。它能夠檢測出「電池續航太噁心了！」實際上是一個高度正面的評價，儘管「sick」這個詞通常意味著「生病」。它理解了上下文。品牌每天都用這個來監控客戶是高興、生氣還是困惑。</p>
+        <p>物體檢測不僅僅是問「這張照片裡有狗嗎？」，而是問：「在這段實時視頻中，所有的狗、汽車和人究竟在哪裡，它們正在往哪裡移動？」 AI會實時地在多個物體周圍繪製出無形的邊界框。</p>
     </div>
     <div class="caption-line">
-        <p>除了分析，NLP還允許我們創建互動式代理，比如自定義聊天機器人。</p>
+        <p>這項技術正在改變我們的社會。</p>
     </div>
     <div class="caption-line">
-        <p>過去，構建一個客服機器人需要數月複雜的編碼。今天，由於LLM對自然語言的理解如此之好，你可以僅用英文指令就能構建一個聊天機器人。我們稱之為提示工程。</p>
+        <p>在醫療保健領域，電腦視覺模型掃描X光片和核磁共振掃描圖像。它們可以檢測到人類醫生可能錯過的微觀早期癌症跡象，從而拯救無數生命。</p>
     </div>
     <div class="caption-line">
-        <p>你就像電影導演給演員劇本一樣。你可以這樣寫：「你是一家咖啡店的友好客服機器人。你的目標是幫助用戶點單。如果用戶生氣，道歉並提供一張免費優惠券。說話要像個海盜一樣。」</p>
+        <p>在交通運輸領域，物體檢測是自動駕駛汽車的大腦。安裝在汽車上的攝像頭不斷掃描道路，預測行人是否將要走到街上，並在毫秒內指示剎車停止。</p>
     </div>
     <div class="caption-line">
-        <p>通過用純文本賦予AI一個人設、一個目標和具體規則，你無需編寫任何傳統代碼，就能瞬間編程出一個功能齊全的AI應用程序。</p>
+        <p>然而，賦予機器「眼睛」也帶來了巨大的倫理挑戰。</p>
+    </div>
+    <div class="caption-line">
+        <p>最具爭議的應用是人臉識別。在世界各地的許多城市，AI攝像頭可以立即識別出人群中的人。雖然這有助於抓捕罪犯，但也引發了巨大的隱私擔憂。我們是否一直都被監視著？</p>
+    </div>
+    <div class="caption-line">
+        <p>此外，如果訓練數據存在偏見，人臉識別系統可能會誤識別某些種族的人，導致錯誤的逮捕。</p>
+    </div>
+    <div class="caption-line">
+        <p>技術是中性的，但我們如何使用它卻不是。賦予AI看世界的能力，意味著人類有責任決定允許它看什麼。</p>
     </div>
 </div>
 
 <!-- frenchCaptions -->
 <div class="captions" id="frenchCaptions" style="display: none;">
     <div class="caption-line">
-        <p>Maintenant que nous savons comment fonctionne le moteur, voyons ce que nous pouvons construire avec lui.</p>
+        <p>La classification d'images est excellente pour identifier un seul objet dans une photo. Mais le monde réel n'est pas une photographie statique. Le monde réel est une vidéo désordonnée et en mouvement.</p>
     </div>
     <div class="caption-line">
-        <p>L'une des applications commerciales les plus puissantes du NLP aujourd'hui est l'analyse des sentiments. Imaginez qu'une entreprise comme Apple lance un nouvel iPhone. En une heure, il y a un million d'avis en ligne. Aucune équipe humaine ne peut tous les lire.</p>
+        <p>Cela nous amène à un niveau plus avancé de la vision par ordinateur : la Détection d'Objets.</p>
     </div>
     <div class="caption-line">
-        <p>Mais un modèle NLP le peut. Il scanne chaque token, cartographie les mots et classifie instantanément l'émotion du texte. Il peut détecter que « L'autonomie de la batterie est malade ! » est en fait un avis extrêmement positif, même si le mot « malade » signifie habituellement « pas en bonne santé ». Il comprend le contexte. Les marques utilisent cela chaque jour pour surveiller si les clients sont heureux, en colère ou perplexes.</p>
+        <p>Au lieu de simplement demander « Y a-t-il un chien dans cette image ? », la détection d'objets demande : « Où se trouvent exactement tous les chiens, les voitures et les humains dans cette vidéo en direct, et où se déplacent-ils ? » L'IA dessine des boîtes de délimitation invisibles autour de plusieurs objets en temps réel.</p>
     </div>
     <div class="caption-line">
-        <p>Au-delà de l'analyse, le NLP nous permet de créer des agents interactifs, comme des chatbots personnalisés.</p>
+        <p>Cette technologie est en train de changer notre société.</p>
     </div>
     <div class="caption-line">
-        <p>Autrefois, construire un bot de service client nécessitait des mois de codage complexe. Aujourd'hui, parce que les LLM comprennent si bien le langage naturel, vous pouvez construire un chatbot en utilisant uniquement des instructions en anglais. Nous appelons cela l'ingénierie des prompts.</p>
+        <p>Dans les soins de santé, les modèles de vision par ordinateur analysent les radiographies et les IRM. Ils peuvent détecter des signes microscopiques précoces de cancer qu'un médecin humain pourrait manquer, sauvant ainsi d'innombrables vies.</p>
     </div>
     <div class="caption-line">
-        <p>Vous agissez comme un réalisateur de cinéma donnant un script à un acteur. Vous pouvez écrire : « Vous êtes un bot de service client sympathique pour un café. Votre objectif est d'aider les utilisateurs à commander des boissons. Si un utilisateur est en colère, excusez-vous et offrez un coupon gratuit. Parlez toujours comme un pirate. »</p>
+        <p>Dans les transports, la détection d'objets est le cerveau des voitures autonomes. Des caméras montées sur la voiture scannent constamment la route, prédisent si un piéton s'apprête à traverser, et ordonnent aux freins de s'arrêter en millisecondes.</p>
     </div>
     <div class="caption-line">
-        <p>En donnant à l'IA une personnalité, un objectif et des règles spécifiques via du texte brut, vous programmez instantanément une application IA entièrement fonctionnelle sans écrire une seule ligne de code traditionnel.</p>
+        <p>Cependant, donner des « yeux » aux machines crée également d'immenses défis éthiques.</p>
+    </div>
+    <div class="caption-line">
+        <p>L'application la plus controversée est la reconnaissance faciale. Dans de nombreuses villes du monde, les caméras IA peuvent identifier instantanément les citoyens dans une foule. Bien que cela aide à attraper les criminels, cela soulève également d'énormes préoccupations en matière de vie privée. Sommes-nous surveillés tout le temps ?</p>
+    </div>
+    <div class="caption-line">
+        <p>De plus, si les données d'entraînement sont biaisées, le système de reconnaissance faciale pourrait mal identifier les personnes de certaines origines ethniques, conduisant à des arrestations injustifiées.</p>
+    </div>
+    <div class="caption-line">
+        <p>La technologie est neutre, mais la façon dont nous l'utilisons ne l'est pas. Donner à l'IA le pouvoir de voir le monde signifie que les humains ont la responsabilité de décider ce qu'il est autorisé à regarder.</p>
     </div>
 </div>
-
-
+                        
+                    
                     
                     <style>
                         /* Style for caption lines */
-                        .captions-container {
-                            max-height: 180px;  /* Reduced from default */
-                            overflow-y: auto;    /* Add scrollbar if needed */
+                        #englishCaptions, #chineseCaptions, #chinesetradCaptions, #frenchCaptions {
+                            max-height: 300px;
+                            overflow-y: auto;
                             margin: 10px 0;
                             padding-right: 10px;
+                            transition: max-height 0.3s ease;
                         }
                         .caption-line {
                             cursor: pointer;
@@ -757,7 +795,6 @@
             </div>
             
             <div class="resources-grid">
-
                 <!-- Reading / Articles -->
                 <div class="resource-item">
                     <div class="resource-header">
@@ -765,15 +802,35 @@
                             <i class="fas fa-newspaper"></i>
                         </div>
                         <div class="resource-meta">
-                            <h4>Best practices for prompt engineering with the OpenAI API</h4>
+                            <h4>Ethical Considerations in the Use of Facial Recognition for Public Safety</h4>
                             <span class="resource-type">Reading / Articles</span>
                         </div>
                     </div>
                     <div class="resource-content">
-                        <p class="resource-author">OpenAI</p>
-                        <p class="resource-description">How to give effective instructions to models</p>
-                        <a href="https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api" target="_blank" class="resource-action-btn">
+                        <p class="resource-author">IEEE Public Safety Technology</p>
+                        <p class="resource-description"></p>
+                        <a href="https://publicsafety.ieee.org/topics/ethical-considerations-in-the-use-of-facial-recognition-for-public-safety/" target="_blank" class="resource-action-btn">
                             <i class="fas fa-external-link-alt"></i> Read Article
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Video / Online Video from YouTube -->
+                <div class="resource-item">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="resource-meta">
+                            <h4>How Self-Driving Cars "See" the World - Tesla Autopilot Vision</h4>
+                            <span class="resource-type">Video / Online Video from YouTube</span>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <p class="resource-author">Tesla</p>
+                        <p class="resource-description"></p>
+                        <a href="https://www.youtube.com/watch?v=hx7BXih7zx8" target="_blank" class="resource-action-btn">
+                            <i class="fas fa-external-link-alt"></i> Watch Video
                         </a>
                     </div>
                 </div>
@@ -785,23 +842,23 @@
                             <i class="fas fa-comments"></i>
                         </div>
                         <div class="resource-meta">
-                            <h4>Tokenization Explorer</h4>
-                            <span class="resource-type">Interaction / Discussion</span>
+                            <h4>Ethical Debate</h4>
+                            <span class="resource-type">Discussion</span>
                         </div>
                     </div>
                     <div class="resource-content">
-                        <p class="resource-description">Try the OpenAI Tokenizer tool. Paste your favorite song lyric into the box and see exactly how the AI chops your words into colored tokens. Notice how spaces and punctuation are treated as separate tokens!</p>
-                        <a href="https://platform.openai.com/tokenizer" target="_blank" class="resource-action-btn">
-                            <i class="fas fa-sign-in-alt"></i> Try Tokenizer
-                        </a>
+                        <p class="resource-description"></p>
+                        <button class="resource-action-btn">
+                            <i class="fas fa-sign-in-alt"></i> Join Discussion
+                        </button>
                     </div>
                 </div> -->
             </div>
         </div>
         
-         <!-- Next Section-->
+        <!-- Next Section-->
          <!-- EDIT CHANGE -->
-        <a href="module02-class01-exercise.html" class="chapter-card">
+        <a href="module02-class02-exercise.html" class="chapter-card">
             <div class="chapter-number">4</div>
             <div class="chapter-content">
                 <p>Next Section</p>
@@ -809,7 +866,7 @@
                 <div class="progress-container">
                     <div class="progress-bar" style="width: 65%"></div>
                 </div>
-                <div class="progress-percentage">0%</div>
+                <div class="progress-percentage">65%</div>
             </div>
             <div class="chapter-arrow">
                 <i class="fas fa-chevron-right"></i>
@@ -1005,7 +1062,7 @@
             
             // Show more/less functionality
             if (showMoreBtn) {
-                const captionsContainer = document.querySelector('.captions-container');
+                const captionsContainer = document.querySelector('#englishCaptions').parentElement;
                 let isExpanded = false;
                 
                 showMoreBtn.addEventListener('click', function() {
@@ -1261,7 +1318,7 @@
                     bio: 'Zoe is a friendly AI avatar specializing in making complex topics easy to understand.',
                     avatar: 'assets/imgs/teacher/zoe.png',
                     specialty: 'Simplified Explanations',
-                    video: 'assets/vids_2-1/2.1_zoe/2.1-zoe-section3-1.mp4'
+                    video: 'assets/vids_2-2/2.2_zoe/2.2-zoe-section3-1.mp4'
                 },
                 neo: {
                     name: 'Neo',
@@ -1269,7 +1326,7 @@
                     bio: 'Neo is an anime-style AI avatar that helps break down complex concepts into easy-to-understand lessons.',
                     avatar: 'assets/imgs/teacher/neo.png',
                     specialty: 'Concept Breakdown',
-                    video: 'assets/vids_2-1/2.1_neo/2.1-neo-section3-1.mp4'
+                    video: 'assets/vids_2-2/2.2_neo/2.2-neo-section3-1.mp4'
                 },
                 rie: {
                     name: 'Rie',
@@ -1277,7 +1334,7 @@
                     bio: 'Rie is a friendly AI avatar specializing in making complex topics easy to understand.',
                     avatar: 'assets/imgs/teacher/Rie.png',
                     specialty: 'Simplified Explanations',
-                    video: 'assets/vids_2-1/2.1_rie/2.1-rie-section3-1.mp4'
+                    video: 'assets/vids_2-2/2.2_rie/2.2-rie-section3-1.mp4'
                 },
                 fiona: {
                     name: 'Fiona',
@@ -1317,7 +1374,7 @@
                     bio: 'Trinity is an anime-style AI avatar that makes learning fun and engaging with a unique personality.',
                     avatar: 'assets/imgs/teacher/trinity.png',
                     specialty: 'Engaging Presentations',
-                    video: 'assets/vids_2-1/2.1_trinity/2.1-trinity-section3-1.mp4'
+                    video: 'assets/vids_2-2/2.2_trinity/2.2-trinity-section3-1.mp4'
                 },
                 elena: {
                     name: 'Elena',
@@ -1325,7 +1382,7 @@
                     bio: 'Elena is an advanced AI avatar designed to provide interactive and engaging learning experiences.',
                     avatar: 'assets/imgs/teacher/elena.png',
                     specialty: 'Interactive Learning',
-                    video: 'assets/vids_2-1/2.1_elena/2.1-elena-section3-1.mp4'    
+                    video: 'assets/vids_2-2/2.2_elena/2.2-elena-section3-1.mp4'    
                 }
             };
 

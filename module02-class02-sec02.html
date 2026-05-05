@@ -62,12 +62,13 @@
     <section class="classes" id="classes">
         <div class="shapes-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden;"></div>
         <div class="section-header" style="position: relative; z-index: 1;">
-            <a href="module01-class03.html" class="back-link">
+            <!-- EDIT CHANGE -->
+            <a href="module02-class02.html" class="back-link">
                 <i class="fas fa-arrow-left"></i> Back to Sections
             </a>
             <!-- EDIT CHANGE -->
-            <p>Chapter 1</p>
-            <h2>The Language of AI: Demystifying NLP & Chatbots</h2>
+            <p>Chapter 2</p>
+            <h2>Visual Perception:<br>Computer Vision</h2>
         </div>
     </section>
     
@@ -76,14 +77,14 @@
         <!-- Chapter -->
         <a class="chapter-card">
             <!-- EDIT CHANGE -->
-            <div class="chapter-number">3</div>
+            <div class="chapter-number">2</div>
             <div class="chapter-content">
-                <p>Section 3</p>
-                <h3>Hands-on: Sentiment Analysis & Prompt Engineering</h3>
+                <p>Section 2</p>
+                <h3>Training an Image Classification Model without Code</h3>
                 <div class="progress-container">
-                    <div class="progress-bar" style="width: 100%"></div>
+                    <div class="progress-bar" style="width: 20%"></div>
                 </div>
-                <div class="progress-percentage">25%</div>
+                <div class="progress-percentage">20%</div>
             </div>
             <div class="chapter-arrow">
                 <i class="fas fa-chevron-right"></i>
@@ -331,7 +332,7 @@
         <div class="video-section">
             <div class="video-container">
                 <video id="lessonVideo" width="100%" controls>
-                    <source src="assets/vids_2-1/2.1_neo/2.1-neo-section3-1.mp4" type="video/mp4">
+                    <source src="assets/vids_2-2/2.2_neo/2.2-neo-section2-1.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                 </video>
             </div>
@@ -356,112 +357,125 @@
 
                     <div class="captions" id="englishCaptions">
     <div class="caption-line">
-        <p>Now that we know how the engine works, let's see what we can build with it.</p>
+        <p>Now that we know how computers see, let's teach one to recognize objects. This is called Image Classification.</p>
     </div>
     <div class="caption-line">
-        <p>One of the most powerful business applications of NLP today is Sentiment Analysis. Imagine a company like Apple releases a new iPhone. Within one hour, there are a million reviews online. No human team can read them all.</p>
+        <p>In the past, training an AI to recognize a coffee mug instead of a water bottle required weeks of coding and massive computing power. Today, thanks to the democratization of AI, anyone can do it from their web browser in minutes.</p>
     </div>
     <div class="caption-line">
-        <p>But an NLP model can. It scans every token, maps the words, and instantly classifies the text's emotion. It can detect that "The battery life is sick!" is actually a highly positive review, even though the word "sick" usually means unwell. It understands the context. Brands use this every day to monitor if customers are happy, angry, or confused.</p>
+        <p>We are going to use a tool created by Google called Teachable Machine. It perfectly demonstrates the core rule of Machine Learning we learned in Class 6: We don't give the machine rules; we give it examples.</p>
     </div>
     <div class="caption-line">
-        <p>Beyond analysis, NLP allows us to create interactive agents, like Custom Chatbots.</p>
+        <p>Here is how the workflow goes:</p>
     </div>
     <div class="caption-line">
-        <p>In the past, building a customer service bot required months of complex coding. Today, because LLMs understand natural language so well, you can build a chatbot using nothing but English instructions. We call this Prompt Engineering.</p>
+        <p>First, Gather Data. You turn on your webcam, hold up a coffee mug, and record 100 quick photos of it from different angles. You label this category "Mug." Then, you hold up a water bottle, record 100 photos, and label it "Bottle."</p>
     </div>
     <div class="caption-line">
-        <p>You act as a movie director giving an actor a script. You can write: "You are a friendly customer service bot for a coffee shop. Your goal is to help users order drinks. If a user is angry, apologize and offer a free coupon. Always speak like a pirate."</p>
+        <p>Second, Train the Model. You click one button. The AI analyzes the pixels, finds the hidden patterns (the features we just talked about), and creates a mathematical model.</p>
     </div>
     <div class="caption-line">
-        <p>By giving the AI a persona, a goal, and specific rules through plain text, you instantly program a fully functional AI application without writing a single line of traditional code.</p>
+        <p>Third, Predict. You hold up a completely new mug that the AI has never seen before. The AI scans it and instantly says: "I am 98% confident this is a Mug."</p>
+    </div>
+    <div class="caption-line">
+        <p>It's that simple! But remember the GIGO principle (Garbage In, Garbage Out)? If you only show the AI pictures of a blue mug during training, and then test it with a red mug, it might get confused. This teaches us a vital lesson: For an AI's vision to be accurate, its training data must be diverse and comprehensive.</p>
     </div>
 </div>
 
 <!-- chineseCaptions -->
 <div class="captions" id="chineseCaptions" style="display: none;">
     <div class="caption-line">
-        <p>现在我们了解了引擎的工作原理，让我们看看可以用它来构建什么。</p>
+        <p>现在我们知道了计算机是如何看的，让我们教它识别物体。这被称为图像分类。</p>
     </div>
     <div class="caption-line">
-        <p>当今NLP最强大的商业应用之一是情感分析。想象一下，像苹果这样的公司发布了一款新iPhone。一小时内，网上就出现了一百万条评论。没有哪个人类团队能全部读完。</p>
+        <p>过去，训练AI识别咖啡杯而不是水瓶需要数周的编码和巨大的计算能力。今天，由于人工智能的民主化，任何人都可以在几分钟内通过网页浏览器完成。</p>
     </div>
     <div class="caption-line">
-        <p>但NLP模型可以。它扫描每一个token，映射词语，并立即对文本的情感进行分类。它能够检测出"电池续航太恶心了！"实际上是一个高度正面的评价，尽管"sick"这个词通常意味着"生病"。它理解了上下文。品牌每天都用这个来监控客户是高兴、生气还是困惑。</p>
+        <p>我们将使用谷歌创建的一个工具，叫做Teachable Machine。它完美地展示了我们在第六课中学到的机器学习的核心规则：我们不給机器规则，我们給它例子。</p>
     </div>
     <div class="caption-line">
-        <p>除了分析，NLP还允许我们创建交互式代理，比如自定义聊天机器人。</p>
+        <p>工作流程是这样的：</p>
     </div>
     <div class="caption-line">
-        <p>过去，构建一个客服机器人需要数月复杂的编码。今天，由于LLM对自然语言的理解如此之好，你可以仅用英文指令就能构建一个聊天机器人。我们称之为提示工程。</p>
+        <p>第一步，收集数据。你打开网络摄像头，举起一个咖啡杯，从不同角度拍摄100张快速照片。你将这个类别标记为"杯子"。然后，你举起一个水瓶，拍摄100张照片，标记为"瓶子"。</p>
     </div>
     <div class="caption-line">
-        <p>你就像电影导演给演员剧本一样。你可以这样写："你是一家咖啡店的友好客服机器人。你的目标是帮助用户点单。如果用户生气，道歉并提供一张免费优惠券。说话要像个海盗一样。"</p>
+        <p>第二步，训练模型。你点击一个按钮。AI分析像素，找出隐藏的模式（我们刚刚讨论过的特征），并创建一个数学模型。</p>
     </div>
     <div class="caption-line">
-        <p>通过用纯文本赋予AI一个人设、一个目标和具体规则，你无需编写任何传统代码，就能瞬间编程出一个功能齐全的AI应用程序。</p>
+        <p>第三步，预测。你举起一个AI从未见过的全新杯子。AI扫描后立即说："我有98%的把握这是一个杯子。"</p>
+    </div>
+    <div class="caption-line">
+        <p>就是这么简单！但还记得GIGO原则（垃圾进，垃圾出）吗？如果你在训练期间只向AI展示蓝色杯子的图片，然后用红色杯子测试它，它可能会感到困惑。这教会了我们一个重要的一课：要使AI的视觉准确，其训练数据必须多样化且全面。</p>
     </div>
 </div>
 
 <!-- chineseTradCaptions -->
 <div class="captions" id="chinesetradCaptions" style="display: none;">
     <div class="caption-line">
-        <p>現在我們了解了引擎的工作原理，讓我們看看可以用它來構建什麼。</p>
+        <p>現在我們知道了計算機是如何看的，讓我們教它識別物體。這被稱為圖像分類。</p>
     </div>
     <div class="caption-line">
-        <p>當今NLP最強大的商業應用之一是情感分析。想像一下，像蘋果這樣的公司發布了一款新iPhone。一小時內，網上就出現了一百萬條評論。沒有哪個人類團隊能全部讀完。</p>
+        <p>過去，訓練AI識別咖啡杯而不是水瓶需要數週的編碼和巨大的計算能力。今天，由於人工智慧的民主化，任何人都可以在幾分鐘內通過網頁瀏覽器完成。</p>
     </div>
     <div class="caption-line">
-        <p>但NLP模型可以。它掃描每一個token，映射詞語，並立即對文本的情感進行分類。它能夠檢測出「電池續航太噁心了！」實際上是一個高度正面的評價，儘管「sick」這個詞通常意味著「生病」。它理解了上下文。品牌每天都用這個來監控客戶是高興、生氣還是困惑。</p>
+        <p>我們將使用谷歌創建的一個工具，叫做Teachable Machine。它完美地展示了我們在第六課中學到的機器學習的核心規則：我們不給機器規則，我們給它例子。</p>
     </div>
     <div class="caption-line">
-        <p>除了分析，NLP還允許我們創建互動式代理，比如自定義聊天機器人。</p>
+        <p>工作流程是這樣的：</p>
     </div>
     <div class="caption-line">
-        <p>過去，構建一個客服機器人需要數月複雜的編碼。今天，由於LLM對自然語言的理解如此之好，你可以僅用英文指令就能構建一個聊天機器人。我們稱之為提示工程。</p>
+        <p>第一步，收集數據。你打開網路攝像頭，舉起一個咖啡杯，從不同角度拍攝100張快速照片。你將這個類別標記為「杯子」。然後，你舉起一個水瓶，拍攝100張照片，標記為「瓶子」。</p>
     </div>
     <div class="caption-line">
-        <p>你就像電影導演給演員劇本一樣。你可以這樣寫：「你是一家咖啡店的友好客服機器人。你的目標是幫助用戶點單。如果用戶生氣，道歉並提供一張免費優惠券。說話要像個海盜一樣。」</p>
+        <p>第二步，訓練模型。你點擊一個按鈕。AI分析像素，找出隱藏的模式（我們剛剛討論過的特徵），並創建一個數學模型。</p>
     </div>
     <div class="caption-line">
-        <p>通過用純文本賦予AI一個人設、一個目標和具體規則，你無需編寫任何傳統代碼，就能瞬間編程出一個功能齊全的AI應用程序。</p>
+        <p>第三步，預測。你舉起一個AI從未見過的全新杯子。AI掃描後立即說：「我有98%的把握這是一個杯子。」</p>
+    </div>
+    <div class="caption-line">
+        <p>就是這麼簡單！但還記得GIGO原則（垃圾進，垃圾出）嗎？如果你在訓練期間只向AI展示藍色杯子的圖片，然後用紅色杯子測試它，它可能會感到困惑。這教會了我們重要的一課：要使AI的視覺準確，其訓練數據必須多樣化且全面。</p>
     </div>
 </div>
 
 <!-- frenchCaptions -->
 <div class="captions" id="frenchCaptions" style="display: none;">
     <div class="caption-line">
-        <p>Maintenant que nous savons comment fonctionne le moteur, voyons ce que nous pouvons construire avec lui.</p>
+        <p>Maintenant que nous savons comment les ordinateurs voient, apprenons à l'un d'eux à reconnaître des objets. C'est ce qu'on appelle la classification d'images.</p>
     </div>
     <div class="caption-line">
-        <p>L'une des applications commerciales les plus puissantes du NLP aujourd'hui est l'analyse des sentiments. Imaginez qu'une entreprise comme Apple lance un nouvel iPhone. En une heure, il y a un million d'avis en ligne. Aucune équipe humaine ne peut tous les lire.</p>
+        <p>Autrefois, entraîner une IA à reconnaître une tasse à café plutôt qu'une bouteille d'eau nécessitait des semaines de codage et une énorme puissance de calcul. Aujourd'hui, grâce à la démocratisation de l'IA, n'importe qui peut le faire depuis son navigateur web en quelques minutes.</p>
     </div>
     <div class="caption-line">
-        <p>Mais un modèle NLP le peut. Il scanne chaque token, cartographie les mots et classifie instantanément l'émotion du texte. Il peut détecter que « L'autonomie de la batterie est malade ! » est en fait un avis extrêmement positif, même si le mot « malade » signifie habituellement « pas en bonne santé ». Il comprend le contexte. Les marques utilisent cela chaque jour pour surveiller si les clients sont heureux, en colère ou perplexes.</p>
+        <p>Nous allons utiliser un outil créé par Google appelé Teachable Machine. Il démontre parfaitement la règle fondamentale de l'apprentissage automatique que nous avons apprise dans le cours 6 : Nous ne donnons pas de règles à la machine ; nous lui donnons des exemples.</p>
     </div>
     <div class="caption-line">
-        <p>Au-delà de l'analyse, le NLP nous permet de créer des agents interactifs, comme des chatbots personnalisés.</p>
+        <p>Voici comment se déroule le processus :</p>
     </div>
     <div class="caption-line">
-        <p>Autrefois, construire un bot de service client nécessitait des mois de codage complexe. Aujourd'hui, parce que les LLM comprennent si bien le langage naturel, vous pouvez construire un chatbot en utilisant uniquement des instructions en anglais. Nous appelons cela l'ingénierie des prompts.</p>
+        <p>Premièrement, Collecter les données. Vous allumez votre webcam, tenez une tasse à café et enregistrez 100 photos rapides sous différents angles. Vous étiquetez cette catégorie « Tasse ». Ensuite, vous tenez une bouteille d'eau, enregistrez 100 photos et l'étiquetez « Bouteille ».</p>
     </div>
     <div class="caption-line">
-        <p>Vous agissez comme un réalisateur de cinéma donnant un script à un acteur. Vous pouvez écrire : « Vous êtes un bot de service client sympathique pour un café. Votre objectif est d'aider les utilisateurs à commander des boissons. Si un utilisateur est en colère, excusez-vous et offrez un coupon gratuit. Parlez toujours comme un pirate. »</p>
+        <p>Deuxièmement, Entraîner le modèle. Vous cliquez sur un bouton. L'IA analyse les pixels, trouve les motifs cachés (les caractéristiques dont nous venons de parler) et crée un modèle mathématique.</p>
     </div>
     <div class="caption-line">
-        <p>En donnant à l'IA une personnalité, un objectif et des règles spécifiques via du texte brut, vous programmez instantanément une application IA entièrement fonctionnelle sans écrire une seule ligne de code traditionnel.</p>
+        <p>Troisièmement, Prédire. Vous tenez une toute nouvelle tasse que l'IA n'a jamais vue auparavant. L'IA la scanne et dit instantanément : « Je suis confiante à 98% que c'est une Tasse. »</p>
+    </div>
+    <div class="caption-line">
+        <p>C'est aussi simple que ça ! Mais vous souvenez-vous du principe GIGO (Garbage In, Garbage Out) ? Si vous ne montrez à l'IA que des images d'une tasse bleue pendant l'entraînement, puis que vous la testez avec une tasse rouge, elle pourrait être confuse. Cela nous enseigne une leçon vitale : Pour que la vision d'une IA soit précise, ses données d'entraînement doivent être diverses et complètes.</p>
     </div>
 </div>
-
-
+                        
+                    
                     
                     <style>
                         /* Style for caption lines */
-                        .captions-container {
-                            max-height: 180px;  /* Reduced from default */
-                            overflow-y: auto;    /* Add scrollbar if needed */
+                        #englishCaptions, #chineseCaptions, #chinesetradCaptions, #frenchCaptions {
+                            max-height: 300px;
+                            overflow-y: auto;
                             margin: 10px 0;
                             padding-right: 10px;
+                            transition: max-height 0.3s ease;
                         }
                         .caption-line {
                             cursor: pointer;
@@ -757,7 +771,6 @@
             </div>
             
             <div class="resources-grid">
-
                 <!-- Reading / Articles -->
                 <div class="resource-item">
                     <div class="resource-header">
@@ -765,51 +778,71 @@
                             <i class="fas fa-newspaper"></i>
                         </div>
                         <div class="resource-meta">
-                            <h4>Best practices for prompt engineering with the OpenAI API</h4>
+                            <h4>What is Image Classification?</h4>
                             <span class="resource-type">Reading / Articles</span>
                         </div>
                     </div>
                     <div class="resource-content">
-                        <p class="resource-author">OpenAI</p>
-                        <p class="resource-description">How to give effective instructions to models</p>
-                        <a href="https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api" target="_blank" class="resource-action-btn">
+                        <p class="resource-author">Google Machine Learning Crash Course</p>
+                        <p class="resource-description">Comprehensive guide to image classification concepts and techniques from Google's ML Crash Course.</p>
+                        <a href="https://developers.google.com/machine-learning/practica/image-classification" target="_blank" class="resource-action-btn">
                             <i class="fas fa-external-link-alt"></i> Read Article
                         </a>
                     </div>
                 </div>
 
+                <!-- Video / Online Video from YouTube -->
+                <div class="resource-item">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="resource-meta">
+                            <h4>Google Teachable Machine Tutorial: Build an AI model in 3 minutes</h4>
+                            <span class="resource-type">Video / Online Video from YouTube</span>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <p class="resource-author">Google</p>
+                        <p class="resource-description">Step-by-step tutorial showing how to quickly build and train your own AI model using Google's Teachable Machine.</p>
+                        <a href="https://www.youtube.com/watch?v=T2qQGqZxkD0" target="_blank" class="resource-action-btn">
+                            <i class="fas fa-external-link-alt"></i> Watch Video
+                        </a>
+                    </div>
+                </div>
+
                 <!-- Interaction / Discussion -->
-                <!-- <div class="resource-item">
+                <div class="resource-item">
                     <div class="resource-header">
                         <div class="resource-icon">
                             <i class="fas fa-comments"></i>
                         </div>
                         <div class="resource-meta">
-                            <h4>Tokenization Explorer</h4>
-                            <span class="resource-type">Interaction / Discussion</span>
+                            <h4>Hands-on Practice</h4>
+                            <span class="resource-type">Discussion</span>
                         </div>
                     </div>
                     <div class="resource-content">
-                        <p class="resource-description">Try the OpenAI Tokenizer tool. Paste your favorite song lyric into the box and see exactly how the AI chops your words into colored tokens. Notice how spaces and punctuation are treated as separate tokens!</p>
-                        <a href="https://platform.openai.com/tokenizer" target="_blank" class="resource-action-btn">
-                            <i class="fas fa-sign-in-alt"></i> Try Tokenizer
+                        <p class="resource-description">It's your turn! Go to Google Teachable Machine and click "Image Project." Train your webcam to recognize the difference between you wearing glasses vs. not wearing glasses, or holding a pen vs. holding your phone. Test it live!</p>
+                        <a href="https://teachablemachine.withgoogle.com/" target="_blank" class="resource-action-btn">
+                            <i class="fas fa-external-link-alt"></i> Try Teachable Machine
                         </a>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
         
-         <!-- Next Section-->
+        <!-- Next Section-->
          <!-- EDIT CHANGE -->
-        <a href="module02-class01-exercise.html" class="chapter-card">
-            <div class="chapter-number">4</div>
+        <a href="module02-class02-sec03.html" class="chapter-card">
+            <div class="chapter-number">3</div>
             <div class="chapter-content">
-                <p>Next Section</p>
-                <h3>Exercise</h3>
+                <p>Section 3</p>
+                <h3>Object Detection and Real-World Applications</h3>
                 <div class="progress-container">
                     <div class="progress-bar" style="width: 65%"></div>
                 </div>
-                <div class="progress-percentage">0%</div>
+                <div class="progress-percentage">65%</div>
             </div>
             <div class="chapter-arrow">
                 <i class="fas fa-chevron-right"></i>
@@ -1005,7 +1038,7 @@
             
             // Show more/less functionality
             if (showMoreBtn) {
-                const captionsContainer = document.querySelector('.captions-container');
+                const captionsContainer = document.querySelector('#englishCaptions').parentElement;
                 let isExpanded = false;
                 
                 showMoreBtn.addEventListener('click', function() {
@@ -1261,7 +1294,7 @@
                     bio: 'Zoe is a friendly AI avatar specializing in making complex topics easy to understand.',
                     avatar: 'assets/imgs/teacher/zoe.png',
                     specialty: 'Simplified Explanations',
-                    video: 'assets/vids_2-1/2.1_zoe/2.1-zoe-section3-1.mp4'
+                    video: 'assets/vids_2-2/2.2_zoe/2.2-zoe-section2-1.mp4'
                 },
                 neo: {
                     name: 'Neo',
@@ -1269,7 +1302,7 @@
                     bio: 'Neo is an anime-style AI avatar that helps break down complex concepts into easy-to-understand lessons.',
                     avatar: 'assets/imgs/teacher/neo.png',
                     specialty: 'Concept Breakdown',
-                    video: 'assets/vids_2-1/2.1_neo/2.1-neo-section3-1.mp4'
+                    video: 'assets/vids_2-2/2.2_neo/2.2-neo-section2-1.mp4'
                 },
                 rie: {
                     name: 'Rie',
@@ -1277,7 +1310,7 @@
                     bio: 'Rie is a friendly AI avatar specializing in making complex topics easy to understand.',
                     avatar: 'assets/imgs/teacher/Rie.png',
                     specialty: 'Simplified Explanations',
-                    video: 'assets/vids_2-1/2.1_rie/2.1-rie-section3-1.mp4'
+                    video: 'assets/vids_2-2/2.2_rie/2.2-rie-section2-1.mp4'
                 },
                 fiona: {
                     name: 'Fiona',
@@ -1317,7 +1350,7 @@
                     bio: 'Trinity is an anime-style AI avatar that makes learning fun and engaging with a unique personality.',
                     avatar: 'assets/imgs/teacher/trinity.png',
                     specialty: 'Engaging Presentations',
-                    video: 'assets/vids_2-1/2.1_trinity/2.1-trinity-section3-1.mp4'
+                    video: 'assets/vids_2-2/2.2_trinity/2.2-trinity-section2-1.mp4'
                 },
                 elena: {
                     name: 'Elena',
@@ -1325,7 +1358,7 @@
                     bio: 'Elena is an advanced AI avatar designed to provide interactive and engaging learning experiences.',
                     avatar: 'assets/imgs/teacher/elena.png',
                     specialty: 'Interactive Learning',
-                    video: 'assets/vids_2-1/2.1_elena/2.1-elena-section3-1.mp4'    
+                    video: 'assets/vids_2-2/2.2_elena/2.2-elena-section2-1.mp4'    
                 }
             };
 

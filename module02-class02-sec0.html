@@ -62,11 +62,13 @@
     <section class="classes" id="classes">
         <div class="shapes-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden;"></div>
         <div class="section-header" style="position: relative; z-index: 1;">
-            <a href="module02-class01.html" class="back-link">
+            <!-- EDIT CHANGE -->
+            <a href="module02-class02.html" class="back-link">
                 <i class="fas fa-arrow-left"></i> Back to Sections
             </a>
-            <p>Chapter 1</p>
-            <h2>The Language of AI: Demystifying NLP & Chatbots</h2>
+            <!-- EDIT CHANGE -->
+            <p>Chapter 2</p>
+            <h2>Visual Perception: Computer Vision</h2>
         </div>
     </section>
     
@@ -74,14 +76,15 @@
     <div class="chapters-container">
         <!-- Chapter -->
         <a class="chapter-card">
+            <!-- EDIT CHANGE -->
             <div class="chapter-number">0</div>
             <div class="chapter-content">
                 <p></p>
                 <h3>Introduction</h3>
                 <div class="progress-container">
-                    <div class="progress-bar" style="width: 100%"></div>
+                    <div class="progress-bar" style="width: 20%"></div>
                 </div>
-                <div class="progress-percentage">100%</div>
+                <div class="progress-percentage">20%</div>
             </div>
             <div class="chapter-arrow">
                 <i class="fas fa-chevron-right"></i>
@@ -325,11 +328,11 @@
         </div>
         
         <!-- Video Section -->
-        
+        <!-- EDIT CHANGE -->
         <div class="video-section">
             <div class="video-container">
                 <video id="lessonVideo" width="100%" controls>
-                    <source src="assets/vids_2-1/2.1_neo/2.1-neo-section0.mp4" type="video/mp4">
+                    <source src="assets/vids_2-2/2.2_neo/2.2-neo-section0.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                 </video>
             </div>
@@ -350,103 +353,92 @@
                             </select>
                         </div>
                     </div>
-                    
+                    <!-- EDIT CHANGE -->
+
                     <div class="captions" id="englishCaptions">
     <div class="caption-line">
-        <p>Hello everyone, In our previous lessons, we learned how Machine Learning works - how algorithms find patterns in massive amounts of data. We also looked at the "builder's toolkit" of frameworks and coding assistants.</p>
+        <p>We explored the "Brain" and the "Mouth" of AI. We learned how Large Language Models map out human words to understand and generate text. But if an AI can only read text, it is trapped in a dark box. To interact with the physical world, the machine needs "Eyes."</p>
     </div>
     <div class="caption-line">
-        <p>But today, we are going to apply that learning power to the most complex, messy, and beautiful data of all: Human Language.</p>
+        <p>Today, in this class, we are going to explore the fascinating world of Computer Vision.</p>
     </div>
     <div class="caption-line">
-        <p>Have you ever wondered how a machine - which is essentially a giant calculator that only understands ones and zeros - can write a beautiful poem, summarize a 100-page document, or joke with you in a chat?</p>
+        <p>How does a self-driving car know the difference between a plastic bag and a running child? How does your smartphone unlock just by looking at your face?</p>
     </div>
     <div class="caption-line">
-        <p>In Class 6, we are diving deep into the world of Natural Language Processing (NLP) and Large Language Models.</p>
+        <p>First, we will look at how machines actually "see" the world—spoiler alert: it's very different from how you and I see it. Second, we will do something incredibly fun: we will build and train our very own Image Classification model in just 5 minutes, without writing a single line of code.</p>
     </div>
     <div class="caption-line">
-        <p>First, we will look at the evolution of AI language and why human words are so hard for computers to grasp. Second, we will uncover the secret mechanics of how machines read: exploring Tokens and the magical mathematical map called Word Embeddings.</p>
+        <p>Finally, we will explore Object Detection and discuss the powerful real-world applications—and the ethical boundaries—of giving machines sight.</p>
     </div>
     <div class="caption-line">
-        <p>Finally, we will roll up our sleeves and look at how to build a custom chatbot using Prompt Engineering.</p>
-    </div>
-    <div class="caption-line">
-        <p>Let's give our AI a voice and start the lesson!</p>
+        <p>Let's open our eyes and dive in!</p>
     </div>
 </div>
 
 <!-- chineseCaptions -->
 <div class="captions" id="chineseCaptions" style="display: none;">
     <div class="caption-line">
-        <p>大家好。在前几节课中，我们学习了机器学习的工作原理——算法如何从海量数据中发现模式。我们还学习了框架和编码助手的“构建者工具包”。</p>
+        <p>我们探讨了人工智能的"大脑"和"嘴巴"。我们学习了大型语言模型如何绘制人类语言的图谱，以理解和生成文本。但如果一个AI只能阅读文本，它就被困在一个黑暗的盒子里。为了与物理世界互动，机器需要"眼睛"。</p>
     </div>
     <div class="caption-line">
-        <p>但今天，我们将把这种学习能力应用到最复杂、最混乱也最美丽的数据上：人类语言。</p>
+        <p>今天，在这节课中，我们将探索迷人的计算机视觉世界。</p>
     </div>
     <div class="caption-line">
-        <p>你是否曾经想过，一台本质上只懂0和1的巨型计算器，怎么能写出优美的诗歌、总结100页的文档，或者在聊天中跟你开玩笑？</p>
+        <p>自动驾驶汽车如何知道塑料袋和奔跑的孩子之间的区别？你的智能手机如何仅通过看你的脸就能解锁？</p>
     </div>
     <div class="caption-line">
-        <p>在第六课中，我们将深入探索自然语言处理和大语言模型的世界。</p>
+        <p>首先，我们将了解机器实际上是如何"看"世界的——剧透警告：它和你我看世界的方式非常不同。其次，我们将做一些非常有趣的事情：我们将在短短5分钟内构建并训练我们自己的图像分类模型，而无需编写一行代码。</p>
     </div>
     <div class="caption-line">
-        <p>首先，我们将了解AI语言的演变，以及为什么人类语言对计算机来说如此难以理解。其次，我们将揭示机器阅读的秘密机制：探索Token和被称为“词嵌入”的神奇数学地图。</p>
+        <p>最后，我们将探索物体检测，并讨论赋予机器视觉的强大现实应用——以及伦理边界。</p>
     </div>
     <div class="caption-line">
-        <p>最后，我们将卷起袖子，学习如何使用提示工程构建一个自定义聊天机器人。</p>
-    </div>
-    <div class="caption-line">
-        <p>让我们给AI發声，开始上课吧！</p>
+        <p>让我们睁开眼睛，潜入其中吧！</p>
     </div>
 </div>
 
 <!-- chineseTradCaptions -->
 <div class="captions" id="chinesetradCaptions" style="display: none;">
     <div class="caption-line">
-        <p>大家好。在前幾節課中，我們學習了機器學習的工作原理——演算法如何從海量數據中發現模式。我們還學習了框架和編碼助手的「構建者工具包」。</p>
+        <p>我們探討了人工智慧的「大腦」和「嘴巴」。我們學習了大型語言模型如何繪製人類語言的圖譜，以理解和生成文本。但如果一個AI只能閱讀文本，它就被困在一個黑暗的盒子裡。為了與物理世界互動，機器需要「眼睛」。</p>
     </div>
     <div class="caption-line">
-        <p>但今天，我們將把這種學習能力應用到最複雜、最混亂也最美麗的數據上：人類語言。</p>
+        <p>今天，在這節課中，我們將探索迷人的電腦視覺世界。</p>
     </div>
     <div class="caption-line">
-        <p>你是否曾經想過，一台本質上只懂0和1的巨型計算器，怎麼能寫出優美的詩歌、總結100頁的文檔，或者在聊天中跟你開玩笑？</p>
+        <p>自動駕駛汽車如何知道塑膠袋和奔跑的孩子之間的區別？你的智慧型手機如何僅通過看你的臉就能解鎖？</p>
     </div>
     <div class="caption-line">
-        <p>在第六課中，我們將深入探索自然語言處理和大語言模型的世界。</p>
+        <p>首先，我們將了解機器實際上是如何「看」世界的——劇透警告：它和你我看世界的方式非常不同。其次，我們將做一些非常有趣的事情：我們將在短短5分鐘內構建並訓練我們自己的圖像分類模型，而無需編寫一行代碼。</p>
     </div>
     <div class="caption-line">
-        <p>首先，我們將了解AI語言的演變，以及為什麼人類語言對計算機來說如此難以理解。其次，我們將揭示機器閱讀的秘密機制：探索Token和被稱為「詞嵌入」的神奇數學地圖。</p>
+        <p>最後，我們將探索物體檢測，並討論賦予機器視覺的強大現實應用——以及倫理邊界。</p>
     </div>
     <div class="caption-line">
-        <p>最後，我們將捲起袖子，學習如何使用提示工程構建一個自定義聊天機器人。</p>
-    </div>
-    <div class="caption-line">
-        <p>讓我們給AI發聲，開始上課吧！</p>
+        <p>讓我們睜開眼睛，潛入其中吧！</p>
     </div>
 </div>
 
 <!-- frenchCaptions -->
 <div class="captions" id="frenchCaptions" style="display: none;">
     <div class="caption-line">
-        <p>Bonjour à tous. Dans nos précédentes leçons, nous avons appris comment fonctionne l'apprentissage automatique - comment les algorithmes trouvent des schémas dans d'énormes quantités de données. Nous avons également examiné la « boîte à outils du constructeur » composée de frameworks et d'assistants de codage.</p>
+        <p>Nous avons exploré le « cerveau » et la « bouche » de l'IA. Nous avons appris comment les grands modèles de langage cartographient les mots humains pour comprendre et générer du texte. Mais si une IA ne peut lire que du texte, elle est enfermée dans une boîte noire. Pour interagir avec le monde physique, la machine a besoin d'« yeux ».</p>
     </div>
     <div class="caption-line">
-        <p>Mais aujourd'hui, nous allons appliquer cette puissance d'apprentissage à la donnée la plus complexe, la plus désordonnée et la plus belle de toutes : le langage humain.</p>
+        <p>Aujourd'hui, dans ce cours, nous allons explorer le monde fascinant de la vision par ordinateur.</p>
     </div>
     <div class="caption-line">
-        <p>Vous êtes-vous déjà demandé comment une machine - qui n'est essentiellement qu'une calculatrice géante ne comprenant que des uns et des zéros - peut écrire un beau poème, résumer un document de 100 pages, ou plaisanter avec vous dans une conversation ?</p>
+        <p>Comment une voiture autonome fait-elle la différence entre un sac en plastique et un enfant qui court ? Comment votre smartphone se déverrouille-t-il simplement en regardant votre visage ?</p>
     </div>
     <div class="caption-line">
-        <p>Dans le cours 6, nous plongeons profondément dans le monde du Traitement du Langage Naturel (NLP) et des Grands Modèles de Langage.</p>
+        <p>Premièrement, nous verrons comment les machines « voient » réellement le monde — alerte spoiler : c'est très différent de la façon dont vous et moi le voyons. Deuxièmement, nous ferons quelque chose d'incroyablement amusant : nous construirons et entraînerons notre propre modèle de classification d'images en seulement 5 minutes, sans écrire une seule ligne de code.</p>
     </div>
     <div class="caption-line">
-        <p>Premièrement, nous examinerons l'évolution du langage de l'IA et pourquoi les mots humains sont si difficiles à saisir pour les ordinateurs. Deuxièmement, nous découvrirons les mécanismes secrets de la lecture des machines : l'exploration des Tokens et la carte mathématique magique appelée Plongements de Mots (Word Embeddings).</p>
+        <p>Enfin, nous explorerons la détection d'objets et discuterons des puissantes applications concrètes — et des limites éthiques — de l'octroi de la vue aux machines.</p>
     </div>
     <div class="caption-line">
-        <p>Enfin, nous retrousserons nos manches et verrons comment construire un chatbot personnalisé en utilisant l'ingénierie des prompts.</p>
-    </div>
-    <div class="caption-line">
-        <p>Donnons une voix à notre IA et commençons la leçon !</p>
+        <p>Ouvrons nos yeux et plongeons-nous dedans !</p>
     </div>
 </div>
                         
@@ -487,6 +479,160 @@
                         .teacher-card .teacher-img {
                             background-color: black;
                             object-fit: cover;
+                        }
+
+                        /* Supplementary Resources Section Styles */
+                        .supplementary-resources {
+                            margin: 3rem 0;
+                            padding: 2rem;
+                            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+                            border-radius: 16px;
+                            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+                        }
+
+                        .supplementary-resources .section-header {
+                            text-align: center;
+                            margin-bottom: 2.5rem;
+                        }
+
+                        .supplementary-resources .section-header h3 {
+                            font-size: 2rem;
+                            font-weight: 700;
+                            color: #2d3748;
+                            margin-bottom: 0.5rem;
+                        }
+
+                        .supplementary-resources .section-header h3 i {
+                            color: var(--primary);
+                            margin-right: 0.5rem;
+                        }
+
+                        .supplementary-resources .section-header p {
+                            color: #718096;
+                            font-size: 1.1rem;
+                        }
+
+                        .resources-grid {
+                            display: grid;
+                            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                            gap: 1.5rem;
+                            max-width: 1200px;
+                            margin: 0 auto;
+                        }
+
+                        .resource-item {
+                            background: white;
+                            border-radius: 12px;
+                            padding: 0;
+                            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+                            transition: transform 0.3s ease, box-shadow 0.3s ease;
+                            overflow: hidden;
+                        }
+
+                        .resource-item:hover {
+                            transform: translateY(-4px);
+                            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+                        }
+
+                        .resource-header {
+                            display: flex;
+                            align-items: center;
+                            gap: 1rem;
+                            padding: 1.5rem 1.5rem 1rem 1.5rem;
+                            border-bottom: 1px solid #e2e8f0;
+                        }
+
+                        .resource-icon {
+                            background: linear-gradient(135deg, var(--primary), #667eea);
+                            color: white;
+                            width: 48px;
+                            height: 48px;
+                            border-radius: 10px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-shrink: 0;
+                        }
+
+                        .resource-icon i {
+                            font-size: 1.2rem;
+                        }
+
+                        .resource-meta h4 {
+                            font-size: 1.1rem;
+                            font-weight: 600;
+                            color: #2d3748;
+                            margin-bottom: 0.25rem;
+                            line-height: 1.4;
+                        }
+
+                        .resource-type {
+                            font-size: 0.85rem;
+                            color: var(--primary);
+                            font-weight: 500;
+                        }
+
+                        .resource-content {
+                            padding: 1rem 1.5rem 1.5rem 1.5rem;
+                        }
+
+                        .resource-author {
+                            font-size: 0.9rem;
+                            color: #4a5568;
+                            font-weight: 500;
+                            margin-bottom: 0.5rem;
+                        }
+
+                        .resource-description {
+                            color: #718096;
+                            font-size: 0.95rem;
+                            line-height: 1.5;
+                            margin-bottom: 1.25rem;
+                        }
+
+                        .resource-action-btn {
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 0.5rem;
+                            background: var(--primary);
+                            color: white;
+                            border: none;
+                            padding: 0.75rem 1.25rem;
+                            border-radius: 8px;
+                            font-weight: 500;
+                            font-size: 0.9rem;
+                            cursor: pointer;
+                            transition: background-color 0.2s ease;
+                            text-decoration: none;
+                        }
+
+                        .resource-action-btn:hover {
+                            background: #667eea;
+                            color: white;
+                        }
+
+                        @media (max-width: 768px) {
+                            .supplementary-resources {
+                                margin: 2rem 0;
+                                padding: 1.5rem;
+                            }
+
+                            .resources-grid {
+                                grid-template-columns: 1fr;
+                                gap: 1rem;
+                            }
+
+                            .resource-header {
+                                padding: 1.25rem 1.25rem 0.75rem 1.25rem;
+                            }
+
+                            .resource-content {
+                                padding: 0.75rem 1.25rem 1.25rem 1.25rem;
+                            }
+
+                            .supplementary-resources .section-header h3 {
+                                font-size: 1.5rem;
+                            }
                         }
                     </style>
                     
@@ -593,12 +739,14 @@
         </div>
         
         
+        
         <!-- Next Section-->
-        <a href="module02-class01-sec01.html" class="chapter-card">
+         <!-- EDIT CHANGE -->
+        <a href="module02-class02-sec01.html" class="chapter-card">
             <div class="chapter-number">1</div>
             <div class="chapter-content">
                 <p>Section 1</p>
-                <h3>The Evolution of AI Language: From Rules to LLMs</h3>
+                <h3>Introduction to Computer Vision</h3>
                 <div class="progress-container">
                     <div class="progress-bar" style="width: 65%"></div>
                 </div>
@@ -681,6 +829,7 @@
             }
             
             // Set default teacher
+            
             let selectedTeacher = 'alex';
             updateTeacherPreview(selectedTeacher);
             
@@ -1029,6 +1178,7 @@
             });
 
             // Teacher data
+            // EDIT CHANGE
             const teachers = {
                 lionelni: {
                     name: 'Lionel Ni',
@@ -1052,7 +1202,7 @@
                     bio: 'Zoe is a friendly AI avatar specializing in making complex topics easy to understand.',
                     avatar: 'assets/imgs/teacher/zoe.png',
                     specialty: 'Simplified Explanations',
-                    video: 'assets/vids_2-1/2.1_zoe/2.1-zoe-section0.mp4'
+                    video: 'assets/vids_2-2/2.2_zoe/2.2-zoe-section0.mp4'
                 },
                 neo: {
                     name: 'Neo',
@@ -1060,7 +1210,7 @@
                     bio: 'Neo is an anime-style AI avatar that helps break down complex concepts into easy-to-understand lessons.',
                     avatar: 'assets/imgs/teacher/neo.png',
                     specialty: 'Concept Breakdown',
-                    video: 'assets/vids_2-1/2.1_neo/2.1-neo-section0.mp4'
+                    video: 'assets/vids_2-2/2.2_neo/2.2-neo-section0.mp4'
                 },
                 rie: {
                     name: 'Rie',
@@ -1068,7 +1218,7 @@
                     bio: 'Rie is a friendly AI avatar specializing in making complex topics easy to understand.',
                     avatar: 'assets/imgs/teacher/Rie.png',
                     specialty: 'Simplified Explanations',
-                    video: 'assets/vids_2-1/2.1_rie/2.1-rie-section0.mp4'
+                    video: 'assets/vids_2-2/2.2_rie/2.2-rie-section0.mp4'
                 },
                 fiona: {
                     name: 'Fiona',
@@ -1108,7 +1258,7 @@
                     bio: 'Trinity is an anime-style AI avatar that makes learning fun and engaging with a unique personality.',
                     avatar: 'assets/imgs/teacher/trinity.png',
                     specialty: 'Engaging Presentations',
-                    video: 'assets/vids_2-1/2.1_trinity/2.1-trinity-section0.mp4'
+                    video: 'assets/vids_2-2/2.2_trinity/2.2-trinity-section0.mp4'
                 },
                 elena: {
                     name: 'Elena',
@@ -1116,7 +1266,7 @@
                     bio: 'Elena is an advanced AI avatar designed to provide interactive and engaging learning experiences.',
                     avatar: 'assets/imgs/teacher/elena.png',
                     specialty: 'Interactive Learning',
-                    video: 'assets/vids_2-1/2.1_elena/2.1-elena-section0.mp4'    
+                    video: 'assets/vids_2-2/2.2_elena/2.2-elena-section0.mp4'    
                 }
             };
 

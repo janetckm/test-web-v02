@@ -62,12 +62,13 @@
     <section class="classes" id="classes">
         <div class="shapes-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden;"></div>
         <div class="section-header" style="position: relative; z-index: 1;">
-            <a href="module01-class03.html" class="back-link">
+            <!-- EDIT CHANGE -->
+            <a href="module02-class02.html" class="back-link">
                 <i class="fas fa-arrow-left"></i> Back to Sections
             </a>
             <!-- EDIT CHANGE -->
             <p>Chapter 1</p>
-            <h2>The Language of AI: Demystifying NLP & Chatbots</h2>
+            <h2>Visual Perception: Computer Vision</h2>
         </div>
     </section>
     
@@ -76,14 +77,14 @@
         <!-- Chapter -->
         <a class="chapter-card">
             <!-- EDIT CHANGE -->
-            <div class="chapter-number">3</div>
+            <div class="chapter-number">1</div>
             <div class="chapter-content">
-                <p>Section 3</p>
-                <h3>Hands-on: Sentiment Analysis & Prompt Engineering</h3>
+                <p>Section 1</p>
+                <h3>Introduction to Computer Vision</h3>
                 <div class="progress-container">
-                    <div class="progress-bar" style="width: 100%"></div>
+                    <div class="progress-bar" style="width: 20%"></div>
                 </div>
-                <div class="progress-percentage">25%</div>
+                <div class="progress-percentage">20%</div>
             </div>
             <div class="chapter-arrow">
                 <i class="fas fa-chevron-right"></i>
@@ -331,7 +332,7 @@
         <div class="video-section">
             <div class="video-container">
                 <video id="lessonVideo" width="100%" controls>
-                    <source src="assets/vids_2-1/2.1_neo/2.1-neo-section3-1.mp4" type="video/mp4">
+                    <source src="assets/vids_2-2/2.2_neo/2.2-neo-section1-1.mp4" type="video/mp4">
                     Your browser does not support HTML video.
                 </video>
             </div>
@@ -356,112 +357,137 @@
 
                     <div class="captions" id="englishCaptions">
     <div class="caption-line">
-        <p>Now that we know how the engine works, let's see what we can build with it.</p>
+        <p>When you look at a photograph of a cat, your human brain instantly recognizes the fur, the pointy ears, and the cute eyes. It takes you zero effort.</p>
     </div>
     <div class="caption-line">
-        <p>One of the most powerful business applications of NLP today is Sentiment Analysis. Imagine a company like Apple releases a new iPhone. Within one hour, there are a million reviews online. No human team can read them all.</p>
+        <p>But when a computer looks at that exact same photograph, it doesn't see a cat. It doesn't see shapes or colors. It sees a giant, flat grid of numbers.</p>
     </div>
     <div class="caption-line">
-        <p>But an NLP model can. It scans every token, maps the words, and instantly classifies the text's emotion. It can detect that "The battery life is sick!" is actually a highly positive review, even though the word "sick" usually means unwell. It understands the context. Brands use this every day to monitor if customers are happy, angry, or confused.</p>
+        <p>To a computer, an image is just a spreadsheet of Pixels. If it's a black-and-white image, each pixel is assigned a number from 0 (pure black) to 255 (pure white). If it's a color image, the computer uses the RGB system — Red, Green, and Blue. Every single pixel has three numbers indicating how much red, green, and blue light is mixed together.</p>
     </div>
     <div class="caption-line">
-        <p>Beyond analysis, NLP allows us to create interactive agents, like Custom Chatbots.</p>
+        <p>So, an image of a cat on your phone is actually an ocean of millions of numbers. How does the AI make sense of this math? It uses a technique called Feature Extraction.</p>
     </div>
     <div class="caption-line">
-        <p>In the past, building a customer service bot required months of complex coding. Today, because LLMs understand natural language so well, you can build a chatbot using nothing but English instructions. We call this Prompt Engineering.</p>
+        <p>Instead of trying to look at the whole cat at once, the AI's neural network scans the image in layers, looking for patterns in the numbers.</p>
     </div>
     <div class="caption-line">
-        <p>You act as a movie director giving an actor a script. You can write: "You are a friendly customer service bot for a coffee shop. Your goal is to help users order drinks. If a user is angry, apologize and offer a free coupon. Always speak like a pirate."</p>
+        <p>The first layer looks for simple things: straight lines, edges, and dark shadows.</p>
     </div>
     <div class="caption-line">
-        <p>By giving the AI a persona, a goal, and specific rules through plain text, you instantly program a fully functional AI application without writing a single line of traditional code.</p>
+        <p>The second layer combines those lines into shapes: circles, triangles, and curves.</p>
+    </div>
+    <div class="caption-line">
+        <p>The final layers combine those shapes into complex features: an eye, a nose, a furry tail.</p>
+    </div>
+    <div class="caption-line">
+        <p>By passing the grid of numbers through these layers, the AI slowly builds an understanding of the image. It transforms raw math into meaning. This is the foundation of Computer Vision.</p>
     </div>
 </div>
 
 <!-- chineseCaptions -->
 <div class="captions" id="chineseCaptions" style="display: none;">
     <div class="caption-line">
-        <p>现在我们了解了引擎的工作原理，让我们看看可以用它来构建什么。</p>
+        <p>当你看到一张猫的照片时，你的人类大脑会立即识别出皮毛、尖尖的耳朵和可爱的眼睛。它不需要你付出任何努力。</p>
     </div>
     <div class="caption-line">
-        <p>当今NLP最强大的商业应用之一是情感分析。想象一下，像苹果这样的公司发布了一款新iPhone。一小时内，网上就出现了一百万条评论。没有哪个人类团队能全部读完。</p>
+        <p>但当计算机看到同一张照片时，它看到的不是猫。它看不到形状或颜色。它看到的只是一个巨大的、扁平的网格数字。</p>
     </div>
     <div class="caption-line">
-        <p>但NLP模型可以。它扫描每一个token，映射词语，并立即对文本的情感进行分类。它能够检测出"电池续航太恶心了！"实际上是一个高度正面的评价，尽管"sick"这个词通常意味着"生病"。它理解了上下文。品牌每天都用这个来监控客户是高兴、生气还是困惑。</p>
+        <p>对计算机来说，图像就是一个像素的电子表格。如果是黑白图像，每个像素被分配一个0（纯黑）到255（纯白）之间的数字。如果是彩色图像，计算机使用RGB系统 —— 红、绿、蓝。每一个像素都有三个数字，表示混合了多少红光、绿光和蓝光。</p>
     </div>
     <div class="caption-line">
-        <p>除了分析，NLP还允许我们创建交互式代理，比如自定义聊天机器人。</p>
+        <p>所以，你手机上的一张猫的照片实际上是一个由数百万个数字组成的海洋。AI如何理解这些数学信息？它使用了一种叫做特征提取的技术。</p>
     </div>
     <div class="caption-line">
-        <p>过去，构建一个客服机器人需要数月复杂的编码。今天，由于LLM对自然语言的理解如此之好，你可以仅用英文指令就能构建一个聊天机器人。我们称之为提示工程。</p>
+        <p>AI的神经网络不是试图一次性看到整只猫，而是逐层扫描图像，寻找数字中的模式。</p>
     </div>
     <div class="caption-line">
-        <p>你就像电影导演给演员剧本一样。你可以这样写："你是一家咖啡店的友好客服机器人。你的目标是帮助用户点单。如果用户生气，道歉并提供一张免费优惠券。说话要像个海盗一样。"</p>
+        <p>第一层寻找简单的东西：直线、边缘和暗影。</p>
     </div>
     <div class="caption-line">
-        <p>通过用纯文本赋予AI一个人设、一个目标和具体规则，你无需编写任何传统代码，就能瞬间编程出一个功能齐全的AI应用程序。</p>
+        <p>第二层将这些线条组合成形状：圆形、三角形和曲线。</p>
+    </div>
+    <div class="caption-line">
+        <p>最后一层将这些形状组合成复杂的特征：眼睛、鼻子、毛茸茸的尾巴。</p>
+    </div>
+    <div class="caption-line">
+        <p>通过将这些数字网格逐层传递，AI慢慢建立起对图像的理解。它将原始数学转化为意义。这就是计算机视觉的基础。</p>
     </div>
 </div>
 
 <!-- chineseTradCaptions -->
 <div class="captions" id="chinesetradCaptions" style="display: none;">
     <div class="caption-line">
-        <p>現在我們了解了引擎的工作原理，讓我們看看可以用它來構建什麼。</p>
+        <p>當你看到一張貓的照片時，你的人類大腦會立即識別出皮毛、尖尖的耳朵和可愛的眼睛。它不需要你付出任何努力。</p>
     </div>
     <div class="caption-line">
-        <p>當今NLP最強大的商業應用之一是情感分析。想像一下，像蘋果這樣的公司發布了一款新iPhone。一小時內，網上就出現了一百萬條評論。沒有哪個人類團隊能全部讀完。</p>
+        <p>但當計算機看到同一張照片時，它看到的不是貓。它看不到形狀或顏色。它看到的只是一個巨大的、扁平的網格數字。</p>
     </div>
     <div class="caption-line">
-        <p>但NLP模型可以。它掃描每一個token，映射詞語，並立即對文本的情感進行分類。它能夠檢測出「電池續航太噁心了！」實際上是一個高度正面的評價，儘管「sick」這個詞通常意味著「生病」。它理解了上下文。品牌每天都用這個來監控客戶是高興、生氣還是困惑。</p>
+        <p>對計算機來說，圖像就是一個像素的電子表格。如果是黑白圖像，每個像素被分配一個0（純黑）到255（純白）之間的數字。如果是彩色圖像，計算機使用RGB系統 —— 紅、綠、藍。每一個像素都有三個數字，表示混合了多少紅光、綠光和藍光。</p>
     </div>
     <div class="caption-line">
-        <p>除了分析，NLP還允許我們創建互動式代理，比如自定義聊天機器人。</p>
+        <p>所以，你手機上的一張貓的照片實際上是一個由數百萬個數字組成的海洋。AI如何理解這些數學信息？它使用了一種叫做特徵提取的技術。</p>
     </div>
     <div class="caption-line">
-        <p>過去，構建一個客服機器人需要數月複雜的編碼。今天，由於LLM對自然語言的理解如此之好，你可以僅用英文指令就能構建一個聊天機器人。我們稱之為提示工程。</p>
+        <p>AI的神經網絡不是試圖一次性看到整隻貓，而是逐層掃描圖像，尋找數字中的模式。</p>
     </div>
     <div class="caption-line">
-        <p>你就像電影導演給演員劇本一樣。你可以這樣寫：「你是一家咖啡店的友好客服機器人。你的目標是幫助用戶點單。如果用戶生氣，道歉並提供一張免費優惠券。說話要像個海盜一樣。」</p>
+        <p>第一層尋找簡單的東西：直線、邊緣和暗影。</p>
     </div>
     <div class="caption-line">
-        <p>通過用純文本賦予AI一個人設、一個目標和具體規則，你無需編寫任何傳統代碼，就能瞬間編程出一個功能齊全的AI應用程序。</p>
+        <p>第二層將這些線條組合成形狀：圓形、三角形和曲線。</p>
+    </div>
+    <div class="caption-line">
+        <p>最後一層將這些形狀組合成複雜的特徵：眼睛、鼻子、毛茸茸的尾巴。</p>
+    </div>
+    <div class="caption-line">
+        <p>通過將這些數字網格逐層傳遞，AI慢慢建立起對圖像的理解。它將原始數學轉化為意義。這就是計算機視覺的基礎。</p>
     </div>
 </div>
 
 <!-- frenchCaptions -->
 <div class="captions" id="frenchCaptions" style="display: none;">
     <div class="caption-line">
-        <p>Maintenant que nous savons comment fonctionne le moteur, voyons ce que nous pouvons construire avec lui.</p>
+        <p>Lorsque vous regardez la photo d'un chat, votre cerveau humain reconnaît instantanément la fourrure, les oreilles pointues et les yeux mignons. Cela ne vous demande aucun effort.</p>
     </div>
     <div class="caption-line">
-        <p>L'une des applications commerciales les plus puissantes du NLP aujourd'hui est l'analyse des sentiments. Imaginez qu'une entreprise comme Apple lance un nouvel iPhone. En une heure, il y a un million d'avis en ligne. Aucune équipe humaine ne peut tous les lire.</p>
+        <p>Mais lorsque l'ordinateur regarde cette même photo, il ne voit pas de chat. Il ne voit pas de formes ni de couleurs. Il voit une grille géante et plate de nombres.</p>
     </div>
     <div class="caption-line">
-        <p>Mais un modèle NLP le peut. Il scanne chaque token, cartographie les mots et classifie instantanément l'émotion du texte. Il peut détecter que « L'autonomie de la batterie est malade ! » est en fait un avis extrêmement positif, même si le mot « malade » signifie habituellement « pas en bonne santé ». Il comprend le contexte. Les marques utilisent cela chaque jour pour surveiller si les clients sont heureux, en colère ou perplexes.</p>
+        <p>Pour un ordinateur, une image n'est qu'une feuille de calcul de Pixels. S'il s'agit d'une image en noir et blanc, chaque pixel se voit attribuer un nombre de 0 (noir pur) à 255 (blanc pur). S'il s'agit d'une image couleur, l'ordinateur utilise le système RVB — Rouge, Vert, Bleu. Chaque pixel a trois nombres indiquant combien de lumière rouge, verte et bleue sont mélangées ensemble.</p>
     </div>
     <div class="caption-line">
-        <p>Au-delà de l'analyse, le NLP nous permet de créer des agents interactifs, comme des chatbots personnalisés.</p>
+        <p>Ainsi, une image de chat sur votre téléphone est en réalité un océan de millions de nombres. Comment l'IA donne-t-elle un sens à ces mathématiques ? Elle utilise une technique appelée Extraction de Caractéristiques.</p>
     </div>
     <div class="caption-line">
-        <p>Autrefois, construire un bot de service client nécessitait des mois de codage complexe. Aujourd'hui, parce que les LLM comprennent si bien le langage naturel, vous pouvez construire un chatbot en utilisant uniquement des instructions en anglais. Nous appelons cela l'ingénierie des prompts.</p>
+        <p>Au lieu d'essayer de regarder le chat en entier d'un coup, le réseau neuronal de l'IA scanne l'image par couches, à la recherche de motifs dans les nombres.</p>
     </div>
     <div class="caption-line">
-        <p>Vous agissez comme un réalisateur de cinéma donnant un script à un acteur. Vous pouvez écrire : « Vous êtes un bot de service client sympathique pour un café. Votre objectif est d'aider les utilisateurs à commander des boissons. Si un utilisateur est en colère, excusez-vous et offrez un coupon gratuit. Parlez toujours comme un pirate. »</p>
+        <p>La première couche cherche des choses simples : des lignes droites, des bords et des ombres sombres.</p>
     </div>
     <div class="caption-line">
-        <p>En donnant à l'IA une personnalité, un objectif et des règles spécifiques via du texte brut, vous programmez instantanément une application IA entièrement fonctionnelle sans écrire une seule ligne de code traditionnel.</p>
+        <p>La deuxième couche combine ces lignes en formes : cercles, triangles et courbes.</p>
+    </div>
+    <div class="caption-line">
+        <p>Les dernières couches combinent ces formes en caractéristiques complexes : un œil, un nez, une queue poilue.</p>
+    </div>
+    <div class="caption-line">
+        <p>En faisant passer la grille de nombres à travers ces couches, l'IA construit lentement une compréhension de l'image. Elle transforme les mathématiques brutes en sens. C'est le fondement de la vision par ordinateur.</p>
     </div>
 </div>
-
-
+                        
+                    
                     
                     <style>
                         /* Style for caption lines */
-                        .captions-container {
-                            max-height: 180px;  /* Reduced from default */
-                            overflow-y: auto;    /* Add scrollbar if needed */
+                        #englishCaptions, #chineseCaptions, #chinesetradCaptions, #frenchCaptions {
+                            max-height: 300px;
+                            overflow-y: auto;
                             margin: 10px 0;
                             padding-right: 10px;
+                            transition: max-height 0.3s ease;
                         }
                         .caption-line {
                             cursor: pointer;
@@ -757,7 +783,6 @@
             </div>
             
             <div class="resources-grid">
-
                 <!-- Reading / Articles -->
                 <div class="resource-item">
                     <div class="resource-header">
@@ -765,51 +790,71 @@
                             <i class="fas fa-newspaper"></i>
                         </div>
                         <div class="resource-meta">
-                            <h4>Best practices for prompt engineering with the OpenAI API</h4>
+                            <h4>What is Computer Vision?</h4>
                             <span class="resource-type">Reading / Articles</span>
                         </div>
                     </div>
                     <div class="resource-content">
-                        <p class="resource-author">OpenAI</p>
-                        <p class="resource-description">How to give effective instructions to models</p>
-                        <a href="https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api" target="_blank" class="resource-action-btn">
+                        <p class="resource-author">IBM</p>
+                        <p class="resource-description"></p>
+                        <a href="https://www.ibm.com/think/topics/computer-vision" target="_blank" class="resource-action-btn">
                             <i class="fas fa-external-link-alt"></i> Read Article
                         </a>
                     </div>
                 </div>
 
+                <!-- Video / Online Video from YouTube -->
+                <div class="resource-item">
+                    <div class="resource-header">
+                        <div class="resource-icon">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="resource-meta">
+                            <h4>Computer Vision Explained in 5 Minutes</h4>
+                            <span class="resource-type">Video / Online Video from YouTube</span>
+                        </div>
+                    </div>
+                    <div class="resource-content">
+                        <p class="resource-author">AI Sciences</p>
+                        <p class="resource-description"></p>
+                        <a href="https://www.youtube.com/watch?v=puB-4LuRNys" target="_blank" class="resource-action-btn">
+                            <i class="fas fa-external-link-alt"></i> Watch Video
+                        </a>
+                    </div>
+                </div>
+
                 <!-- Interaction / Discussion -->
-                <!-- <div class="resource-item">
+                <div class="resource-item">
                     <div class="resource-header">
                         <div class="resource-icon">
                             <i class="fas fa-comments"></i>
                         </div>
                         <div class="resource-meta">
-                            <h4>Tokenization Explorer</h4>
+                            <h4>Challenge</h4>
                             <span class="resource-type">Interaction / Discussion</span>
                         </div>
                     </div>
                     <div class="resource-content">
-                        <p class="resource-description">Try the OpenAI Tokenizer tool. Paste your favorite song lyric into the box and see exactly how the AI chops your words into colored tokens. Notice how spaces and punctuation are treated as separate tokens!</p>
-                        <a href="https://platform.openai.com/tokenizer" target="_blank" class="resource-action-btn">
-                            <i class="fas fa-sign-in-alt"></i> Try Tokenizer
-                        </a>
+                        <p class="resource-description">Take out your smartphone, open any photo you took recently, and zoom in as far as you possibly can. Keep zooming until the image turns into tiny, blurry colored squares. You are now looking at the pixels—exactly how a computer sees the world!</p>
+                        <button class="resource-action-btn">
+                            <i class="fas fa-sign-in-alt"></i> Join Discussion
+                        </button>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
         
-         <!-- Next Section-->
+        <!-- Next Section-->
          <!-- EDIT CHANGE -->
-        <a href="module02-class01-exercise.html" class="chapter-card">
-            <div class="chapter-number">4</div>
+        <a href="module02-class02-sec02.html" class="chapter-card">
+            <div class="chapter-number">2</div>
             <div class="chapter-content">
-                <p>Next Section</p>
-                <h3>Exercise</h3>
+                <p>Section 2</p>
+                <h3>Training an Image Classification Model</h3>
                 <div class="progress-container">
                     <div class="progress-bar" style="width: 65%"></div>
                 </div>
-                <div class="progress-percentage">0%</div>
+                <div class="progress-percentage">65%</div>
             </div>
             <div class="chapter-arrow">
                 <i class="fas fa-chevron-right"></i>
@@ -1005,7 +1050,7 @@
             
             // Show more/less functionality
             if (showMoreBtn) {
-                const captionsContainer = document.querySelector('.captions-container');
+                const captionsContainer = document.querySelector('#englishCaptions').parentElement;
                 let isExpanded = false;
                 
                 showMoreBtn.addEventListener('click', function() {
@@ -1261,7 +1306,7 @@
                     bio: 'Zoe is a friendly AI avatar specializing in making complex topics easy to understand.',
                     avatar: 'assets/imgs/teacher/zoe.png',
                     specialty: 'Simplified Explanations',
-                    video: 'assets/vids_2-1/2.1_zoe/2.1-zoe-section3-1.mp4'
+                    video: 'assets/vids_2-2/2.2_zoe/2.2-zoe-section1-1.mp4'
                 },
                 neo: {
                     name: 'Neo',
@@ -1269,7 +1314,7 @@
                     bio: 'Neo is an anime-style AI avatar that helps break down complex concepts into easy-to-understand lessons.',
                     avatar: 'assets/imgs/teacher/neo.png',
                     specialty: 'Concept Breakdown',
-                    video: 'assets/vids_2-1/2.1_neo/2.1-neo-section3-1.mp4'
+                    video: 'assets/vids_2-2/2.2_neo/2.2-neo-section1-1.mp4'
                 },
                 rie: {
                     name: 'Rie',
@@ -1277,7 +1322,7 @@
                     bio: 'Rie is a friendly AI avatar specializing in making complex topics easy to understand.',
                     avatar: 'assets/imgs/teacher/Rie.png',
                     specialty: 'Simplified Explanations',
-                    video: 'assets/vids_2-1/2.1_rie/2.1-rie-section3-1.mp4'
+                    video: 'assets/vids_2-2/2.2_rie/2.2-rie-section1-1.mp4'
                 },
                 fiona: {
                     name: 'Fiona',
@@ -1317,7 +1362,7 @@
                     bio: 'Trinity is an anime-style AI avatar that makes learning fun and engaging with a unique personality.',
                     avatar: 'assets/imgs/teacher/trinity.png',
                     specialty: 'Engaging Presentations',
-                    video: 'assets/vids_2-1/2.1_trinity/2.1-trinity-section3-1.mp4'
+                    video: 'assets/vids_2-2/2.2_trinity/2.2-trinity-section1-1.mp4'
                 },
                 elena: {
                     name: 'Elena',
@@ -1325,7 +1370,7 @@
                     bio: 'Elena is an advanced AI avatar designed to provide interactive and engaging learning experiences.',
                     avatar: 'assets/imgs/teacher/elena.png',
                     specialty: 'Interactive Learning',
-                    video: 'assets/vids_2-1/2.1_elena/2.1-elena-section3-1.mp4'    
+                    video: 'assets/vids_2-2/2.2_elena/2.2-elena-section1-1.mp4'    
                 }
             };
 
